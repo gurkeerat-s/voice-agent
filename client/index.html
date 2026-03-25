@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Agent</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #888;
+  }
+
+  /* State indicator orb */
+  .orb-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .orb {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #222;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+
+  .orb.idle {
+    background: #333;
+    box-shadow: 0 0 20px rgba(80, 80, 80, 0.3);
+  }
+
+  .orb.listening {
+    background: #1a6b3c;
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .orb.thinking {
+    background: #6b5a1a;
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
+    animation: pulse 0.8s ease-in-out infinite;
+  }
+
+  .orb.speaking {
+    background: #1a3f6b;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .state-label {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    min-height: 1.5em;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+  }
+
+  .btn-start {
+    background: #22c55e;
+    color: #000;
+  }
+  .btn-start:hover { background: #16a34a; }
+
+  .btn-stop {
+    background: #ef4444;
+    color: #fff;
+  }
+  .btn-stop:hover { background: #dc2626; }
+
+  .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* Transcript area */
+  .transcript {
+    margin-top: 2rem;
+    text-align: left;
+    background: #111;
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 120px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .transcript .turn {
+    margin-bottom: 0.5rem;
+  }
+
+  .transcript .turn.user { color: #86efac; }
+  .transcript .turn.agent { color: #93c5fd; }
+  .transcript .turn .label { font-weight: 600; }
+
+  .status-bar {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Voice Agent</h1>
+
+  <div class="orb-wrapper">
+    <div class="orb idle" id="orb"></div>
+  </div>
+
+  <div class="state-label" id="stateLabel">idle</div>
+
+  <button class="btn btn-start" id="startBtn" onclick="start()">Start Conversation</button>
+  <button class="btn btn-stop" id="stopBtn" onclick="stop()" style="display:none">Stop</button>
+
+  <div class="transcript" id="transcript"></div>
+
+  <div class="status-bar" id="statusBar">Not connected</div>
+</div>
+
+<script>
+// ── Config ────────────────────────────────────────────────
+const WS_URL = `ws://${location.hostname}:${location.port || 8765}/ws`;
+const INPUT_SAMPLE_RATE = 48000;
+const OUTPUT_SAMPLE_RATE = 24000;
+const CHUNK_MS = 200;
+const CHUNK_SAMPLES = INPUT_SAMPLE_RATE * CHUNK_MS / 1000; // 9600 samples per chunk
+
+// ── State ─────────────────────────────────────────────────
+let ws = null;
+let audioContext = null;
+let micStream = null;
+let scriptProcessor = null;
+let playbackQueue = [];
+let isPlaying = false;
+
+// ── UI helpers ────────────────────────────────────────────
+const orb = document.getElementById('orb');
+const stateLabel = document.getElementById('stateLabel');
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+const transcript = document.getElementById('transcript');
+const statusBar = document.getElementById('statusBar');
+
+function setAgentState(state) {
+  orb.className = 'orb ' + state;
+  stateLabel.textContent = state;
+}
+
+function addTranscriptTurn(role, text) {
+  const div = document.createElement('div');
+  div.className = 'turn ' + role;
+  const label = role === 'user' ? 'You' : 'Agent';
+  div.innerHTML = `<span class="label">${label}:</span> ${text}`;
+  transcript.appendChild(div);
+  transcript.scrollTop = transcript.scrollHeight;
+}
+
+function setStatus(msg) {
+  statusBar.textContent = msg;
+}
+
+// ── Audio playback ────────────────────────────────────────
+function initAudioPlayback() {
+  if (!audioContext) {
+    audioContext = new AudioContext({ sampleRate: OUTPUT_SAMPLE_RATE });
+  }
+}
+
+function enqueueAudio(pcm16Buffer) {
+  // Convert Int16 PCM to Float32
+  const int16 = new Int16Array(pcm16Buffer);
+  const float32 = new Float32Array(int16.length);
+  for (let i = 0; i < int16.length; i++) {
+    float32[i] = int16[i] / 32768.0;
+  }
+  playbackQueue.push(float32);
+  if (!isPlaying) {
+    playNextChunk();
+  }
+}
+
+function playNextChunk() {
+  if (playbackQueue.length === 0) {
+    isPlaying = false;
+    return;
+  }
+  isPlaying = true;
+  const samples = playbackQueue.shift();
+  const buffer = audioContext.createBuffer(1, samples.length, OUTPUT_SAMPLE_RATE);
+  buffer.getChannelData(0).set(samples);
+  const source = audioContext.createBufferSource();
+  source.buffer = buffer;
+  source.connect(audioContext.destination);
+  source.onended = playNextChunk;
+  source.start();
+}
+
+// ── Mic capture ───────────────────────────────────────────
+async function startMic() {
+  micStream = await navigator.mediaDevices.getUserMedia({
+    audio: {
+      sampleRate: INPUT_SAMPLE_RATE,
+      channelCount: 1,
+      echoCancellation: true,
+      noiseSuppression: true,
+      autoGainControl: true,
+    }
+  });
+
+  const micContext = new AudioContext({ sampleRate: INPUT_SAMPLE_RATE });
+  const source = micContext.createMediaStreamSource(micStream);
+
+  // ScriptProcessorNode for raw PCM access
+  // (AudioWorklet would be better but this is simpler for a test client)
+  const bufferSize = CHUNK_SAMPLES;
+  scriptProcessor = micContext.createScriptProcessor(bufferSize, 1, 1);
+
+  scriptProcessor.onaudioprocess = (e) => {
+    if (!ws || ws.readyState !== WebSocket.OPEN) return;
+
+    const float32 = e.inputBuffer.getChannelData(0);
+    // Convert to Int16 PCM
+    const int16 = new Int16Array(float32.length);
+    for (let i = 0; i < float32.length; i++) {
+      int16[i] = Math.max(-32768, Math.min(32767, Math.round(float32[i] * 32768)));
+    }
+    ws.send(int16.buffer);
+  };
+
+  source.connect(scriptProcessor);
+  scriptProcessor.connect(micContext.destination);
+}
+
+function stopMic() {
+  if (scriptProcessor) {
+    scriptProcessor.disconnect();
+    scriptProcessor = null;
+  }
+  if (micStream) {
+    micStream.getTracks().forEach(t => t.stop());
+    micStream = null;
+  }
+}
+
+// ── WebSocket ─────────────────────────────────────────────
+function connectWS() {
+  ws = new WebSocket(WS_URL);
+  ws.binaryType = 'arraybuffer';
+
+  ws.onopen = () => {
+    setStatus('Connected');
+  };
+
+  ws.onmessage = (event) => {
+    if (typeof event.data === 'string') {
+      // JSON control message
+      try {
+        const msg = JSON.parse(event.data);
+        if (msg.type === 'state') {
+          setAgentState(msg.state);
+        }
+      } catch (e) {}
+    } else {
+      // Binary audio data
+      enqueueAudio(event.data);
+    }
+  };
+
+  ws.onclose = () => {
+    setStatus('Disconnected');
+    setAgentState('idle');
+  };
+
+  ws.onerror = (err) => {
+    setStatus('Connection error');
+    console.error('WebSocket error:', err);
+  };
+}
+
+// ── Start/Stop ────────────────────────────────────────────
+async function start() {
+  startBtn.style.display = 'none';
+  stopBtn.style.display = 'inline-block';
+  transcript.innerHTML = '';
+  playbackQueue = [];
+
+  initAudioPlayback();
+  connectWS();
+
+  // Small delay for WS to connect before starting mic
+  await new Promise(r => setTimeout(r, 300));
+  await startMic();
+  setStatus('Connected — speak into your mic');
+}
+
+function stop() {
+  stopBtn.style.display = 'none';
+  startBtn.style.display = 'inline-block';
+
+  stopMic();
+  if (ws) {
+    ws.close();
+    ws = null;
+  }
+  setAgentState('idle');
+  playbackQueue = [];
+  isPlaying = false;
+  setStatus('Stopped');
+}
+</script>
+</body>
+</html>
