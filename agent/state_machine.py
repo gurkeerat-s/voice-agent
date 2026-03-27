@@ -106,8 +106,11 @@ class VoiceAgent:
                 # Route event to current state handler
                 await self._handle_event(event, stt_audio)
 
-        except Exception:
+        except Exception as e:
             # WebSocket closed or error — clean up
+            import traceback
+            print(f"Agent error: {e}")
+            traceback.print_exc()
             self._running = False
 
     async def _handle_event(self, event: VadEvent, stt_audio: np.ndarray):
