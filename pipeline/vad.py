@@ -55,8 +55,9 @@ class VADProcessor:
         self.barge_in_min_ms = cfg.barge_in_min_ms
         self.chunk_ms = cfg.chunk_duration_ms
 
-        # Silero VAD operates at 16kHz
+        # Silero VAD operates at 16kHz, requires exactly 512 samples per call
         self.sample_rate = 16000
+        self.vad_chunk_size = 512
 
         # Load Silero VAD model
         self.model, self._utils = torch.hub.load(
@@ -64,6 +65,9 @@ class VADProcessor:
             model="silero_vad",
             trust_repo=True,
         )
+
+        # Buffer for accumulating samples until we have 512
+        self._audio_buffer = np.array([], dtype=np.float32)
 
         # State tracking
         self._is_speaking = False
@@ -74,6 +78,7 @@ class VADProcessor:
     def reset(self):
         """Reset internal state for a new conversation."""
         self.model.reset_states()
+        self._audio_buffer = np.array([], dtype=np.float32)
         self._is_speaking = False
         self._speech_start_time = None
         self._silence_start_time = None
@@ -97,10 +102,17 @@ class VADProcessor:
         """
         now = time.monotonic()
 
-        # Run Silero VAD on the chunk
-        tensor = torch.from_numpy(audio_chunk).float()
-        confidence = self.model(tensor, self.sample_rate).item()
-        speech_detected = confidence >= self.speech_threshold
+        # Buffer incoming audio and process in 512-sample windows
+        self._audio_buffer = np.concatenate([self._audio_buffer, audio_chunk])
+
+        # Process as many 512-sample chunks as we can, keep last result
+        speech_detected = False
+        while len(self._audio_buffer) >= self.vad_chunk_size:
+            window = self._audio_buffer[:self.vad_chunk_size]
+            self._audio_buffer = self._audio_buffer[self.vad_chunk_size:]
+            tensor = torch.from_numpy(window).float()
+            confidence = self.model(tensor, self.sample_rate).item()
+            speech_detected = confidence >= self.speech_threshold
 
         if speech_detected:
             return self._handle_speech(now, is_agent_speaking)
