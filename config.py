@@ -33,9 +33,9 @@ class STTConfig(BaseSettings):
 
 class LLMConfig(BaseSettings):
     """LLM inference settings."""
-    # vLLM serves an OpenAI-compatible API on this URL
-    api_base: str = "http://localhost:8000/v1"
-    model: str = "meta-llama/Meta-Llama-3.1-8B-Instruct-AWQ"
+    # Ollama serves an OpenAI-compatible API on this URL
+    api_base: str = "http://localhost:11434/v1"
+    model: str = "llama3.1:8b"
     max_tokens: int = 256
     temperature: float = 0.7
     # System prompt for the voice agent
