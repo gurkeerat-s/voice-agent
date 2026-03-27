@@ -143,8 +143,11 @@ class StreamingTTS:
             self.speaker_embedding,
         )
 
-        # output["wav"] is a 1D torch tensor
-        return output["wav"].cpu().numpy().astype(np.float32)
+        # output["wav"] may be a torch tensor or numpy array depending on version
+        wav = output["wav"]
+        if hasattr(wav, 'cpu'):
+            wav = wav.cpu().numpy()
+        return np.asarray(wav, dtype=np.float32)
 
     def crossfade(
         self,
