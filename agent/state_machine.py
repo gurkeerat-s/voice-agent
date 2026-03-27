@@ -202,11 +202,15 @@ class VoiceAgent:
 
     async def _handle_thinking(self, event: VadEvent, stt_audio: np.ndarray):
         """THINKING: LLM generating, maybe play filler."""
-        # Check if filler should play
+        # Check if filler should play — just prime it, don't send yet.
+        # The filler audio will be sent as crossfade in _generate_and_speak,
+        # or played standalone if LLM is really slow.
         filler_result = self.filler.get_filler_if_needed()
-        if filler_result is not None:
+        if filler_result is not None and not self.filler.is_filler_playing:
             phrase, audio = filler_result
             await self._send_audio(audio)
+            # Clear the audio so blend_with_response won't replay it
+            self.filler._filler_audio = None
 
         # If user starts talking again during THINKING, treat as new turn
         if event.type == VadEventType.SPEECH_START:

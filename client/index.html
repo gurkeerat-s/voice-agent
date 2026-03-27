@@ -176,8 +176,6 @@ let ws = null;
 let audioContext = null;
 let micStream = null;
 let scriptProcessor = null;
-let playbackQueue = [];
-let isPlaying = false;
 
 // ── UI helpers ────────────────────────────────────────────
 const orb = document.getElementById('orb');
@@ -206,10 +204,15 @@ function setStatus(msg) {
 }
 
 // ── Audio playback ────────────────────────────────────────
+// Scheduled playback time — ensures gapless audio by scheduling
+// each buffer to start exactly when the previous one ends.
+let nextPlayTime = 0;
+
 function initAudioPlayback() {
   if (!audioContext) {
     audioContext = new AudioContext({ sampleRate: OUTPUT_SAMPLE_RATE });
   }
+  nextPlayTime = 0;
 }
 
 function enqueueAudio(pcm16Buffer) {
@@ -219,26 +222,20 @@ function enqueueAudio(pcm16Buffer) {
   for (let i = 0; i < int16.length; i++) {
     float32[i] = int16[i] / 32768.0;
   }
-  playbackQueue.push(float32);
-  if (!isPlaying) {
-    playNextChunk();
-  }
-}
 
-function playNextChunk() {
-  if (playbackQueue.length === 0) {
-    isPlaying = false;
-    return;
-  }
-  isPlaying = true;
-  const samples = playbackQueue.shift();
-  const buffer = audioContext.createBuffer(1, samples.length, OUTPUT_SAMPLE_RATE);
-  buffer.getChannelData(0).set(samples);
+  const buffer = audioContext.createBuffer(1, float32.length, OUTPUT_SAMPLE_RATE);
+  buffer.getChannelData(0).set(float32);
   const source = audioContext.createBufferSource();
   source.buffer = buffer;
   source.connect(audioContext.destination);
-  source.onended = playNextChunk;
-  source.start();
+
+  // Schedule gapless playback
+  const now = audioContext.currentTime;
+  if (nextPlayTime < now) {
+    nextPlayTime = now;
+  }
+  source.start(nextPlayTime);
+  nextPlayTime += buffer.duration;
 }
 
 // ── Mic capture ───────────────────────────────────────────
@@ -327,7 +324,6 @@ async function start() {
   startBtn.style.display = 'none';
   stopBtn.style.display = 'inline-block';
   transcript.innerHTML = '';
-  playbackQueue = [];
 
   try {
     initAudioPlayback();
@@ -352,8 +348,7 @@ function stop() {
     ws = null;
   }
   setAgentState('idle');
-  playbackQueue = [];
-  isPlaying = false;
+  nextPlayTime = 0;
   setStatus('Stopped');
 }
 </script>
