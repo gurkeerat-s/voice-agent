@@ -51,6 +51,16 @@ async def lifespan(app: FastAPI):
     audio_cache = AudioCache()
     audio_cache.generate_all(tts_instance)
 
+    # 3. Warm up LLM (first call is slow due to model loading)
+    print("Warming up LLM...")
+    from pipeline.llm import LLMClient
+    llm = LLMClient()
+    try:
+        warmup_response = await llm.generate_full("Say hi.", [])
+        print(f"  LLM warm: {warmup_response[:50]}")
+    except Exception as e:
+        print(f"  LLM warmup failed (will retry on first request): {e}")
+
     print("=" * 60)
     print(f"  Ready — listening on ws://0.0.0.0:{config.server.port}/ws")
     print("=" * 60)

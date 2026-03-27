@@ -91,8 +91,20 @@ class VoiceAgent:
         """
         try:
             while self._running:
-                # Receive audio chunk from browser
-                data = await self.ws.receive_bytes()
+                # Receive any message type from WebSocket
+                message = await self.ws.receive()
+
+                if message.get("type") == "websocket.disconnect":
+                    break
+
+                # Handle binary audio data
+                if "bytes" in message and message["bytes"]:
+                    data = message["bytes"]
+                elif "text" in message:
+                    # Text message — ignore (could be control message from client)
+                    continue
+                else:
+                    continue
 
                 # Decode and resample
                 raw_audio = self.audio_io.decode_ws_audio(data)
