@@ -258,24 +258,21 @@ class VoiceAgent:
 
                 # Synthesize this sentence (run sync TTS in executor)
                 loop = asyncio.get_event_loop()
-                chunks = await loop.run_in_executor(
-                    None, lambda s=sentence: list(self.tts.synthesize_stream(s))
+                audio = await loop.run_in_executor(
+                    None, lambda s=sentence: self.tts.synthesize_full(s)
                 )
 
-                for chunk in chunks:
-                    if self._cancel_speaking.is_set():
-                        return
+                if self._cancel_speaking.is_set():
+                    return
 
-                    audio = chunk.audio
+                if first_chunk:
+                    # Crossfade filler -> real response
+                    audio = self.filler.blend_with_response(audio)
+                    self.state = State.SPEAKING
+                    await self._send_state("speaking")
+                    first_chunk = False
 
-                    if first_chunk:
-                        # Crossfade filler -> real response
-                        audio = self.filler.blend_with_response(audio)
-                        self.state = State.SPEAKING
-                        await self._send_state("speaking")
-                        first_chunk = False
-
-                    await self._send_audio(audio)
+                await self._send_audio(audio)
 
             # Done speaking — record assistant turn
             self.conversation.add_assistant_turn(full_response.strip())
