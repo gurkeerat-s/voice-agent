@@ -334,7 +334,6 @@ def train(args):
 
     training_args = TrainingArguments(
         output_dir=args.output_dir,
-        overwrite_output_dir=not args.resume,
 
         # -- Batch size --
         per_device_train_batch_size=args.batch_size,
