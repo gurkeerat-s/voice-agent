@@ -6,11 +6,10 @@ torchaudio>=2.1.0
 faster-whisper>=1.0.0
 
 # LLM
-vllm>=0.4.0
 openai>=1.12.0
 
-# TTS (Coqui XTTS-v2)
-TTS>=0.22.0
+# TTS (Kokoro)
+kokoro>=0.9
 
 # Server
 fastapi>=0.110.0

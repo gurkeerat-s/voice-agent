@@ -49,19 +49,20 @@ class LLMConfig(BaseSettings):
 
 
 class TTSConfig(BaseSettings):
-    """Text-to-speech settings."""
-    model_name: str = "tts_models/multilingual/multi-dataset/xtts_v2"
-    device: str = "cuda"
-    # Path to reference audio for voice cloning (6-10s WAV)
-    reference_audio_path: str = "voice/reference.wav"
-    # Sample rate of generated audio
+    """Text-to-speech settings (Kokoro-82M)."""
+    # Kokoro voice ID — see available voices:
+    # American English female: af_heart, af_bella, af_nicole, af_nova, af_sarah, af_sky
+    # American English male: am_adam, am_echo, am_eric, am_liam, am_michael
+    # British English female: bf_emma, bf_isabella, bf_lily
+    # British English male: bm_daniel, bm_george, bm_lewis
+    voice: str = "af_heart"
+    speed: float = 1.0
+    # Sample rate of generated audio (Kokoro outputs 24kHz)
     sample_rate: int = 24000
-    # Streaming chunk size (in model tokens, not audio samples)
-    stream_chunk_size: int = 20
     # Crossfade duration when transitioning filler -> real response (ms)
     crossfade_ms: int = 100
-    # Language for XTTS
-    language: str = "en"
+    # Path to reference audio (not used by Kokoro, kept for compatibility)
+    reference_audio_path: str = "voice/reference.wav"
 
 
 class AudioConfig(BaseSettings):

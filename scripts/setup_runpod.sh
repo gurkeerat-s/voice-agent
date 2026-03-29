@@ -13,41 +13,30 @@ echo "  Voice Agent — RunPod Setup"
 echo "=============================================="
 
 # ── 1. System deps ─────────────────────────────────────────
-echo "[1/7] System dependencies..."
-apt-get update -qq && apt-get install -y -qq ffmpeg zstd > /dev/null 2>&1
+echo "[1/5] System dependencies..."
+apt-get update -qq && apt-get install -y -qq ffmpeg zstd espeak-ng > /dev/null 2>&1
 echo "  Done."
 
-# ── 2. Install vllm first (pins torch==2.4.0) ─────────────
-echo "[2/7] Installing vllm..."
-pip install -q vllm==0.6.2
+# ── 2. Python packages ────────────────────────────────────
+echo "[2/5] Installing Python packages..."
+pip install -q "kokoro>=0.9" soundfile faster-whisper openai fastapi "uvicorn[standard]" websockets scipy pydantic pydantic-settings
 echo "  Done."
 
-# ── 3. Install TTS and other deps ─────────────────────────
-echo "[3/7] Installing TTS and dependencies..."
-pip install -q --ignore-installed blinker
-pip install -q faster-whisper TTS openai fastapi "uvicorn[standard]" websockets scipy soundfile pydantic-settings
-echo "  Done."
-
-# ── 4. Pin transformers for TTS compatibility ──────────────
-echo "[4/7] Pinning transformers..."
-pip install -q transformers==4.45.0
-echo "  Done."
-
-# ── 5. Fix torch CUDA version (TTS pulls wrong one) ───────
-echo "[5/7] Fixing torch CUDA versions..."
-pip install torch==2.4.0+cu124 torchaudio==2.4.0+cu124 --index-url https://download.pytorch.org/whl/cu124 --force-reinstall --no-deps -q
-echo "  Done."
-
-# ── 6. Install Ollama ─────────────────────────────────────
-echo "[6/7] Installing Ollama..."
+# ── 3. Install Ollama ─────────────────────────────────────
+echo "[3/5] Installing Ollama..."
 curl -fsSL https://ollama.com/install.sh | sh
 echo "  Done."
 
-# ── 7. Start Ollama and pull model ────────────────────────
-echo "[7/7] Starting Ollama and pulling Llama 3.1 8B..."
+# ── 4. Start Ollama and pull model ────────────────────────
+echo "[4/5] Starting Ollama and pulling Llama 3.1 8B..."
 ollama serve &
 sleep 5
 ollama pull llama3.1:8b
+echo "  Done."
+
+# ── 5. Download Kokoro model ──────────────────────────────
+echo "[5/5] Downloading Kokoro model..."
+python -c "from kokoro import KPipeline; p = KPipeline(lang_code='a'); print('Kokoro ready.')"
 echo "  Done."
 
 echo ""
