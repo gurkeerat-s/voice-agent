@@ -78,13 +78,17 @@ class StreamingTTS:
         with torch.no_grad():
             audio = self.model.generate(**inputs, output_audio=True)
 
-        # Save to temp buffer and read back as numpy
-        # processor.save_audio returns None, writes to file
-        # Instead, extract audio directly from the generate output
-        if hasattr(audio, 'cpu'):
-            audio_np = audio.cpu().numpy().astype(np.float32)
+        # Extract audio tensor — handle different output formats
+        if isinstance(audio, torch.Tensor):
+            audio_tensor = audio
+        elif hasattr(audio, 'audio_values'):
+            audio_tensor = audio.audio_values
+        elif isinstance(audio, (tuple, list)):
+            audio_tensor = audio[0]
         else:
-            audio_np = np.asarray(audio, dtype=np.float32)
+            audio_tensor = audio
+
+        audio_np = audio_tensor.cpu().float().numpy().astype(np.float32)
 
         # Flatten if needed
         if audio_np.ndim > 1:
