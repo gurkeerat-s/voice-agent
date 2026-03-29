@@ -309,6 +309,9 @@ def train(args):
         attn_implementation="sdpa",  # use Flash Attention if available
     )
 
+    # Cast entire model to bfloat16 (including codec) to avoid dtype mismatches
+    model = model.to(torch.bfloat16)
+
     # ---- Freeze codec ----
     freeze_codec(model)
 
