@@ -1,8 +1,8 @@
 """
-Voice setup for CSM-1B with LoRA adapter.
+Voice setup for Orpheus TTS.
 
-Loads the base model + fine-tuned adapter and returns
-a ready-to-use TTS instance.
+Orpheus uses preset voices (no cloning needed).
+This module just initializes the TTS pipeline.
 
 Usage:
     tts = setup_voice()
@@ -14,13 +14,11 @@ from config import config
 
 def setup_voice(reference_audio_path: str | None = None) -> StreamingTTS:
     """
-    Initialize TTS with the fine-tuned CSM-1B model.
+    Initialize TTS with Orpheus.
 
     Returns:
         A StreamingTTS instance ready to synthesize speech.
     """
     tts = StreamingTTS()
-    print(f"Loading CSM-1B + LoRA adapter ({config.tts.adapter_path})...")
     tts.load_model()
-    print("CSM-1B TTS ready.")
     return tts

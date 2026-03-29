@@ -1,6 +1,6 @@
 #!/bin/bash
 # ──────────────────────────────────────────────────────────
-# RunPod Setup Script — Voice Agent with CSM-1B
+# RunPod Setup Script — Voice Agent with Orpheus TTS
 #
 # Usage:
 #   cd /workspace && git clone https://github.com/gurkeerat-s/voice-agent.git && cd voice-agent && chmod +x scripts/setup_runpod.sh && ./scripts/setup_runpod.sh
@@ -19,7 +19,7 @@ echo "  Done."
 
 # ── 2. Python packages ────────────────────────────────────
 echo "[2/4] Installing Python packages..."
-pip install -q "transformers>=4.52.1" "peft>=0.15.0" faster-whisper openai fastapi "uvicorn[standard]" websockets scipy soundfile pydantic pydantic-settings accelerate
+pip install -q orpheus-speech faster-whisper openai fastapi "uvicorn[standard]" websockets scipy soundfile pydantic pydantic-settings
 echo "  Done."
 
 # ── 3. Install Ollama ─────────────────────────────────────

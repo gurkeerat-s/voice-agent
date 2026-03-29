@@ -1,9 +1,9 @@
 """
-TTS using fine-tuned CSM-1B with LoRA adapter.
+TTS using Orpheus-TTS (3B, Llama-based).
 
-Loads sesame/csm-1b base model + LoRA adapter (trained on Zara voice),
-merges weights, and generates speech.
-Outputs 24kHz float32 mono audio.
+Fast, expressive speech synthesis with emotion tags.
+Outputs 24kHz int16 PCM via SNAC codec, converted to float32 for pipeline.
+Native streaming support (~85ms per chunk).
 
 Usage:
     tts = StreamingTTS()
@@ -14,55 +14,41 @@ Usage:
 """
 
 import numpy as np
-import torch
 
 from config import config
 
 
 class StreamingTTS:
     """
-    CSM-1B TTS with LoRA adapter for voice cloning.
+    Orpheus TTS wrapper with streaming output.
     """
 
     def __init__(self):
         cfg = config.tts
         self.sample_rate = cfg.sample_rate  # 24000
         self.crossfade_ms = cfg.crossfade_ms
-        self.base_model_id = cfg.base_model
-        self.adapter_path = cfg.adapter_path
-        self.speaker_id = cfg.speaker_id
+        self.voice = cfg.voice
 
         self.model = None
-        self.processor = None
-        self.device = None
 
     def load_model(self):
-        """Load CSM-1B base model + LoRA adapter. Call once at startup."""
-        from transformers import CsmForConditionalGeneration, AutoProcessor
-        from peft import PeftModel
+        """Load Orpheus TTS model. Call once at startup."""
+        import os
+        os.environ["SNAC_DEVICE"] = "cuda"
 
-        print(f"Loading CSM-1B base model: {self.base_model_id}")
-        self.processor = AutoProcessor.from_pretrained(self.base_model_id)
-        base_model = CsmForConditionalGeneration.from_pretrained(
-            self.base_model_id,
-            torch_dtype=torch.float32,
+        from orpheus_tts import OrpheusModel
+
+        print(f"Loading Orpheus TTS (voice: {self.voice})...")
+        self.model = OrpheusModel(
+            model_name="canopylabs/orpheus-tts-0.1-finetune-prod",
+            max_model_len=2048,
+            gpu_memory_utilization=0.3,
+            dtype="bfloat16",
         )
-
-        print(f"Loading LoRA adapter: {self.adapter_path}")
-        model = PeftModel.from_pretrained(base_model, self.adapter_path)
-        self.model = model.merge_and_unload()
-
-        # Convert to bfloat16 for faster inference
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.model = self.model.to(device=self.device, dtype=torch.bfloat16)
-        self.model.eval()
-
-        # Compile for faster generation
-        # self.model = torch.compile(self.model, mode="reduce-overhead")
-        print(f"CSM-1B ready on {self.device}")
+        print("Orpheus TTS ready.")
 
     def load_voice(self, reference_audio_path: str):
-        """No-op — voice is baked into the LoRA adapter."""
+        """No-op — Orpheus uses preset voices."""
         pass
 
     def synthesize_full(self, text: str) -> np.ndarray:
@@ -75,30 +61,23 @@ class StreamingTTS:
         if self.model is None:
             raise RuntimeError("Call load_model() first")
 
-        # Format text with speaker ID prefix
-        prompt = f"[{self.speaker_id}]{text}"
-        inputs = self.processor(prompt, add_special_tokens=True).to(self.device)
+        chunks = []
+        for audio_bytes in self.model.generate_speech(
+            prompt=text,
+            voice=self.voice,
+            temperature=0.6,
+            top_p=0.8,
+            repetition_penalty=1.3,
+            max_tokens=1200,
+        ):
+            chunk_np = np.frombuffer(audio_bytes, dtype=np.int16)
+            chunks.append(chunk_np)
 
-        with torch.no_grad():
-            audio = self.model.generate(**inputs, output_audio=True)
+        if not chunks:
+            return np.array([], dtype=np.float32)
 
-        # Extract audio tensor — handle different output formats
-        if isinstance(audio, torch.Tensor):
-            audio_tensor = audio
-        elif hasattr(audio, 'audio_values'):
-            audio_tensor = audio.audio_values
-        elif isinstance(audio, (tuple, list)):
-            audio_tensor = audio[0]
-        else:
-            audio_tensor = audio
-
-        audio_np = audio_tensor.cpu().float().numpy().astype(np.float32)
-
-        # Flatten if needed
-        if audio_np.ndim > 1:
-            audio_np = audio_np.squeeze()
-
-        return audio_np
+        audio_int16 = np.concatenate(chunks)
+        return audio_int16.astype(np.float32) / 32767.0
 
     def crossfade(
         self,
