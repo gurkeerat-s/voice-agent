@@ -48,8 +48,17 @@ async def lifespan(app: FastAPI):
     tts_instance = setup_voice()
 
     # 2. Pre-generate filler & backchannel audio
+    # NOTE: Orpheus TTS uses vLLM internally which conflicts with generating
+    # audio during FastAPI startup. Generate cache in a subprocess instead.
     audio_cache = AudioCache()
-    audio_cache.generate_all(tts_instance)
+    import concurrent.futures
+    import asyncio
+    loop = asyncio.get_event_loop()
+    try:
+        await loop.run_in_executor(None, audio_cache.generate_all, tts_instance)
+    except Exception as e:
+        print(f"  Cache generation failed: {e}")
+        print("  Fillers/backchannels will be skipped.")
 
     # 3. Warm up LLM (first call is slow due to model loading)
     print("Warming up LLM...")
