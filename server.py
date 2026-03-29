@@ -44,8 +44,8 @@ async def lifespan(app: FastAPI):
     print("  Voice Agent — Starting up")
     print("=" * 60)
 
-    # 1. Load TTS model and clone voice
-    tts_instance = setup_voice(config.tts.reference_audio_path)
+    # 1. Load TTS model
+    tts_instance = setup_voice()
 
     # 2. Pre-generate filler & backchannel audio
     audio_cache = AudioCache()
@@ -108,12 +108,7 @@ def main():
     parser = argparse.ArgumentParser(description="Voice Agent Server")
     parser.add_argument("--host", default=config.server.host)
     parser.add_argument("--port", type=int, default=config.server.port)
-    parser.add_argument("--reference", default=config.tts.reference_audio_path,
-                        help="Path to reference voice audio (6-10s WAV)")
     args = parser.parse_args()
-
-    # Override config with CLI args
-    config.tts.reference_audio_path = args.reference
 
     uvicorn.run(
         "server:app",
