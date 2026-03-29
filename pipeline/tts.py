@@ -141,6 +141,11 @@ class StreamingTTS:
             self.language,
             self.gpt_cond_latent,
             self.speaker_embedding,
+            temperature=0.65,
+            repetition_penalty=10.0,
+            top_k=50,
+            top_p=0.8,
+            enable_text_splitting=True,
         )
 
         # output["wav"] may be a torch tensor or numpy array depending on version
