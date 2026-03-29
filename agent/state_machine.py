@@ -292,15 +292,10 @@ class VoiceAgent:
     # ── Audio/message sending ──────────────────────────────────────
 
     async def _send_audio(self, audio: np.ndarray):
-        """Normalize, encode, chunk, and send audio over WebSocket."""
+        """Normalize, encode, and send audio over WebSocket as one buffer."""
         audio = self.audio_io.normalize_volume(audio)
-        chunks = self.audio_io.chunk_audio(audio, self.tts.sample_rate)
-
-        for chunk in chunks:
-            if self._cancel_speaking.is_set():
-                return
-            encoded = self.audio_io.encode_ws_audio(chunk)
-            await self.ws.send_bytes(encoded)
+        encoded = self.audio_io.encode_ws_audio(audio)
+        await self.ws.send_bytes(encoded)
 
     async def _send_state(self, state_name: str):
         """Send a JSON state update to the client (for UI indicators)."""
