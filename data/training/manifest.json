@@ -1,0 +1,4257 @@
+{
+  "voice_id": "jqcCZkN6Knx8BJ5TBdYR",
+  "total_lines": 850,
+  "total_chars": 86311,
+  "lines": [
+    {
+      "id": 0,
+      "text": "Hey! How's it going? I haven't seen you in forever.",
+      "audio": "line_0000.mp3"
+    },
+    {
+      "id": 1,
+      "text": "Oh my gosh, hi! Come in, come in. Make yourself at home.",
+      "audio": "line_0001.mp3"
+    },
+    {
+      "id": 2,
+      "text": "Good morning! Did you sleep okay? You look a little tired.",
+      "audio": "line_0002.mp3"
+    },
+    {
+      "id": 3,
+      "text": "Hey there, welcome back! So glad you could make it.",
+      "audio": "line_0003.mp3"
+    },
+    {
+      "id": 4,
+      "text": "Oh hey! I was just thinking about you, actually.",
+      "audio": "line_0004.mp3"
+    },
+    {
+      "id": 5,
+      "text": "Hi! Okay, you look amazing today. What's the occasion?",
+      "audio": "line_0005.mp3"
+    },
+    {
+      "id": 6,
+      "text": "Well look who it is! It's been ages. How have you been?",
+      "audio": "line_0006.mp3"
+    },
+    {
+      "id": 7,
+      "text": "Hey you! I was hoping I'd run into you today.",
+      "audio": "line_0007.mp3"
+    },
+    {
+      "id": 8,
+      "text": "Oh hi! Sorry, I'm a mess right now. Come in anyway.",
+      "audio": "line_0008.mp3"
+    },
+    {
+      "id": 9,
+      "text": "Good to see you! Grab a seat, I'll be right with you.",
+      "audio": "line_0009.mp3"
+    },
+    {
+      "id": 10,
+      "text": "So I was at the grocery store earlier, right? And this guy just walks up to me and starts telling me about his cat. Like, completely out of nowhere.",
+      "audio": "line_0010.mp3"
+    },
+    {
+      "id": 11,
+      "text": "I don't know, I've been feeling kind of weird lately. Not bad, just... different, you know?",
+      "audio": "line_0011.mp3"
+    },
+    {
+      "id": 12,
+      "text": "Wait, you actually did that? That's hilarious. I can't believe you got away with it.",
+      "audio": "line_0012.mp3"
+    },
+    {
+      "id": 13,
+      "text": "Honestly? I think the best part of my day was just sitting on the porch with my coffee this morning. Sometimes the simple things are everything.",
+      "audio": "line_0013.mp3"
+    },
+    {
+      "id": 14,
+      "text": "You know what I realized the other day? I've been doing this for almost five years now. Five years! That's crazy when you think about it.",
+      "audio": "line_0014.mp3"
+    },
+    {
+      "id": 15,
+      "text": "Oh no, don't even get me started on that. I have so many opinions and none of them are good.",
+      "audio": "line_0015.mp3"
+    },
+    {
+      "id": 16,
+      "text": "That reminds me of something my mom always used to say. She'd be like, just take it one step at a time, honey.",
+      "audio": "line_0016.mp3"
+    },
+    {
+      "id": 17,
+      "text": "I mean, yeah, it's not perfect, but nothing ever is, right? You just do your best and hope it works out.",
+      "audio": "line_0017.mp3"
+    },
+    {
+      "id": 18,
+      "text": "Can I be honest with you? I was really nervous about this, but now that we're talking, I feel so much better.",
+      "audio": "line_0018.mp3"
+    },
+    {
+      "id": 19,
+      "text": "No way. No way! Are you serious right now? Tell me everything.",
+      "audio": "line_0019.mp3"
+    },
+    {
+      "id": 20,
+      "text": "I tried that new restaurant on Fifth Street yesterday. The pasta was incredible, but the service was kind of slow.",
+      "audio": "line_0020.mp3"
+    },
+    {
+      "id": 21,
+      "text": "My neighbor got a new puppy and now I can't stop going over there to play with it. It's a golden retriever and it's so fluffy.",
+      "audio": "line_0021.mp3"
+    },
+    {
+      "id": 22,
+      "text": "I was on the phone with my sister for like two hours last night. We haven't talked that long in months.",
+      "audio": "line_0022.mp3"
+    },
+    {
+      "id": 23,
+      "text": "Did you know there's a farmers market every Saturday? I went for the first time last week and now I'm obsessed.",
+      "audio": "line_0023.mp3"
+    },
+    {
+      "id": 24,
+      "text": "I accidentally sent that text to the wrong person and I'm still recovering from the embarrassment.",
+      "audio": "line_0024.mp3"
+    },
+    {
+      "id": 25,
+      "text": "So apparently, I've been saying that word wrong my entire life. Someone corrected me yesterday and I just stood there in shock.",
+      "audio": "line_0025.mp3"
+    },
+    {
+      "id": 26,
+      "text": "I've been binge watching this show and I'm only on season two but I already know it's going to ruin me.",
+      "audio": "line_0026.mp3"
+    },
+    {
+      "id": 27,
+      "text": "My coworker brought homemade cookies today and they were actually incredible. I had like four of them.",
+      "audio": "line_0027.mp3"
+    },
+    {
+      "id": 28,
+      "text": "I tried to fix the sink myself and ended up making it way worse. Now there's water everywhere.",
+      "audio": "line_0028.mp3"
+    },
+    {
+      "id": 29,
+      "text": "I found this really cool bookstore downtown that I'd never noticed before. It's tiny but they have the best selection.",
+      "audio": "line_0029.mp3"
+    },
+    {
+      "id": 30,
+      "text": "So what have you been up to? Anything exciting going on?",
+      "audio": "line_0030.mp3"
+    },
+    {
+      "id": 31,
+      "text": "Wait, can you explain that to me? I feel like I'm missing something.",
+      "audio": "line_0031.mp3"
+    },
+    {
+      "id": 32,
+      "text": "Have you ever tried doing it the other way around? Like, what if you started from the end?",
+      "audio": "line_0032.mp3"
+    },
+    {
+      "id": 33,
+      "text": "Hmm, that's interesting. What made you decide to go that route?",
+      "audio": "line_0033.mp3"
+    },
+    {
+      "id": 34,
+      "text": "Do you think it's worth it? Like, genuinely, do you think it's going to make a difference?",
+      "audio": "line_0034.mp3"
+    },
+    {
+      "id": 35,
+      "text": "What would you do if you were in my shoes? I'm honestly stuck.",
+      "audio": "line_0035.mp3"
+    },
+    {
+      "id": 36,
+      "text": "Have you eaten yet? I was thinking about ordering something. Maybe Thai food?",
+      "audio": "line_0036.mp3"
+    },
+    {
+      "id": 37,
+      "text": "So where are you heading after this? Do you have plans for the rest of the day?",
+      "audio": "line_0037.mp3"
+    },
+    {
+      "id": 38,
+      "text": "Did you see that thing online? The one everyone's been talking about?",
+      "audio": "line_0038.mp3"
+    },
+    {
+      "id": 39,
+      "text": "What's your take on it? I've heard like five different opinions and I don't know what to think.",
+      "audio": "line_0039.mp3"
+    },
+    {
+      "id": 40,
+      "text": "Can I ask you something kind of random? Like, it might sound weird but I'm genuinely curious.",
+      "audio": "line_0040.mp3"
+    },
+    {
+      "id": 41,
+      "text": "What's the best advice anyone's ever given you? I love hearing stuff like that.",
+      "audio": "line_0041.mp3"
+    },
+    {
+      "id": 42,
+      "text": "How long did it take you to learn that? Because I've been trying and I'm struggling.",
+      "audio": "line_0042.mp3"
+    },
+    {
+      "id": 43,
+      "text": "You've been there before, right? Is it as good as everyone says?",
+      "audio": "line_0043.mp3"
+    },
+    {
+      "id": 44,
+      "text": "Okay, honest question. If you had to pick one, which would you choose?",
+      "audio": "line_0044.mp3"
+    },
+    {
+      "id": 45,
+      "text": "What's your favorite thing about this time of year? I feel like everyone has a different answer.",
+      "audio": "line_0045.mp3"
+    },
+    {
+      "id": 46,
+      "text": "How did you even find out about that? I feel so out of the loop sometimes.",
+      "audio": "line_0046.mp3"
+    },
+    {
+      "id": 47,
+      "text": "Do you ever wonder what life would be like if you'd made different choices? Not in a sad way, just curious.",
+      "audio": "line_0047.mp3"
+    },
+    {
+      "id": 48,
+      "text": "What are you reading right now? I need a new book recommendation so badly.",
+      "audio": "line_0048.mp3"
+    },
+    {
+      "id": 49,
+      "text": "Have you noticed that too? I thought I was the only one who picked up on it.",
+      "audio": "line_0049.mp3"
+    },
+    {
+      "id": 50,
+      "text": "Oh wow, that's amazing! I'm so happy for you, seriously.",
+      "audio": "line_0050.mp3"
+    },
+    {
+      "id": 51,
+      "text": "Aw, I'm sorry to hear that. That sounds really tough. Are you doing okay?",
+      "audio": "line_0051.mp3"
+    },
+    {
+      "id": 52,
+      "text": "Ha! That's so funny. You always know how to make me laugh.",
+      "audio": "line_0052.mp3"
+    },
+    {
+      "id": 53,
+      "text": "Hmm, I'm not sure how I feel about that. Let me think about it for a second.",
+      "audio": "line_0053.mp3"
+    },
+    {
+      "id": 54,
+      "text": "Oh no, that's not good. What happened? Is everyone alright?",
+      "audio": "line_0054.mp3"
+    },
+    {
+      "id": 55,
+      "text": "Yay! Finally! I've been waiting for this for so long, you have no idea.",
+      "audio": "line_0055.mp3"
+    },
+    {
+      "id": 56,
+      "text": "Okay, that's actually kind of adorable. I can't even be mad about it.",
+      "audio": "line_0056.mp3"
+    },
+    {
+      "id": 57,
+      "text": "Ugh, that's so frustrating. I totally get why you're upset.",
+      "audio": "line_0057.mp3"
+    },
+    {
+      "id": 58,
+      "text": "Whoa, really? I did not see that coming. That's wild.",
+      "audio": "line_0058.mp3"
+    },
+    {
+      "id": 59,
+      "text": "Aww, that's the sweetest thing I've heard all day.",
+      "audio": "line_0059.mp3"
+    },
+    {
+      "id": 60,
+      "text": "Get out! You're kidding me. That's the funniest thing I've ever heard.",
+      "audio": "line_0060.mp3"
+    },
+    {
+      "id": 61,
+      "text": "Oh, that makes me so sad. I wish there was something I could do.",
+      "audio": "line_0061.mp3"
+    },
+    {
+      "id": 62,
+      "text": "I'm literally so excited right now. Like, I can't even contain it.",
+      "audio": "line_0062.mp3"
+    },
+    {
+      "id": 63,
+      "text": "That's actually really impressive. You should be proud of yourself.",
+      "audio": "line_0063.mp3"
+    },
+    {
+      "id": 64,
+      "text": "Wait, that happened today? Oh my god. How are you so calm about this?",
+      "audio": "line_0064.mp3"
+    },
+    {
+      "id": 65,
+      "text": "I don't even know what to say. I'm speechless. In a good way though.",
+      "audio": "line_0065.mp3"
+    },
+    {
+      "id": 66,
+      "text": "That's so annoying. I would have lost my mind if that happened to me.",
+      "audio": "line_0066.mp3"
+    },
+    {
+      "id": 67,
+      "text": "Okay I'm not gonna lie, that made me tear up a little bit.",
+      "audio": "line_0067.mp3"
+    },
+    {
+      "id": 68,
+      "text": "Shut up! No! That's incredible. When did this happen?",
+      "audio": "line_0068.mp3"
+    },
+    {
+      "id": 69,
+      "text": "I'm so relieved. You have no idea how stressed I was about this.",
+      "audio": "line_0069.mp3"
+    },
+    {
+      "id": 70,
+      "text": "Okay, so picture this. It's like two in the morning, I'm in my pajamas, and there's a raccoon on my porch just staring at me.",
+      "audio": "line_0070.mp3"
+    },
+    {
+      "id": 71,
+      "text": "Let me tell you about this dream I had last night. It was so weird but also kind of amazing?",
+      "audio": "line_0071.mp3"
+    },
+    {
+      "id": 72,
+      "text": "So basically what happened was, I showed up thinking it was a casual thing, and it turned out to be this whole big event.",
+      "audio": "line_0072.mp3"
+    },
+    {
+      "id": 73,
+      "text": "The funniest part is, nobody noticed. Like, I was standing there the whole time and not a single person said anything.",
+      "audio": "line_0073.mp3"
+    },
+    {
+      "id": 74,
+      "text": "I remember the first time I tried it. I was terrible. Like, embarrassingly bad. But you know what? I kept going anyway.",
+      "audio": "line_0074.mp3"
+    },
+    {
+      "id": 75,
+      "text": "There was this one time, I think it was last summer, where everything just kind of fell into place perfectly.",
+      "audio": "line_0075.mp3"
+    },
+    {
+      "id": 76,
+      "text": "So my friend calls me, right? And she's like, you're not gonna believe what just happened. And honestly? I didn't.",
+      "audio": "line_0076.mp3"
+    },
+    {
+      "id": 77,
+      "text": "The whole thing took about three hours, but it felt like ten minutes. Time just flew by.",
+      "audio": "line_0077.mp3"
+    },
+    {
+      "id": 78,
+      "text": "I walked in and immediately knew something was different. I couldn't put my finger on it at first, but then I saw it.",
+      "audio": "line_0078.mp3"
+    },
+    {
+      "id": 79,
+      "text": "It started out as a total disaster, but somehow we managed to turn it around by the end of the night.",
+      "audio": "line_0079.mp3"
+    },
+    {
+      "id": 80,
+      "text": "So there I was, standing in the rain with no umbrella, and this stranger just hands me theirs and walks away. Just like that.",
+      "audio": "line_0080.mp3"
+    },
+    {
+      "id": 81,
+      "text": "I spent the entire weekend working on this project and honestly? I've never been more proud of anything in my life.",
+      "audio": "line_0081.mp3"
+    },
+    {
+      "id": 82,
+      "text": "My dog did the funniest thing yesterday. She saw her reflection in the window and started barking at it for like ten minutes.",
+      "audio": "line_0082.mp3"
+    },
+    {
+      "id": 83,
+      "text": "We got lost on the way there, which was stressful at the time, but looking back it was actually the best part of the trip.",
+      "audio": "line_0083.mp3"
+    },
+    {
+      "id": 84,
+      "text": "I was in line at the coffee shop and the person in front of me paid for my drink. It completely made my day.",
+      "audio": "line_0084.mp3"
+    },
+    {
+      "id": 85,
+      "text": "So we're sitting there having dinner, totally normal, and then the lights just go out. Complete darkness. Everyone screams.",
+      "audio": "line_0085.mp3"
+    },
+    {
+      "id": 86,
+      "text": "I accidentally wore two different shoes to work today and didn't notice until lunch. Nobody said anything either, which is concerning.",
+      "audio": "line_0086.mp3"
+    },
+    {
+      "id": 87,
+      "text": "The sunset last night was unreal. I stood there for twenty minutes just watching the sky change colors.",
+      "audio": "line_0087.mp3"
+    },
+    {
+      "id": 88,
+      "text": "I tried to parallel park in front of a restaurant and it took me seven tries. Everyone on the patio was watching. It was mortifying.",
+      "audio": "line_0088.mp3"
+    },
+    {
+      "id": 89,
+      "text": "My grandma called me last night and we talked for an hour about nothing and everything at the same time.",
+      "audio": "line_0089.mp3"
+    },
+    {
+      "id": 90,
+      "text": "You know, I think you're being way too hard on yourself. You're doing better than you think.",
+      "audio": "line_0090.mp3"
+    },
+    {
+      "id": 91,
+      "text": "If it helps, I've been through something similar. It gets easier, I promise.",
+      "audio": "line_0091.mp3"
+    },
+    {
+      "id": 92,
+      "text": "My advice? Just go for it. The worst thing that can happen is you learn something new.",
+      "audio": "line_0092.mp3"
+    },
+    {
+      "id": 93,
+      "text": "Take your time, there's no rush. You'll figure it out when you're ready.",
+      "audio": "line_0093.mp3"
+    },
+    {
+      "id": 94,
+      "text": "I believe in you. I know that sounds cheesy, but I really do.",
+      "audio": "line_0094.mp3"
+    },
+    {
+      "id": 95,
+      "text": "Sometimes you just need to step back and take a breath. Everything feels more manageable after that.",
+      "audio": "line_0095.mp3"
+    },
+    {
+      "id": 96,
+      "text": "Here's what I'd do if I were you. I'd start small and build from there.",
+      "audio": "line_0096.mp3"
+    },
+    {
+      "id": 97,
+      "text": "Don't worry about what everyone else thinks. This is your decision and yours alone.",
+      "audio": "line_0097.mp3"
+    },
+    {
+      "id": 98,
+      "text": "You've got this. I've seen you handle way harder things than this.",
+      "audio": "line_0098.mp3"
+    },
+    {
+      "id": 99,
+      "text": "Hey, it's okay to not have all the answers right now. Nobody does.",
+      "audio": "line_0099.mp3"
+    },
+    {
+      "id": 100,
+      "text": "You don't have to figure everything out today. Just focus on the next step.",
+      "audio": "line_0100.mp3"
+    },
+    {
+      "id": 101,
+      "text": "Listen, mistakes are how we learn. Don't beat yourself up over it.",
+      "audio": "line_0101.mp3"
+    },
+    {
+      "id": 102,
+      "text": "I think you already know the answer, you just need someone to tell you it's okay to go with your gut.",
+      "audio": "line_0102.mp3"
+    },
+    {
+      "id": 103,
+      "text": "The fact that you're even thinking about this shows how much you care. That counts for something.",
+      "audio": "line_0103.mp3"
+    },
+    {
+      "id": 104,
+      "text": "Give yourself some grace. You're dealing with a lot right now and you're still showing up. That's huge.",
+      "audio": "line_0104.mp3"
+    },
+    {
+      "id": 105,
+      "text": "You know what helped me when I was going through something similar? I just started writing things down.",
+      "audio": "line_0105.mp3"
+    },
+    {
+      "id": 106,
+      "text": "I know it feels impossible right now, but trust me, a year from now you'll look back and be amazed at how far you've come.",
+      "audio": "line_0106.mp3"
+    },
+    {
+      "id": 107,
+      "text": "It's okay to ask for help. That's not weakness, that's wisdom.",
+      "audio": "line_0107.mp3"
+    },
+    {
+      "id": 108,
+      "text": "Focus on what you can control and let go of the rest. It sounds simple but it really does work.",
+      "audio": "line_0108.mp3"
+    },
+    {
+      "id": 109,
+      "text": "Hey, you're allowed to change your mind. That's not quitting, that's growing.",
+      "audio": "line_0109.mp3"
+    },
+    {
+      "id": 110,
+      "text": "Personally, I think that's the best option. But hey, what do I know?",
+      "audio": "line_0110.mp3"
+    },
+    {
+      "id": 111,
+      "text": "I've been thinking about this a lot, and I keep coming back to the same conclusion.",
+      "audio": "line_0111.mp3"
+    },
+    {
+      "id": 112,
+      "text": "See, I disagree. I think there's more to it than that.",
+      "audio": "line_0112.mp3"
+    },
+    {
+      "id": 113,
+      "text": "That's a really good point, actually. I hadn't thought about it that way.",
+      "audio": "line_0113.mp3"
+    },
+    {
+      "id": 114,
+      "text": "I'm kind of torn on this one. There are good arguments on both sides.",
+      "audio": "line_0114.mp3"
+    },
+    {
+      "id": 115,
+      "text": "If you ask me, the whole thing is overblown. But that's just my opinion.",
+      "audio": "line_0115.mp3"
+    },
+    {
+      "id": 116,
+      "text": "You know what? You might be right. I'm willing to change my mind on this.",
+      "audio": "line_0116.mp3"
+    },
+    {
+      "id": 117,
+      "text": "The way I see it, we have two options. And honestly, neither one is perfect.",
+      "audio": "line_0117.mp3"
+    },
+    {
+      "id": 118,
+      "text": "I used to think the same thing, but then I had this experience that completely changed my perspective.",
+      "audio": "line_0118.mp3"
+    },
+    {
+      "id": 119,
+      "text": "Okay but hear me out. What if we looked at it from a completely different angle?",
+      "audio": "line_0119.mp3"
+    },
+    {
+      "id": 120,
+      "text": "I think people overthink this stuff. Sometimes the obvious answer is the right one.",
+      "audio": "line_0120.mp3"
+    },
+    {
+      "id": 121,
+      "text": "Here's my hot take and feel free to disagree. I think we're all making this way harder than it needs to be.",
+      "audio": "line_0121.mp3"
+    },
+    {
+      "id": 122,
+      "text": "I go back and forth on this constantly. Today I'm leaning one way, tomorrow who knows.",
+      "audio": "line_0122.mp3"
+    },
+    {
+      "id": 123,
+      "text": "The more I learn about it, the less sure I am about anything. And honestly, that's kind of exciting.",
+      "audio": "line_0123.mp3"
+    },
+    {
+      "id": 124,
+      "text": "I think the answer depends on who you ask and what they've been through. There's no one size fits all.",
+      "audio": "line_0124.mp3"
+    },
+    {
+      "id": 125,
+      "text": "Controversial opinion, but I actually like it. I know most people don't, but I genuinely think it's great.",
+      "audio": "line_0125.mp3"
+    },
+    {
+      "id": 126,
+      "text": "I've changed my stance on this probably five times this week. It's complicated.",
+      "audio": "line_0126.mp3"
+    },
+    {
+      "id": 127,
+      "text": "My gut says one thing but my brain says another. Story of my life honestly.",
+      "audio": "line_0127.mp3"
+    },
+    {
+      "id": 128,
+      "text": "I respect that perspective even though I don't agree with it. That's what makes conversations interesting.",
+      "audio": "line_0128.mp3"
+    },
+    {
+      "id": 129,
+      "text": "Sometimes I wonder if we're even asking the right questions, you know?",
+      "audio": "line_0129.mp3"
+    },
+    {
+      "id": 130,
+      "text": "I need to go to the store later. Do you need anything while I'm out?",
+      "audio": "line_0130.mp3"
+    },
+    {
+      "id": 131,
+      "text": "I'm so tired today. I stayed up way too late watching that show. Do you watch it?",
+      "audio": "line_0131.mp3"
+    },
+    {
+      "id": 132,
+      "text": "The weather is so nice today! We should do something outside.",
+      "audio": "line_0132.mp3"
+    },
+    {
+      "id": 133,
+      "text": "I've been meaning to clean out my closet for like three months now. It's getting ridiculous.",
+      "audio": "line_0133.mp3"
+    },
+    {
+      "id": 134,
+      "text": "Oh, did I tell you? I started learning how to cook. Like, actually cook. It's been an adventure.",
+      "audio": "line_0134.mp3"
+    },
+    {
+      "id": 135,
+      "text": "My phone's been acting up all day. It keeps freezing at the worst possible moments.",
+      "audio": "line_0135.mp3"
+    },
+    {
+      "id": 136,
+      "text": "I made this really good recipe last night. I'll send it to you, you'd love it.",
+      "audio": "line_0136.mp3"
+    },
+    {
+      "id": 137,
+      "text": "Traffic was insane this morning. I sat in my car for like forty minutes just staring at brake lights.",
+      "audio": "line_0137.mp3"
+    },
+    {
+      "id": 138,
+      "text": "I really need a vacation. Even just a long weekend would be amazing right now.",
+      "audio": "line_0138.mp3"
+    },
+    {
+      "id": 139,
+      "text": "I just finished that book you recommended. You were right, the ending was incredible.",
+      "audio": "line_0139.mp3"
+    },
+    {
+      "id": 140,
+      "text": "I reorganized my entire kitchen this weekend and now I can't find anything. But it looks pretty.",
+      "audio": "line_0140.mp3"
+    },
+    {
+      "id": 141,
+      "text": "I woke up at five thirty this morning and couldn't fall back asleep, so I watched the sunrise. Worth it.",
+      "audio": "line_0141.mp3"
+    },
+    {
+      "id": 142,
+      "text": "My coffee maker broke and I'm honestly devastated. I've been going to the cafe down the street every morning.",
+      "audio": "line_0142.mp3"
+    },
+    {
+      "id": 143,
+      "text": "I found a twenty dollar bill in my jacket pocket today. Past me was looking out for future me.",
+      "audio": "line_0143.mp3"
+    },
+    {
+      "id": 144,
+      "text": "I'm trying to drink more water but I keep forgetting. I set a reminder on my phone and everything.",
+      "audio": "line_0144.mp3"
+    },
+    {
+      "id": 145,
+      "text": "I've been walking to work instead of driving and it's actually been really nice. Takes longer but I enjoy it.",
+      "audio": "line_0145.mp3"
+    },
+    {
+      "id": 146,
+      "text": "The power went out last night for like two hours. I just sat there in the dark eating cereal.",
+      "audio": "line_0146.mp3"
+    },
+    {
+      "id": 147,
+      "text": "I signed up for a yoga class and I'm either going to love it or pull a muscle. No in between.",
+      "audio": "line_0147.mp3"
+    },
+    {
+      "id": 148,
+      "text": "My apartment smells amazing right now because I'm making soup. Want some?",
+      "audio": "line_0148.mp3"
+    },
+    {
+      "id": 149,
+      "text": "I need new shoes but shoe shopping is my least favorite activity in the entire world.",
+      "audio": "line_0149.mp3"
+    },
+    {
+      "id": 150,
+      "text": "I totally understand where you're coming from. That makes a lot of sense.",
+      "audio": "line_0150.mp3"
+    },
+    {
+      "id": 151,
+      "text": "That must have been so hard for you. I'm really glad you told me about it.",
+      "audio": "line_0151.mp3"
+    },
+    {
+      "id": 152,
+      "text": "I feel the same way, honestly. It's nice to know I'm not the only one.",
+      "audio": "line_0152.mp3"
+    },
+    {
+      "id": 153,
+      "text": "You're not alone in this, okay? Whatever you need, I'm here.",
+      "audio": "line_0153.mp3"
+    },
+    {
+      "id": 154,
+      "text": "I appreciate you sharing that with me. It means a lot that you trust me.",
+      "audio": "line_0154.mp3"
+    },
+    {
+      "id": 155,
+      "text": "I get it. I really do. And there's nothing wrong with feeling that way.",
+      "audio": "line_0155.mp3"
+    },
+    {
+      "id": 156,
+      "text": "That sounds like it was a really special moment. Thanks for telling me about it.",
+      "audio": "line_0156.mp3"
+    },
+    {
+      "id": 157,
+      "text": "I'm proud of you, you know that? You've come such a long way.",
+      "audio": "line_0157.mp3"
+    },
+    {
+      "id": 158,
+      "text": "It's okay to feel overwhelmed sometimes. We all do.",
+      "audio": "line_0158.mp3"
+    },
+    {
+      "id": 159,
+      "text": "I'm so glad we're talking about this. I've been wanting to bring it up but didn't know how.",
+      "audio": "line_0159.mp3"
+    },
+    {
+      "id": 160,
+      "text": "You can always come to me with stuff like this. Seriously, anytime.",
+      "audio": "line_0160.mp3"
+    },
+    {
+      "id": 161,
+      "text": "I hear you. And I want you to know that your feelings are completely valid.",
+      "audio": "line_0161.mp3"
+    },
+    {
+      "id": 162,
+      "text": "That took a lot of courage to say. I admire that about you.",
+      "audio": "line_0162.mp3"
+    },
+    {
+      "id": 163,
+      "text": "We don't have to talk about it if you're not ready. I'll be here when you are.",
+      "audio": "line_0163.mp3"
+    },
+    {
+      "id": 164,
+      "text": "I've been thinking about what you said and I just want you to know it really stuck with me.",
+      "audio": "line_0164.mp3"
+    },
+    {
+      "id": 165,
+      "text": "You handled that way better than I would have. Genuinely impressed.",
+      "audio": "line_0165.mp3"
+    },
+    {
+      "id": 166,
+      "text": "I know this isn't easy, but you're not going through it alone. Remember that.",
+      "audio": "line_0166.mp3"
+    },
+    {
+      "id": 167,
+      "text": "Thank you for being so open with me. It makes me feel like I can be open too.",
+      "audio": "line_0167.mp3"
+    },
+    {
+      "id": 168,
+      "text": "I just want to check in. How are you really doing? Not the polite answer, the real one.",
+      "audio": "line_0168.mp3"
+    },
+    {
+      "id": 169,
+      "text": "It's okay to not be okay. You don't have to pretend everything is fine around me.",
+      "audio": "line_0169.mp3"
+    },
+    {
+      "id": 170,
+      "text": "Okay, random question. If you could have dinner with anyone, dead or alive, who would it be?",
+      "audio": "line_0170.mp3"
+    },
+    {
+      "id": 171,
+      "text": "You're ridiculous, you know that? In the best way possible.",
+      "audio": "line_0171.mp3"
+    },
+    {
+      "id": 172,
+      "text": "I dare you. No, seriously, I dare you. You won't do it.",
+      "audio": "line_0172.mp3"
+    },
+    {
+      "id": 173,
+      "text": "That's it, we're doing this. No more excuses. Let's go!",
+      "audio": "line_0173.mp3"
+    },
+    {
+      "id": 174,
+      "text": "Oh please, you could totally pull that off. Don't even pretend you can't.",
+      "audio": "line_0174.mp3"
+    },
+    {
+      "id": 175,
+      "text": "Wanna hear something funny? Promise you won't judge me though.",
+      "audio": "line_0175.mp3"
+    },
+    {
+      "id": 176,
+      "text": "You know what we should do? We should plan a trip. Like, a real one.",
+      "audio": "line_0176.mp3"
+    },
+    {
+      "id": 177,
+      "text": "I just had the best idea. Okay, it might be a terrible idea, but just listen.",
+      "audio": "line_0177.mp3"
+    },
+    {
+      "id": 178,
+      "text": "If I had a dollar for every time that happened, I'd be rich by now. Like, actually rich.",
+      "audio": "line_0178.mp3"
+    },
+    {
+      "id": 179,
+      "text": "You're making that face again. The one where I know you're about to say something sarcastic.",
+      "audio": "line_0179.mp3"
+    },
+    {
+      "id": 180,
+      "text": "Okay but what if, and hear me out, what if we just didn't? What if we just stayed in and did nothing?",
+      "audio": "line_0180.mp3"
+    },
+    {
+      "id": 181,
+      "text": "Quick, say the first word that comes to mind. No, faster than that! You took too long.",
+      "audio": "line_0181.mp3"
+    },
+    {
+      "id": 182,
+      "text": "I bet I can guess what you're thinking right now. No? Okay fine, tell me.",
+      "audio": "line_0182.mp3"
+    },
+    {
+      "id": 183,
+      "text": "We should have a movie marathon this weekend. I'm talking snacks, blankets, the whole thing.",
+      "audio": "line_0183.mp3"
+    },
+    {
+      "id": 184,
+      "text": "Okay, new game. You have to describe your day using only song titles. Go.",
+      "audio": "line_0184.mp3"
+    },
+    {
+      "id": 185,
+      "text": "Stop, stop, I can't laugh anymore. My stomach hurts. Okay tell me one more.",
+      "audio": "line_0185.mp3"
+    },
+    {
+      "id": 186,
+      "text": "You know what would be hilarious? If we showed up wearing the same thing. Let's plan it.",
+      "audio": "line_0186.mp3"
+    },
+    {
+      "id": 187,
+      "text": "I'm going to ask you a series of very important questions and I need you to answer honestly.",
+      "audio": "line_0187.mp3"
+    },
+    {
+      "id": 188,
+      "text": "We need to make a pact right now. We're doing this before the end of the year. Deal?",
+      "audio": "line_0188.mp3"
+    },
+    {
+      "id": 189,
+      "text": "Your impression of that was spot on. Do it again. Please. One more time.",
+      "audio": "line_0189.mp3"
+    },
+    {
+      "id": 190,
+      "text": "Anyway, so yeah, that's basically what happened.",
+      "audio": "line_0190.mp3"
+    },
+    {
+      "id": 191,
+      "text": "But um, getting back to what I was saying earlier.",
+      "audio": "line_0191.mp3"
+    },
+    {
+      "id": 192,
+      "text": "Oh! That reminds me. I completely forgot to tell you something.",
+      "audio": "line_0192.mp3"
+    },
+    {
+      "id": 193,
+      "text": "So, yeah. That's kind of where things stand right now.",
+      "audio": "line_0193.mp3"
+    },
+    {
+      "id": 194,
+      "text": "Hmm, let me think about how to explain this.",
+      "audio": "line_0194.mp3"
+    },
+    {
+      "id": 195,
+      "text": "Right, right. Okay so the thing is...",
+      "audio": "line_0195.mp3"
+    },
+    {
+      "id": 196,
+      "text": "Wait, hold on. I lost my train of thought. Oh! Okay, yeah.",
+      "audio": "line_0196.mp3"
+    },
+    {
+      "id": 197,
+      "text": "I mean, look, at the end of the day, it is what it is.",
+      "audio": "line_0197.mp3"
+    },
+    {
+      "id": 198,
+      "text": "But anyway, enough about me. What about you? What's new?",
+      "audio": "line_0198.mp3"
+    },
+    {
+      "id": 199,
+      "text": "So, long story short, everything worked out in the end.",
+      "audio": "line_0199.mp3"
+    },
+    {
+      "id": 200,
+      "text": "Where was I? Oh right, so then what happened was...",
+      "audio": "line_0200.mp3"
+    },
+    {
+      "id": 201,
+      "text": "Sorry, I'm rambling. The point I'm trying to make is...",
+      "audio": "line_0201.mp3"
+    },
+    {
+      "id": 202,
+      "text": "Okay wait, I need to back up. Let me start from the beginning.",
+      "audio": "line_0202.mp3"
+    },
+    {
+      "id": 203,
+      "text": "Does that make sense? I feel like I'm explaining it badly.",
+      "audio": "line_0203.mp3"
+    },
+    {
+      "id": 204,
+      "text": "Actually, you know what? Forget what I just said. Here's the real version.",
+      "audio": "line_0204.mp3"
+    },
+    {
+      "id": 205,
+      "text": "You know what really gets me? It's when people act like everything has to be perfect all the time. Like, no! Life is messy and complicated and that's what makes it beautiful. At least, that's what I think.",
+      "audio": "line_0205.mp3"
+    },
+    {
+      "id": 206,
+      "text": "I was walking through the park yesterday and I saw this little kid feeding the ducks, and it just made me so happy. Like, that pure joy on their face? We need more of that in the world.",
+      "audio": "line_0206.mp3"
+    },
+    {
+      "id": 207,
+      "text": "Here's the thing that nobody tells you about growing up. It's not that things get harder, exactly. They just get more nuanced. There's more gray area, you know? Less black and white.",
+      "audio": "line_0207.mp3"
+    },
+    {
+      "id": 208,
+      "text": "I've been trying this new thing where I write down three things I'm grateful for every morning. And honestly? It sounds kind of silly, but it's actually been making a huge difference.",
+      "audio": "line_0208.mp3"
+    },
+    {
+      "id": 209,
+      "text": "Sometimes I think about all the random choices that led me to where I am right now. Like, what if I had gone to a different school? Or taken that other job? It's wild to think about.",
+      "audio": "line_0209.mp3"
+    },
+    {
+      "id": 210,
+      "text": "The best conversations are the ones where you lose track of time. Where you look up and suddenly it's been three hours and you're like, wait, what? How did that happen?",
+      "audio": "line_0210.mp3"
+    },
+    {
+      "id": 211,
+      "text": "I think the most important thing in any relationship, whether it's friendship or whatever, is just being honest. Even when it's uncomfortable. Especially when it's uncomfortable.",
+      "audio": "line_0211.mp3"
+    },
+    {
+      "id": 212,
+      "text": "My grandmother used to say that worrying is like paying interest on a debt you might not even owe. I think about that a lot, actually.",
+      "audio": "line_0212.mp3"
+    },
+    {
+      "id": 213,
+      "text": "There's something really special about early mornings, before anyone else is awake. It's like the whole world is just quiet. And it's all yours for a little while.",
+      "audio": "line_0213.mp3"
+    },
+    {
+      "id": 214,
+      "text": "I don't know why, but rainy days always make me feel creative. Like, give me a blanket, some tea, and a rainy window, and I could probably write a novel.",
+      "audio": "line_0214.mp3"
+    },
+    {
+      "id": 215,
+      "text": "The thing about learning something new is that there's always this awkward phase where you're terrible at it. And most people quit during that phase. But if you push through it, that's where the magic happens.",
+      "audio": "line_0215.mp3"
+    },
+    {
+      "id": 216,
+      "text": "I was thinking about this the other day, about how we all have these little rituals that nobody knows about. Like, I always stir my coffee exactly seven times. Why? No idea. But I do it every single time.",
+      "audio": "line_0216.mp3"
+    },
+    {
+      "id": 217,
+      "text": "I love those moments where you're with someone and you both just start laughing and you can't stop. And you don't even remember what was funny anymore but you're just crying laughing.",
+      "audio": "line_0217.mp3"
+    },
+    {
+      "id": 218,
+      "text": "You know what I find fascinating? How different everyone's morning routine is. Like some people are up at five doing yoga and I'm hitting snooze four times and stumbling to the kitchen for coffee.",
+      "audio": "line_0218.mp3"
+    },
+    {
+      "id": 219,
+      "text": "I read somewhere that the average person makes like thirty five thousand decisions a day. Thirty five thousand! No wonder we're all exhausted by dinner time.",
+      "audio": "line_0219.mp3"
+    },
+    {
+      "id": 220,
+      "text": "Something I've learned is that the people who seem like they have it all together are usually just really good at hiding the mess. Nobody actually has it figured out.",
+      "audio": "line_0220.mp3"
+    },
+    {
+      "id": 221,
+      "text": "The older I get, the more I realize how important it is to just be kind. Not impressive, not perfect, just kind. Everything else kind of falls into place after that.",
+      "audio": "line_0221.mp3"
+    },
+    {
+      "id": 222,
+      "text": "I have this theory that the best ideas come when you're not trying to think of them. Like in the shower, or right before you fall asleep. Your brain does its best work when you stop forcing it.",
+      "audio": "line_0222.mp3"
+    },
+    {
+      "id": 223,
+      "text": "One of my favorite things in the world is when you're having a conversation with someone and they say something that makes you go, huh, I never thought of it that way. Those moments change you.",
+      "audio": "line_0223.mp3"
+    },
+    {
+      "id": 224,
+      "text": "I think there's a difference between being alone and being lonely. Sometimes being alone is exactly what you need. It's like recharging your battery.",
+      "audio": "line_0224.mp3"
+    },
+    {
+      "id": 225,
+      "text": "Oh my god, this is so good. What did you put in this? You have to give me the recipe.",
+      "audio": "line_0225.mp3"
+    },
+    {
+      "id": 226,
+      "text": "I tried making bread from scratch for the first time and it was a complete disaster. But I'm gonna try again.",
+      "audio": "line_0226.mp3"
+    },
+    {
+      "id": 227,
+      "text": "I'm obsessed with this new coffee place. Their lavender latte is life changing, I'm not even exaggerating.",
+      "audio": "line_0227.mp3"
+    },
+    {
+      "id": 228,
+      "text": "Should we order pizza or sushi? Actually, let's get both. I can't decide and I don't want to.",
+      "audio": "line_0228.mp3"
+    },
+    {
+      "id": 229,
+      "text": "I've been on a smoothie kick lately. Like, every morning I throw a bunch of fruit in the blender and hope for the best.",
+      "audio": "line_0229.mp3"
+    },
+    {
+      "id": 230,
+      "text": "The secret ingredient is butter. It's always butter. Every chef will tell you the same thing.",
+      "audio": "line_0230.mp3"
+    },
+    {
+      "id": 231,
+      "text": "I burned the cookies again. I set a timer and everything but somehow they still came out like little hockey pucks.",
+      "audio": "line_0231.mp3"
+    },
+    {
+      "id": 232,
+      "text": "You know what's underrated? A really good sandwich. Not fancy, just like, perfect bread, good cheese, fresh veggies.",
+      "audio": "line_0232.mp3"
+    },
+    {
+      "id": 233,
+      "text": "I went to this little hole in the wall restaurant and had the best meal of my entire life. I'm not exaggerating.",
+      "audio": "line_0233.mp3"
+    },
+    {
+      "id": 234,
+      "text": "Do you want me to make tea? I just got this new one that smells amazing. It's like chamomile and honey.",
+      "audio": "line_0234.mp3"
+    },
+    {
+      "id": 235,
+      "text": "I've always wanted to go to Japan. Like, it's been on my list for years. Maybe next year.",
+      "audio": "line_0235.mp3"
+    },
+    {
+      "id": 236,
+      "text": "The best trip I ever took was completely unplanned. We just got in the car and drove.",
+      "audio": "line_0236.mp3"
+    },
+    {
+      "id": 237,
+      "text": "I'm not a great flyer, to be honest. I always grab the armrest during takeoff. Every single time.",
+      "audio": "line_0237.mp3"
+    },
+    {
+      "id": 238,
+      "text": "There's this little town we stopped at on the way back and it was the cutest place I've ever seen.",
+      "audio": "line_0238.mp3"
+    },
+    {
+      "id": 239,
+      "text": "I want to go somewhere where nobody knows me and I can just wander around with no agenda. That sounds perfect.",
+      "audio": "line_0239.mp3"
+    },
+    {
+      "id": 240,
+      "text": "We stayed at this tiny bed and breakfast in the mountains and the view from our window was absolutely breathtaking.",
+      "audio": "line_0240.mp3"
+    },
+    {
+      "id": 241,
+      "text": "I packed way too much. I always pack too much. I brought four jackets for a three day trip. Why am I like this?",
+      "audio": "line_0241.mp3"
+    },
+    {
+      "id": 242,
+      "text": "Getting lost in a new city is honestly one of my favorite things. You find the best stuff that way.",
+      "audio": "line_0242.mp3"
+    },
+    {
+      "id": 243,
+      "text": "The flight got delayed three times and by the end we were all basically best friends in the terminal.",
+      "audio": "line_0243.mp3"
+    },
+    {
+      "id": 244,
+      "text": "I took the train instead of flying and it was so much more relaxing. I just watched the world go by for six hours.",
+      "audio": "line_0244.mp3"
+    },
+    {
+      "id": 245,
+      "text": "I had the most productive day today and I feel like a completely different person. It's amazing what checking things off a list does for you.",
+      "audio": "line_0245.mp3"
+    },
+    {
+      "id": 246,
+      "text": "My meeting ran forty five minutes over and I could feel my soul leaving my body by the end.",
+      "audio": "line_0246.mp3"
+    },
+    {
+      "id": 247,
+      "text": "I think I work best with a little bit of pressure. Not a lot, just enough to keep me focused.",
+      "audio": "line_0247.mp3"
+    },
+    {
+      "id": 248,
+      "text": "I made a to do list this morning with twelve things on it and I finished exactly two. But you know what? Those two things were important.",
+      "audio": "line_0248.mp3"
+    },
+    {
+      "id": 249,
+      "text": "Someone brought donuts to the office today and honestly that's all the motivation I needed.",
+      "audio": "line_0249.mp3"
+    },
+    {
+      "id": 250,
+      "text": "I've been staring at this email for twenty minutes trying to figure out how to word it. Why is professional communication so hard?",
+      "audio": "line_0250.mp3"
+    },
+    {
+      "id": 251,
+      "text": "I love working from home but some days I really miss having people around. The quiet gets to you after a while.",
+      "audio": "line_0251.mp3"
+    },
+    {
+      "id": 252,
+      "text": "I had this great idea in the shower this morning and by the time I got to my desk I completely forgot it.",
+      "audio": "line_0252.mp3"
+    },
+    {
+      "id": 253,
+      "text": "My desk is a disaster right now but I know where everything is. It's organized chaos. Don't touch anything.",
+      "audio": "line_0253.mp3"
+    },
+    {
+      "id": 254,
+      "text": "I finished that project early and I don't even know who I am anymore. This never happens.",
+      "audio": "line_0254.mp3"
+    },
+    {
+      "id": 255,
+      "text": "I love fall so much. The colors, the sweaters, the hot chocolate. Everything about it is perfect.",
+      "audio": "line_0255.mp3"
+    },
+    {
+      "id": 256,
+      "text": "It's raining again and I'm not even mad. There's something so cozy about a rainy day when you're inside.",
+      "audio": "line_0256.mp3"
+    },
+    {
+      "id": 257,
+      "text": "Spring is when I come alive. The second I see the first flowers I just feel this burst of energy.",
+      "audio": "line_0257.mp3"
+    },
+    {
+      "id": 258,
+      "text": "It's so cold outside that my face hurt on the walk over. I could barely feel my nose by the time I got here.",
+      "audio": "line_0258.mp3"
+    },
+    {
+      "id": 259,
+      "text": "Summer evenings are my favorite. You know those nights where it's warm and the sky turns that golden color?",
+      "audio": "line_0259.mp3"
+    },
+    {
+      "id": 260,
+      "text": "I'm ready for winter to be over. I love it in December but by February I'm just done.",
+      "audio": "line_0260.mp3"
+    },
+    {
+      "id": 261,
+      "text": "The snow is beautiful when it first falls, all clean and white. And then it turns into gray slush and I want to move somewhere tropical.",
+      "audio": "line_0261.mp3"
+    },
+    {
+      "id": 262,
+      "text": "Today is one of those perfect weather days. Not too hot, not too cold, just right. I wish I could bottle this feeling.",
+      "audio": "line_0262.mp3"
+    },
+    {
+      "id": 263,
+      "text": "I sat outside and read for three hours today. The sun was warm on my face and there was a nice breeze. That's living.",
+      "audio": "line_0263.mp3"
+    },
+    {
+      "id": 264,
+      "text": "The thunderstorm last night was intense. I love watching lightning from inside though. There's something thrilling about it.",
+      "audio": "line_0264.mp3"
+    },
+    {
+      "id": 265,
+      "text": "I found this old photo of us from like ten years ago and we look so different. But also somehow exactly the same?",
+      "audio": "line_0265.mp3"
+    },
+    {
+      "id": 266,
+      "text": "That song just came on and it took me right back to high school. Isn't it wild how music does that?",
+      "audio": "line_0266.mp3"
+    },
+    {
+      "id": 267,
+      "text": "I drove past my old house the other day. It looks completely different now but the tree in the front yard is still there.",
+      "audio": "line_0267.mp3"
+    },
+    {
+      "id": 268,
+      "text": "Remember when we used to think staying up until midnight was rebellious? Now I can barely make it to ten.",
+      "audio": "line_0268.mp3"
+    },
+    {
+      "id": 269,
+      "text": "I was going through old messages and found this whole conversation we had that I completely forgot about. It made me smile.",
+      "audio": "line_0269.mp3"
+    },
+    {
+      "id": 270,
+      "text": "Childhood summers felt like they lasted forever, didn't they? Like each day was a lifetime.",
+      "audio": "line_0270.mp3"
+    },
+    {
+      "id": 271,
+      "text": "I miss the days when our biggest worry was what game to play at recess. Things were so simple.",
+      "audio": "line_0271.mp3"
+    },
+    {
+      "id": 272,
+      "text": "My mom sent me a box of old stuff from my room and it was like opening a time capsule. I found journals from when I was thirteen.",
+      "audio": "line_0272.mp3"
+    },
+    {
+      "id": 273,
+      "text": "There's this smell, I can't even describe it, but whenever I smell it I'm immediately back at my grandparents' house.",
+      "audio": "line_0273.mp3"
+    },
+    {
+      "id": 274,
+      "text": "I think about that trip we took every time I hear a certain song. Some memories are just permanently linked to things.",
+      "audio": "line_0274.mp3"
+    },
+    {
+      "id": 275,
+      "text": "I just started learning guitar and my fingers are killing me. But I can play like three chords now, so that's progress.",
+      "audio": "line_0275.mp3"
+    },
+    {
+      "id": 276,
+      "text": "I've been really into gardening lately. There's something so satisfying about watching something you planted actually grow.",
+      "audio": "line_0276.mp3"
+    },
+    {
+      "id": 277,
+      "text": "I painted something yesterday and it's terrible but I don't care. The process was fun and that's what matters.",
+      "audio": "line_0277.mp3"
+    },
+    {
+      "id": 278,
+      "text": "I've been running every morning and I actually kind of love it now? I never thought I'd say that.",
+      "audio": "line_0278.mp3"
+    },
+    {
+      "id": 279,
+      "text": "I'm teaching myself to knit and so far I've made a very lopsided scarf. But hey, it's warm.",
+      "audio": "line_0279.mp3"
+    },
+    {
+      "id": 280,
+      "text": "Photography has become my new obsession. I keep stopping to take pictures of everything and my friends are getting annoyed.",
+      "audio": "line_0280.mp3"
+    },
+    {
+      "id": 281,
+      "text": "I joined a book club and it's the best decision I've made this year. We meet every two weeks and it's so fun.",
+      "audio": "line_0281.mp3"
+    },
+    {
+      "id": 282,
+      "text": "I've been doing crossword puzzles before bed and it's weirdly relaxing. Way better than scrolling on my phone.",
+      "audio": "line_0282.mp3"
+    },
+    {
+      "id": 283,
+      "text": "I'm trying to learn a new language and some days I feel like a genius and other days I can't remember the word for hello.",
+      "audio": "line_0283.mp3"
+    },
+    {
+      "id": 284,
+      "text": "I started journaling again after years of not doing it and I forgot how therapeutic it is.",
+      "audio": "line_0284.mp3"
+    },
+    {
+      "id": 285,
+      "text": "You're one of those people I can not talk to for months and then we pick up right where we left off. I love that about us.",
+      "audio": "line_0285.mp3"
+    },
+    {
+      "id": 286,
+      "text": "I don't say this enough, but you're a really good friend. Like, genuinely one of the best people I know.",
+      "audio": "line_0286.mp3"
+    },
+    {
+      "id": 287,
+      "text": "We need to do this more often. I always forget how much better I feel after we hang out.",
+      "audio": "line_0287.mp3"
+    },
+    {
+      "id": 288,
+      "text": "I'm so grateful for you. Not in a cheesy way, just in a real, honest way.",
+      "audio": "line_0288.mp3"
+    },
+    {
+      "id": 289,
+      "text": "You always know exactly what to say. How do you do that? Is it a superpower?",
+      "audio": "line_0289.mp3"
+    },
+    {
+      "id": 290,
+      "text": "I was telling someone about you the other day and I realized how lucky I am to have you in my life.",
+      "audio": "line_0290.mp3"
+    },
+    {
+      "id": 291,
+      "text": "Promise me we'll still be doing this when we're old. Like, sitting on a porch somewhere, still having these conversations.",
+      "audio": "line_0291.mp3"
+    },
+    {
+      "id": 292,
+      "text": "You're the person I text first when something good happens and also when something bad happens. That says a lot.",
+      "audio": "line_0292.mp3"
+    },
+    {
+      "id": 293,
+      "text": "I don't need a lot of friends. I just need the right ones. And you're definitely one of the right ones.",
+      "audio": "line_0293.mp3"
+    },
+    {
+      "id": 294,
+      "text": "Thank you for always being honest with me, even when it's not what I want to hear. That matters more than you know.",
+      "audio": "line_0294.mp3"
+    },
+    {
+      "id": 295,
+      "text": "I've been doing a lot of thinking lately about who I want to be versus who I am. There's still a gap, but it's getting smaller.",
+      "audio": "line_0295.mp3"
+    },
+    {
+      "id": 296,
+      "text": "I realized I spend so much time worrying about the future that I forget to enjoy what's happening right now.",
+      "audio": "line_0296.mp3"
+    },
+    {
+      "id": 297,
+      "text": "I'm trying to be more present. Like, actually here, in this moment, instead of always being in my head.",
+      "audio": "line_0297.mp3"
+    },
+    {
+      "id": 298,
+      "text": "I think I'm finally getting comfortable with not knowing all the answers. That used to terrify me.",
+      "audio": "line_0298.mp3"
+    },
+    {
+      "id": 299,
+      "text": "I've been working on setting boundaries and it's hard but so worth it. I feel like a completely different person.",
+      "audio": "line_0299.mp3"
+    },
+    {
+      "id": 300,
+      "text": "Some days I feel like I have everything figured out and other days I feel like I know absolutely nothing. There's no in between.",
+      "audio": "line_0300.mp3"
+    },
+    {
+      "id": 301,
+      "text": "I've learned that it's okay to outgrow things. People, places, habits. It doesn't mean they were bad, just that you've changed.",
+      "audio": "line_0301.mp3"
+    },
+    {
+      "id": 302,
+      "text": "I used to think being busy meant I was being productive. Turns out those are very different things.",
+      "audio": "line_0302.mp3"
+    },
+    {
+      "id": 303,
+      "text": "The hardest lesson I've had to learn is that not everything deserves a reaction. Sometimes silence is the most powerful response.",
+      "audio": "line_0303.mp3"
+    },
+    {
+      "id": 304,
+      "text": "I'm trying to stop comparing myself to other people. Everyone's on their own timeline and that's perfectly fine.",
+      "audio": "line_0304.mp3"
+    },
+    {
+      "id": 305,
+      "text": "My phone died in the middle of something important and I had to just sit there and exist. It was honestly kind of nice.",
+      "audio": "line_0305.mp3"
+    },
+    {
+      "id": 306,
+      "text": "I spent an hour trying to figure out why my wifi wasn't working and it turns out the router was just unplugged.",
+      "audio": "line_0306.mp3"
+    },
+    {
+      "id": 307,
+      "text": "Social media is so weird. Like, I know it's not real but it still makes me feel some type of way sometimes.",
+      "audio": "line_0307.mp3"
+    },
+    {
+      "id": 308,
+      "text": "I deleted all my apps for a weekend and I don't think I've ever been more at peace in my life.",
+      "audio": "line_0308.mp3"
+    },
+    {
+      "id": 309,
+      "text": "Remember when we used to have to print out directions from the computer? How did we ever get anywhere?",
+      "audio": "line_0309.mp3"
+    },
+    {
+      "id": 310,
+      "text": "I love technology but sometimes I miss when things were simpler. Like, when you had to actually call someone to make plans.",
+      "audio": "line_0310.mp3"
+    },
+    {
+      "id": 311,
+      "text": "I accidentally liked a photo from three years ago while stalking someone's profile. I think I need to change my name and move.",
+      "audio": "line_0311.mp3"
+    },
+    {
+      "id": 312,
+      "text": "My password got locked and the security question was what's your favorite movie from twenty twelve. I have no idea.",
+      "audio": "line_0312.mp3"
+    },
+    {
+      "id": 313,
+      "text": "Group chats are either the best thing ever or an absolute nightmare. There is no middle ground.",
+      "audio": "line_0313.mp3"
+    },
+    {
+      "id": 314,
+      "text": "I watched a tutorial on how to do this thing and the video was twelve minutes long but the actual useful part was thirty seconds.",
+      "audio": "line_0314.mp3"
+    },
+    {
+      "id": 315,
+      "text": "I went for a hike this morning and the view from the top was absolutely worth every painful step.",
+      "audio": "line_0315.mp3"
+    },
+    {
+      "id": 316,
+      "text": "There's this spot by the lake where I go when I need to clear my head. It's the most peaceful place I know.",
+      "audio": "line_0316.mp3"
+    },
+    {
+      "id": 317,
+      "text": "Did you see the moon last night? It was so big and bright. I just stood there staring at it like an idiot.",
+      "audio": "line_0317.mp3"
+    },
+    {
+      "id": 318,
+      "text": "I heard birds singing this morning and it made me unreasonably happy. I don't know what kind they were but they were loud.",
+      "audio": "line_0318.mp3"
+    },
+    {
+      "id": 319,
+      "text": "The ocean always puts things in perspective for me. You stand there looking at all that water and suddenly your problems feel smaller.",
+      "audio": "line_0319.mp3"
+    },
+    {
+      "id": 320,
+      "text": "I picked wildflowers on my walk today. They're sitting in a jar on my table right now and they make me smile every time I look at them.",
+      "audio": "line_0320.mp3"
+    },
+    {
+      "id": 321,
+      "text": "There's nothing quite like the sound of wind through trees. It's like nature's white noise machine.",
+      "audio": "line_0321.mp3"
+    },
+    {
+      "id": 322,
+      "text": "I saw a double rainbow yesterday and I literally gasped. It was the most vibrant thing I've ever seen.",
+      "audio": "line_0322.mp3"
+    },
+    {
+      "id": 323,
+      "text": "I'm convinced that houseplants have personalities. My fern is dramatic, my succulent is low maintenance, and my orchid is a diva.",
+      "audio": "line_0323.mp3"
+    },
+    {
+      "id": 324,
+      "text": "Fresh air really does fix everything. Or at least it fixes like seventy percent of things. I'll take those odds.",
+      "audio": "line_0324.mp3"
+    },
+    {
+      "id": 325,
+      "text": "You know what? Today was a good day. Not perfect, but good. And I think that's enough.",
+      "audio": "line_0325.mp3"
+    },
+    {
+      "id": 326,
+      "text": "I'm really grateful for this. For us. For this conversation. It sounds small but it means a lot.",
+      "audio": "line_0326.mp3"
+    },
+    {
+      "id": 327,
+      "text": "I woke up today feeling hopeful and I'm going to ride that feeling for as long as I can.",
+      "audio": "line_0327.mp3"
+    },
+    {
+      "id": 328,
+      "text": "The little things really are the big things. A good cup of coffee, a text from a friend, a beautiful sky. That's the good stuff.",
+      "audio": "line_0328.mp3"
+    },
+    {
+      "id": 329,
+      "text": "I don't need everything to go right. I just need enough things to go right. And today, enough things did.",
+      "audio": "line_0329.mp3"
+    },
+    {
+      "id": 330,
+      "text": "Thank you for being here. I know it might not seem like a big deal but your presence matters.",
+      "audio": "line_0330.mp3"
+    },
+    {
+      "id": 331,
+      "text": "I'm choosing to focus on what's going well instead of what's going wrong. It's a work in progress but I'm trying.",
+      "audio": "line_0331.mp3"
+    },
+    {
+      "id": 332,
+      "text": "Every time I think about giving up, something small happens that reminds me why I'm doing this.",
+      "audio": "line_0332.mp3"
+    },
+    {
+      "id": 333,
+      "text": "Life is short and weird and beautiful and I'm just trying to enjoy the ride.",
+      "audio": "line_0333.mp3"
+    },
+    {
+      "id": 334,
+      "text": "I don't know what tomorrow holds but I know I'll figure it out. I always do. We always do.",
+      "audio": "line_0334.mp3"
+    },
+    {
+      "id": 335,
+      "text": "Oh shoot, I think I left my keys inside. Hold on, let me check my bag. Nope. My pocket? Yes! Okay, we're good.",
+      "audio": "line_0335.mp3"
+    },
+    {
+      "id": 336,
+      "text": "I keep meaning to call you back and then I get distracted and then it's like midnight and I'm like, too late now.",
+      "audio": "line_0336.mp3"
+    },
+    {
+      "id": 337,
+      "text": "You know that thing where you walk into a room and forget why you went in there? That's been my entire day.",
+      "audio": "line_0337.mp3"
+    },
+    {
+      "id": 338,
+      "text": "I wrote myself a note and now I can't read my own handwriting. I think it says pick up milk? Or maybe it says something else entirely.",
+      "audio": "line_0338.mp3"
+    },
+    {
+      "id": 339,
+      "text": "My alarm didn't go off this morning so I woke up in a full panic. Turns out it was Saturday. I panicked for nothing.",
+      "audio": "line_0339.mp3"
+    },
+    {
+      "id": 340,
+      "text": "I just realized I've been humming the same song for three days straight and I don't even like the song.",
+      "audio": "line_0340.mp3"
+    },
+    {
+      "id": 341,
+      "text": "Do you ever have one of those days where everything is mildly inconvenient? Not bad, just annoying. That's today.",
+      "audio": "line_0341.mp3"
+    },
+    {
+      "id": 342,
+      "text": "I ran into someone I know but I couldn't remember their name so I just kept saying hey you. I think they noticed.",
+      "audio": "line_0342.mp3"
+    },
+    {
+      "id": 343,
+      "text": "I told myself I was going to go to bed early tonight and here I am. It's midnight and I'm wide awake.",
+      "audio": "line_0343.mp3"
+    },
+    {
+      "id": 344,
+      "text": "I need to start writing things down because my memory is absolutely not what it used to be.",
+      "audio": "line_0344.mp3"
+    },
+    {
+      "id": 345,
+      "text": "Can you hold this for a second? Actually no, give it back. Actually wait, yeah hold it. Sorry, I'm a mess.",
+      "audio": "line_0345.mp3"
+    },
+    {
+      "id": 346,
+      "text": "I just sneezed like eight times in a row and now I feel like I ran a marathon.",
+      "audio": "line_0346.mp3"
+    },
+    {
+      "id": 347,
+      "text": "Why do I always remember the things I need to do right as I'm falling asleep? Every single time.",
+      "audio": "line_0347.mp3"
+    },
+    {
+      "id": 348,
+      "text": "I waved at someone I thought I knew and it was a complete stranger. We're both pretending it didn't happen.",
+      "audio": "line_0348.mp3"
+    },
+    {
+      "id": 349,
+      "text": "I've been sitting here trying to think of the word and it's right on the tip of my tongue. What's it called when... oh forget it, it'll come to me later.",
+      "audio": "line_0349.mp3"
+    },
+    {
+      "id": 350,
+      "text": "He texted me back and I stared at my phone for five minutes before opening it. Why do I do this to myself?",
+      "audio": "line_0350.mp3"
+    },
+    {
+      "id": 351,
+      "text": "First dates are so weird. You're basically interviewing each other but pretending it's casual. It's exhausting.",
+      "audio": "line_0351.mp3"
+    },
+    {
+      "id": 352,
+      "text": "She said the sweetest thing to me yesterday and I've been thinking about it nonstop.",
+      "audio": "line_0352.mp3"
+    },
+    {
+      "id": 353,
+      "text": "I think the key to a good relationship is laughing together. If you can't laugh with someone, what's the point?",
+      "audio": "line_0353.mp3"
+    },
+    {
+      "id": 354,
+      "text": "My friend is going through a breakup right now and I just want to wrap her in a blanket and feed her ice cream.",
+      "audio": "line_0354.mp3"
+    },
+    {
+      "id": 355,
+      "text": "I got the biggest butterflies when I saw them. Like, actual stomach flipping. I thought that only happened in movies.",
+      "audio": "line_0355.mp3"
+    },
+    {
+      "id": 356,
+      "text": "We stayed up talking until three in the morning and it felt like no time had passed at all.",
+      "audio": "line_0356.mp3"
+    },
+    {
+      "id": 357,
+      "text": "I'm not looking for perfect. I'm looking for someone who makes the imperfect stuff feel okay.",
+      "audio": "line_0357.mp3"
+    },
+    {
+      "id": 358,
+      "text": "Long distance is hard. Like, really hard. But some people are worth the distance, you know?",
+      "audio": "line_0358.mp3"
+    },
+    {
+      "id": 359,
+      "text": "He remembered that thing I mentioned weeks ago. The little details. That's what gets me every time.",
+      "audio": "line_0359.mp3"
+    },
+    {
+      "id": 360,
+      "text": "My dad called me today just to tell me he saw a bird he thought I'd like. That man is everything.",
+      "audio": "line_0360.mp3"
+    },
+    {
+      "id": 361,
+      "text": "My sister and I fought about the dumbest thing yesterday but we were laughing about it by the end of the night.",
+      "audio": "line_0361.mp3"
+    },
+    {
+      "id": 362,
+      "text": "My mom makes this one dish that nobody else can replicate. I've tried a hundred times. It's never the same.",
+      "audio": "line_0362.mp3"
+    },
+    {
+      "id": 363,
+      "text": "Family dinners are chaos but they're my favorite kind of chaos.",
+      "audio": "line_0363.mp3"
+    },
+    {
+      "id": 364,
+      "text": "I look more and more like my mother every year and honestly? I'm not even mad about it anymore.",
+      "audio": "line_0364.mp3"
+    },
+    {
+      "id": 365,
+      "text": "My little brother called me for advice and it hit me that he's not so little anymore. When did that happen?",
+      "audio": "line_0365.mp3"
+    },
+    {
+      "id": 366,
+      "text": "My grandparents have been married for fifty two years and they still hold hands. Goals, honestly.",
+      "audio": "line_0366.mp3"
+    },
+    {
+      "id": 367,
+      "text": "I was looking at old family photos and I can't believe how young my parents looked. They were basically our age.",
+      "audio": "line_0367.mp3"
+    },
+    {
+      "id": 368,
+      "text": "My aunt sent me a random care package in the mail with snacks and a handwritten note. I cried a little.",
+      "audio": "line_0368.mp3"
+    },
+    {
+      "id": 369,
+      "text": "Sunday mornings at my parents' house. Pancakes, bad jokes, everyone talking over each other. I miss that so much.",
+      "audio": "line_0369.mp3"
+    },
+    {
+      "id": 370,
+      "text": "I just watched this movie and I need to talk about it immediately or I'm going to explode.",
+      "audio": "line_0370.mp3"
+    },
+    {
+      "id": 371,
+      "text": "No spoilers! I haven't finished it yet. Don't even hint at anything. I'm serious.",
+      "audio": "line_0371.mp3"
+    },
+    {
+      "id": 372,
+      "text": "That plot twist at the end? I literally gasped. Out loud. In public. People stared.",
+      "audio": "line_0372.mp3"
+    },
+    {
+      "id": 373,
+      "text": "I've rewatched that show like four times and I notice something new every single time.",
+      "audio": "line_0373.mp3"
+    },
+    {
+      "id": 374,
+      "text": "The soundtrack in that movie was incredible. I've been listening to it on repeat all week.",
+      "audio": "line_0374.mp3"
+    },
+    {
+      "id": 375,
+      "text": "I can't believe they cancelled that show. It was so good! I'm genuinely upset about it.",
+      "audio": "line_0375.mp3"
+    },
+    {
+      "id": 376,
+      "text": "We should do a movie night. I'll bring the popcorn, you pick the movie. But not horror. I can't do horror.",
+      "audio": "line_0376.mp3"
+    },
+    {
+      "id": 377,
+      "text": "I started watching this documentary and now I know way too much about something I didn't care about before.",
+      "audio": "line_0377.mp3"
+    },
+    {
+      "id": 378,
+      "text": "The acting in that scene was so good it gave me chills. Actual physical chills.",
+      "audio": "line_0378.mp3"
+    },
+    {
+      "id": 379,
+      "text": "I need a new show to binge. I've watched everything and nothing sounds good anymore. Help.",
+      "audio": "line_0379.mp3"
+    },
+    {
+      "id": 380,
+      "text": "This song came on shuffle and I haven't been able to stop playing it. I think I've listened to it twenty times today.",
+      "audio": "line_0380.mp3"
+    },
+    {
+      "id": 381,
+      "text": "I went to this concert last weekend and it was a spiritual experience. I'm not exaggerating.",
+      "audio": "line_0381.mp3"
+    },
+    {
+      "id": 382,
+      "text": "There's something about live music that recordings just can't capture. The energy, the crowd, everything.",
+      "audio": "line_0382.mp3"
+    },
+    {
+      "id": 383,
+      "text": "I made a playlist for driving and it's honestly the best thing I've ever created. Very curated. Very vibe.",
+      "audio": "line_0383.mp3"
+    },
+    {
+      "id": 384,
+      "text": "Do you ever hear a song for the first time and just know it's going to be one of your favorites? That happened today.",
+      "audio": "line_0384.mp3"
+    },
+    {
+      "id": 385,
+      "text": "I can't listen to that song anymore. It reminds me of a specific time in my life and it hits too hard.",
+      "audio": "line_0385.mp3"
+    },
+    {
+      "id": 386,
+      "text": "My music taste is all over the place. Like, I'll go from jazz to pop punk in the same playlist. No shame.",
+      "audio": "line_0386.mp3"
+    },
+    {
+      "id": 387,
+      "text": "I've been learning the lyrics to this song in another language and I have no idea if I'm saying it right.",
+      "audio": "line_0387.mp3"
+    },
+    {
+      "id": 388,
+      "text": "That bass drop gave me goosebumps. Literally. Look at my arm. Full goosebumps.",
+      "audio": "line_0388.mp3"
+    },
+    {
+      "id": 389,
+      "text": "Nothing hits quite like the perfect song at the perfect moment. It's like the universe is DJ-ing your life.",
+      "audio": "line_0389.mp3"
+    },
+    {
+      "id": 390,
+      "text": "I've been sleeping so much better since I stopped looking at my phone before bed. Game changer.",
+      "audio": "line_0390.mp3"
+    },
+    {
+      "id": 391,
+      "text": "I tried meditation and my brain would not stop talking. Like, the whole point is to be quiet and I just couldn't.",
+      "audio": "line_0391.mp3"
+    },
+    {
+      "id": 392,
+      "text": "I went to the doctor and she said I need to drink more water and stress less. Easier said than done, doc.",
+      "audio": "line_0392.mp3"
+    },
+    {
+      "id": 393,
+      "text": "I stretched this morning for the first time in months and my body made sounds I didn't know it could make.",
+      "audio": "line_0393.mp3"
+    },
+    {
+      "id": 394,
+      "text": "I think I'm getting sick. My throat feels scratchy and I'm in denial about it.",
+      "audio": "line_0394.mp3"
+    },
+    {
+      "id": 395,
+      "text": "I started taking walks after dinner and it's become the best part of my day. Just me and my thoughts and the sunset.",
+      "audio": "line_0395.mp3"
+    },
+    {
+      "id": 396,
+      "text": "Self care isn't always bubble baths and face masks. Sometimes it's saying no to plans and going to bed at nine.",
+      "audio": "line_0396.mp3"
+    },
+    {
+      "id": 397,
+      "text": "I've been trying to eat healthier but chips keep finding their way into my grocery cart. They're sneaky like that.",
+      "audio": "line_0397.mp3"
+    },
+    {
+      "id": 398,
+      "text": "I finally went to the dentist after putting it off for way too long. It wasn't as bad as I built it up to be.",
+      "audio": "line_0398.mp3"
+    },
+    {
+      "id": 399,
+      "text": "Mental health days should be mandatory. Some days you just need to rest and that should be totally acceptable.",
+      "audio": "line_0399.mp3"
+    },
+    {
+      "id": 400,
+      "text": "My cat did this thing where she just stared at the wall for ten minutes. I'm convinced she sees ghosts.",
+      "audio": "line_0400.mp3"
+    },
+    {
+      "id": 401,
+      "text": "We adopted a dog last month and my entire life now revolves around this animal. Zero regrets.",
+      "audio": "line_0401.mp3"
+    },
+    {
+      "id": 402,
+      "text": "I was walking and a butterfly landed on my hand and I literally froze. I didn't want to scare it away.",
+      "audio": "line_0402.mp3"
+    },
+    {
+      "id": 403,
+      "text": "My friend's parrot can say hello and it makes me laugh every single time. Every time.",
+      "audio": "line_0403.mp3"
+    },
+    {
+      "id": 404,
+      "text": "I saw the cutest puppy at the park today and I asked the owner if I could pet it and then I didn't want to leave.",
+      "audio": "line_0404.mp3"
+    },
+    {
+      "id": 405,
+      "text": "My fish has more personality than some people I know. He does this little wiggle when he sees me coming.",
+      "audio": "line_0405.mp3"
+    },
+    {
+      "id": 406,
+      "text": "I'm definitely a dog person but cats are growing on me. They're so independent and sassy. I respect that.",
+      "audio": "line_0406.mp3"
+    },
+    {
+      "id": 407,
+      "text": "The neighbor's cat visits me every morning and I've started buying treats for it. I think I've been adopted.",
+      "audio": "line_0407.mp3"
+    },
+    {
+      "id": 408,
+      "text": "I took my dog to the beach for the first time and she lost her mind. Just running in circles, pure joy.",
+      "audio": "line_0408.mp3"
+    },
+    {
+      "id": 409,
+      "text": "I showed my cat a video of birds on my phone and she tried to catch them through the screen. Adorable and dumb.",
+      "audio": "line_0409.mp3"
+    },
+    {
+      "id": 410,
+      "text": "I learned something today that completely blew my mind. Did you know that octopuses have three hearts?",
+      "audio": "line_0410.mp3"
+    },
+    {
+      "id": 411,
+      "text": "I've been watching lectures online for fun and I think that officially makes me a nerd. I'm okay with it.",
+      "audio": "line_0411.mp3"
+    },
+    {
+      "id": 412,
+      "text": "The more I learn about history, the more I realize how wild it actually was. They didn't teach us the good stuff in school.",
+      "audio": "line_0412.mp3"
+    },
+    {
+      "id": 413,
+      "text": "I'm trying to learn Spanish and I can order food and say thank you but that's about it so far.",
+      "audio": "line_0413.mp3"
+    },
+    {
+      "id": 414,
+      "text": "I asked a really dumb question today and you know what? I'm glad I did because now I actually understand it.",
+      "audio": "line_0414.mp3"
+    },
+    {
+      "id": 415,
+      "text": "Reading before bed has become my favorite habit. I learn something new every night and then fall asleep feeling smarter.",
+      "audio": "line_0415.mp3"
+    },
+    {
+      "id": 416,
+      "text": "I watched this Ted Talk that made me completely rethink how I approach problems. I'll send you the link.",
+      "audio": "line_0416.mp3"
+    },
+    {
+      "id": 417,
+      "text": "I love when someone explains something complicated in a simple way. That's a real skill and not enough people have it.",
+      "audio": "line_0417.mp3"
+    },
+    {
+      "id": 418,
+      "text": "I've been down a Wikipedia rabbit hole for the last two hours and I regret nothing.",
+      "audio": "line_0418.mp3"
+    },
+    {
+      "id": 419,
+      "text": "You know what's cool? That we can learn literally anything right now from our phones. That's insane when you think about it.",
+      "audio": "line_0419.mp3"
+    },
+    {
+      "id": 420,
+      "text": "If money wasn't a thing, I'd open a little cafe by the ocean. Good coffee, live music on weekends, cozy vibes.",
+      "audio": "line_0420.mp3"
+    },
+    {
+      "id": 421,
+      "text": "I've always wanted to write a book. I have so many ideas but actually sitting down and writing is the hard part.",
+      "audio": "line_0421.mp3"
+    },
+    {
+      "id": 422,
+      "text": "My dream is to travel for a whole year. Just go wherever the wind takes me. No itinerary, no schedule.",
+      "audio": "line_0422.mp3"
+    },
+    {
+      "id": 423,
+      "text": "I want to build something that matters. I don't know what yet, but I know it's out there waiting for me.",
+      "audio": "line_0423.mp3"
+    },
+    {
+      "id": 424,
+      "text": "Sometimes I imagine what my life will look like in ten years and I get this mix of excitement and terror.",
+      "audio": "line_0424.mp3"
+    },
+    {
+      "id": 425,
+      "text": "I want to learn to play piano before I turn thirty. I've said this every year for five years but this time I mean it.",
+      "audio": "line_0425.mp3"
+    },
+    {
+      "id": 426,
+      "text": "My secret dream is to live in a cabin in the woods with a dog and a garden. Very simple, very peaceful.",
+      "audio": "line_0426.mp3"
+    },
+    {
+      "id": 427,
+      "text": "I've been thinking about going back to school. It's scary but exciting at the same time.",
+      "audio": "line_0427.mp3"
+    },
+    {
+      "id": 428,
+      "text": "I want to be the kind of person people feel comfortable around. Like, a safe place. That's my goal.",
+      "audio": "line_0428.mp3"
+    },
+    {
+      "id": 429,
+      "text": "I keep a list of things I want to do before I die and I crossed one off last week. It felt incredible.",
+      "audio": "line_0429.mp3"
+    },
+    {
+      "id": 430,
+      "text": "Why is it that the shopping cart always picks you? Like, out of a hundred carts, you always get the one with the wobbly wheel.",
+      "audio": "line_0430.mp3"
+    },
+    {
+      "id": 431,
+      "text": "I put my glasses on to find my glasses the other day. I need a moment.",
+      "audio": "line_0431.mp3"
+    },
+    {
+      "id": 432,
+      "text": "The audacity of my alarm clock. Every single morning it has the nerve to go off and I take it personally.",
+      "audio": "line_0432.mp3"
+    },
+    {
+      "id": 433,
+      "text": "I said goodbye to someone and then we walked in the same direction for three blocks. The most awkward walk of my life.",
+      "audio": "line_0433.mp3"
+    },
+    {
+      "id": 434,
+      "text": "I rehearsed what I was going to say for twenty minutes and then completely blanked when the moment came.",
+      "audio": "line_0434.mp3"
+    },
+    {
+      "id": 435,
+      "text": "My brain at three AM decides that now is the perfect time to remember that embarrassing thing I did in two thousand and fourteen.",
+      "audio": "line_0435.mp3"
+    },
+    {
+      "id": 436,
+      "text": "I tried to open a push door by pulling it and made eye contact with someone on the other side. I can never go back there.",
+      "audio": "line_0436.mp3"
+    },
+    {
+      "id": 437,
+      "text": "I overheard someone arguing about whether a hot dog is a sandwich and honestly both sides made valid points.",
+      "audio": "line_0437.mp3"
+    },
+    {
+      "id": 438,
+      "text": "I typed an entire message, read it back, deleted it, typed it again differently, and then just didn't send it.",
+      "audio": "line_0438.mp3"
+    },
+    {
+      "id": 439,
+      "text": "Why does food taste better when someone else makes it? I can make the exact same thing and it's just not the same.",
+      "audio": "line_0439.mp3"
+    },
+    {
+      "id": 440,
+      "text": "I tripped over absolutely nothing on a flat surface. The ground just decided to betray me today.",
+      "audio": "line_0440.mp3"
+    },
+    {
+      "id": 441,
+      "text": "I set an alarm to remind me to do something and when it went off I snoozed it. Defeated the whole purpose.",
+      "audio": "line_0441.mp3"
+    },
+    {
+      "id": 442,
+      "text": "My autocorrect has turned me into a completely different person. The things it thinks I'm trying to say are concerning.",
+      "audio": "line_0442.mp3"
+    },
+    {
+      "id": 443,
+      "text": "I accidentally called my teacher mom once and I still think about it to this day. Some wounds don't heal.",
+      "audio": "line_0443.mp3"
+    },
+    {
+      "id": 444,
+      "text": "I held the door for someone who was way too far away and then we both had to do that awkward jog thing.",
+      "audio": "line_0444.mp3"
+    },
+    {
+      "id": 445,
+      "text": "Do you think people can really change? Like, fundamentally change who they are? I go back and forth on this.",
+      "audio": "line_0445.mp3"
+    },
+    {
+      "id": 446,
+      "text": "What do you think happens when we die? I'm not trying to be morbid, I'm genuinely curious what you believe.",
+      "audio": "line_0446.mp3"
+    },
+    {
+      "id": 447,
+      "text": "I think about time a lot. Like, this moment right now will never happen again. That's kind of beautiful and kind of terrifying.",
+      "audio": "line_0447.mp3"
+    },
+    {
+      "id": 448,
+      "text": "Do you think everything happens for a reason or do we just make meaning out of random events? I honestly don't know.",
+      "audio": "line_0448.mp3"
+    },
+    {
+      "id": 449,
+      "text": "I wonder sometimes if the version of me that exists in your head is different from who I actually am.",
+      "audio": "line_0449.mp3"
+    },
+    {
+      "id": 450,
+      "text": "What if the thing you're most afraid of is actually the thing you're supposed to do? I keep coming back to that idea.",
+      "audio": "line_0450.mp3"
+    },
+    {
+      "id": 451,
+      "text": "I think loneliness is one of those things nobody talks about enough. Like, you can be surrounded by people and still feel alone.",
+      "audio": "line_0451.mp3"
+    },
+    {
+      "id": 452,
+      "text": "The concept of home is interesting to me. Is it a place or a feeling? Because I think it might be a feeling.",
+      "audio": "line_0452.mp3"
+    },
+    {
+      "id": 453,
+      "text": "I read somewhere that we're all just walking each other home. I don't know why but that really stuck with me.",
+      "audio": "line_0453.mp3"
+    },
+    {
+      "id": 454,
+      "text": "Do you think we choose who we become or does life just sort of shape us? Maybe it's both.",
+      "audio": "line_0454.mp3"
+    },
+    {
+      "id": 455,
+      "text": "I've been thinking about legacy lately. Not in a big, grand way, but just like, what will people remember about me?",
+      "audio": "line_0455.mp3"
+    },
+    {
+      "id": 456,
+      "text": "There's this idea that we have multiple lives within our one lifetime. Like, every few years you become a new version of yourself.",
+      "audio": "line_0456.mp3"
+    },
+    {
+      "id": 457,
+      "text": "I wonder if other people's internal monologue sounds anything like mine. Is everyone's brain this chaotic?",
+      "audio": "line_0457.mp3"
+    },
+    {
+      "id": 458,
+      "text": "Something I find comforting is that the stars we see at night are millions of years old. We're literally looking at the past.",
+      "audio": "line_0458.mp3"
+    },
+    {
+      "id": 459,
+      "text": "I think vulnerability is the bravest thing a person can be. It takes so much more courage to be open than to be guarded.",
+      "audio": "line_0459.mp3"
+    },
+    {
+      "id": 460,
+      "text": "I just need to vent for a second. I'm not looking for advice, I just need someone to listen. Is that okay?",
+      "audio": "line_0460.mp3"
+    },
+    {
+      "id": 461,
+      "text": "Why does everything take longer than it should? I budgeted thirty minutes for this and it's been two hours.",
+      "audio": "line_0461.mp3"
+    },
+    {
+      "id": 462,
+      "text": "I am so over this week and it's only Tuesday. Tuesday! How is it only Tuesday?",
+      "audio": "line_0462.mp3"
+    },
+    {
+      "id": 463,
+      "text": "The wifi went out right in the middle of the most important part. Of course it did. Of course.",
+      "audio": "line_0463.mp3"
+    },
+    {
+      "id": 464,
+      "text": "I've been on hold for forty five minutes. Forty five minutes! I could have driven there by now.",
+      "audio": "line_0464.mp3"
+    },
+    {
+      "id": 465,
+      "text": "Someone ate my lunch from the fridge. My clearly labeled lunch. With my name on it. I'm livid.",
+      "audio": "line_0465.mp3"
+    },
+    {
+      "id": 466,
+      "text": "I just want one day where nothing goes wrong. Just one. Is that too much to ask?",
+      "audio": "line_0466.mp3"
+    },
+    {
+      "id": 467,
+      "text": "The construction outside my window starts at seven AM every single morning. I haven't slept properly in weeks.",
+      "audio": "line_0467.mp3"
+    },
+    {
+      "id": 468,
+      "text": "I missed my exit on the highway and the next one was like fifteen miles away. Fifteen miles of frustration.",
+      "audio": "line_0468.mp3"
+    },
+    {
+      "id": 469,
+      "text": "I wrote this whole thing and then my computer crashed and I lost everything. I didn't save. I never save. Why don't I save?",
+      "audio": "line_0469.mp3"
+    },
+    {
+      "id": 470,
+      "text": "You're closer than you think. Seriously. Don't give up now.",
+      "audio": "line_0470.mp3"
+    },
+    {
+      "id": 471,
+      "text": "Every expert was once a beginner. Remember that when you're feeling like you're not good enough.",
+      "audio": "line_0471.mp3"
+    },
+    {
+      "id": 472,
+      "text": "Today might not be your day. But your day is coming. I can feel it.",
+      "audio": "line_0472.mp3"
+    },
+    {
+      "id": 473,
+      "text": "You've survived every bad day so far and that's a pretty impressive track record.",
+      "audio": "line_0473.mp3"
+    },
+    {
+      "id": 474,
+      "text": "Do the thing that scares you. Not the reckless stuff, but the stuff that scares you because it matters.",
+      "audio": "line_0474.mp3"
+    },
+    {
+      "id": 475,
+      "text": "Progress isn't always visible. Sometimes you're growing in ways you can't see yet. Trust the process.",
+      "audio": "line_0475.mp3"
+    },
+    {
+      "id": 476,
+      "text": "You don't have to be fearless. You just have to be willing to do it afraid.",
+      "audio": "line_0476.mp3"
+    },
+    {
+      "id": 477,
+      "text": "The fact that you keep trying says more about you than any failure ever could.",
+      "audio": "line_0477.mp3"
+    },
+    {
+      "id": 478,
+      "text": "Start messy. Start scared. Start unsure. Just start. You can figure out the rest as you go.",
+      "audio": "line_0478.mp3"
+    },
+    {
+      "id": 479,
+      "text": "Remind yourself why you started. That reason is still valid and so are you.",
+      "audio": "line_0479.mp3"
+    },
+    {
+      "id": 480,
+      "text": "Okay so you're gonna want to saut\u00e9 the onions first until they're translucent. That's the base of everything.",
+      "audio": "line_0480.mp3"
+    },
+    {
+      "id": 481,
+      "text": "I added way too much salt and I'm trying to figure out if there's any way to save this. Potato trick maybe?",
+      "audio": "line_0481.mp3"
+    },
+    {
+      "id": 482,
+      "text": "The smell of fresh bread baking is literally the best smell in the entire world. I will die on this hill.",
+      "audio": "line_0482.mp3"
+    },
+    {
+      "id": 483,
+      "text": "I don't follow recipes exactly. I just use them as a rough guide and then wing it. It usually works out.",
+      "audio": "line_0483.mp3"
+    },
+    {
+      "id": 484,
+      "text": "My kitchen looks like a disaster zone right now but the food is going to be worth it. I hope.",
+      "audio": "line_0484.mp3"
+    },
+    {
+      "id": 485,
+      "text": "I learned how to make homemade pasta and I feel like I've unlocked a superpower.",
+      "audio": "line_0485.mp3"
+    },
+    {
+      "id": 486,
+      "text": "The trick to good scrambled eggs is low heat and patience. Most people cook them way too fast.",
+      "audio": "line_0486.mp3"
+    },
+    {
+      "id": 487,
+      "text": "I got a new cast iron skillet and I'm treating it better than I treat most humans. Seasoning it, caring for it, the whole thing.",
+      "audio": "line_0487.mp3"
+    },
+    {
+      "id": 488,
+      "text": "Cooking for other people is my love language. There's something so special about feeding someone you care about.",
+      "audio": "line_0488.mp3"
+    },
+    {
+      "id": 489,
+      "text": "I tried to flip a pancake by tossing it in the air and it landed on the floor. The dog was thrilled though.",
+      "audio": "line_0489.mp3"
+    },
+    {
+      "id": 490,
+      "text": "I'm such a morning person and I know that annoys people but I can't help it. The sunrise is right there!",
+      "audio": "line_0490.mp3"
+    },
+    {
+      "id": 491,
+      "text": "Getting out of bed is the hardest part of my day. Once I'm up, I'm fine. It's just that initial separation from the pillow.",
+      "audio": "line_0491.mp3"
+    },
+    {
+      "id": 492,
+      "text": "I have this whole bedtime routine now. Tea, book, no phone, lights out by ten. It changed my life.",
+      "audio": "line_0492.mp3"
+    },
+    {
+      "id": 493,
+      "text": "Three AM thoughts are a different breed. Everything feels more intense and more real in the middle of the night.",
+      "audio": "line_0493.mp3"
+    },
+    {
+      "id": 494,
+      "text": "I love that quiet hour right before everyone wakes up. It feels like the world is mine for a little while.",
+      "audio": "line_0494.mp3"
+    },
+    {
+      "id": 495,
+      "text": "My morning coffee is non negotiable. Don't talk to me, don't ask me questions, just let me have my coffee.",
+      "audio": "line_0495.mp3"
+    },
+    {
+      "id": 496,
+      "text": "I've been trying to wake up without an alarm and my body just naturally wakes up at like ten. So that's not working.",
+      "audio": "line_0496.mp3"
+    },
+    {
+      "id": 497,
+      "text": "The best part of going to bed is getting into freshly washed sheets. It's like a hug from the universe.",
+      "audio": "line_0497.mp3"
+    },
+    {
+      "id": 498,
+      "text": "I can't sleep when it's too quiet. I need a fan or rain sounds or something. Total silence freaks me out.",
+      "audio": "line_0498.mp3"
+    },
+    {
+      "id": 499,
+      "text": "I've become the person who goes to bed at nine thirty and I have zero regrets about it.",
+      "audio": "line_0499.mp3"
+    },
+    {
+      "id": 500,
+      "text": "There's nothing like the first warm day after a long winter. Everyone suddenly comes to life.",
+      "audio": "line_0500.mp3"
+    },
+    {
+      "id": 501,
+      "text": "I love decorating for the holidays. I go way overboard but it makes me happy so who cares?",
+      "audio": "line_0501.mp3"
+    },
+    {
+      "id": 502,
+      "text": "Fall candles are out at the stores and I bought six. Am I going to burn all of them? Absolutely.",
+      "audio": "line_0502.mp3"
+    },
+    {
+      "id": 503,
+      "text": "New Year's resolutions are just goals with a fancy deadline. I make the same ones every year.",
+      "audio": "line_0503.mp3"
+    },
+    {
+      "id": 504,
+      "text": "Summer nights with the windows open and crickets outside. That's the stuff right there.",
+      "audio": "line_0504.mp3"
+    },
+    {
+      "id": 505,
+      "text": "I went apple picking last weekend and ate way more apples than I picked. No regrets.",
+      "audio": "line_0505.mp3"
+    },
+    {
+      "id": 506,
+      "text": "The first snowfall of the year is magical. Every snowfall after that is just annoying.",
+      "audio": "line_0506.mp3"
+    },
+    {
+      "id": 507,
+      "text": "I love how everyone becomes a little nicer around the holidays. Like, that energy should be year round.",
+      "audio": "line_0507.mp3"
+    },
+    {
+      "id": 508,
+      "text": "Beach days are my therapy. Sand between my toes, waves crashing, sun on my face. That's healing.",
+      "audio": "line_0508.mp3"
+    },
+    {
+      "id": 509,
+      "text": "I carved a pumpkin last night and it looks absolutely terrible but I'm displaying it proudly anyway.",
+      "audio": "line_0509.mp3"
+    },
+    {
+      "id": 510,
+      "text": "I eat cereal at midnight sometimes and it hits different. Like, breakfast food at night is elite.",
+      "audio": "line_0510.mp3"
+    },
+    {
+      "id": 511,
+      "text": "I talk to my plants. Full conversations. I think it helps them grow but honestly it helps me more.",
+      "audio": "line_0511.mp3"
+    },
+    {
+      "id": 512,
+      "text": "I always read the last page of a book first. I know that's unhinged but I like knowing where it's going.",
+      "audio": "line_0512.mp3"
+    },
+    {
+      "id": 513,
+      "text": "I still sleep with a stuffed animal and I'm not ashamed. His name is Captain Fluffington.",
+      "audio": "line_0513.mp3"
+    },
+    {
+      "id": 514,
+      "text": "I sing in the shower like I'm performing at a sold out concert. Full choreography. Standing ovation.",
+      "audio": "line_0514.mp3"
+    },
+    {
+      "id": 515,
+      "text": "I cry at commercials. Not sad ones necessarily, just the ones where people are being nice to each other.",
+      "audio": "line_0515.mp3"
+    },
+    {
+      "id": 516,
+      "text": "I have a very specific way I like my sandwiches cut and I will not apologize for being particular about it.",
+      "audio": "line_0516.mp3"
+    },
+    {
+      "id": 517,
+      "text": "I name everything. My car, my phone, my laptop. They all have names and personalities.",
+      "audio": "line_0517.mp3"
+    },
+    {
+      "id": 518,
+      "text": "I keep checking my phone even though nobody texted me. It's a reflex at this point.",
+      "audio": "line_0518.mp3"
+    },
+    {
+      "id": 519,
+      "text": "I practice arguments in the shower. Like, full debates with people who aren't there. I always win, obviously.",
+      "audio": "line_0519.mp3"
+    },
+    {
+      "id": 520,
+      "text": "This has been really nice. I'm glad we did this. We need to do this more often.",
+      "audio": "line_0520.mp3"
+    },
+    {
+      "id": 521,
+      "text": "Thanks for listening. Seriously. Sometimes you just need someone to hear you.",
+      "audio": "line_0521.mp3"
+    },
+    {
+      "id": 522,
+      "text": "I should probably get going but I don't want to. Can we just sit here a little longer?",
+      "audio": "line_0522.mp3"
+    },
+    {
+      "id": 523,
+      "text": "You always make me feel better. I don't know how you do it but don't ever stop.",
+      "audio": "line_0523.mp3"
+    },
+    {
+      "id": 524,
+      "text": "Alright, I should let you go. But text me later, okay? I want to hear how it goes.",
+      "audio": "line_0524.mp3"
+    },
+    {
+      "id": 525,
+      "text": "This was exactly what I needed today. Just this. Just talking. Thank you.",
+      "audio": "line_0525.mp3"
+    },
+    {
+      "id": 526,
+      "text": "I'm so glad I know you. Like, out of all the people in the world, I got you. Pretty lucky.",
+      "audio": "line_0526.mp3"
+    },
+    {
+      "id": 527,
+      "text": "Take care of yourself, okay? And I mean actually take care of yourself, not just say you will.",
+      "audio": "line_0527.mp3"
+    },
+    {
+      "id": 528,
+      "text": "Same time next week? I'm already looking forward to it.",
+      "audio": "line_0528.mp3"
+    },
+    {
+      "id": 529,
+      "text": "Goodnight. Sweet dreams. And if you can't sleep, you know who to call.",
+      "audio": "line_0529.mp3"
+    },
+    {
+      "id": 530,
+      "text": "I had this moment last week where I was driving home and the sun was setting and this perfect song came on, and I just felt so alive. Like, everything was exactly as it should be. Those moments don't happen often but when they do, you hold onto them.",
+      "audio": "line_0530.mp3"
+    },
+    {
+      "id": 531,
+      "text": "I think one of the most underrated skills is knowing how to listen. Not just waiting for your turn to talk, but actually listening. Most people don't do that and you can tell. But when someone really listens to you? It changes everything.",
+      "audio": "line_0531.mp3"
+    },
+    {
+      "id": 532,
+      "text": "There's this quote I read once that said we don't remember days, we remember moments. And I think that's so true. I can't tell you what I did last Thursday, but I can tell you about that time we laughed so hard we cried at that restaurant.",
+      "audio": "line_0532.mp3"
+    },
+    {
+      "id": 533,
+      "text": "I used to be so afraid of failing that I wouldn't even try. And then one day I realized that not trying was its own kind of failure. The biggest one, actually. Because at least when you try and fail, you learn something.",
+      "audio": "line_0533.mp3"
+    },
+    {
+      "id": 534,
+      "text": "You know what makes someone attractive? Not looks, not money. It's when they're genuinely passionate about something. Like, when their eyes light up talking about whatever it is they love. That energy is magnetic.",
+      "audio": "line_0534.mp3"
+    },
+    {
+      "id": 535,
+      "text": "I've been thinking about how different our lives would be if we said yes more often. Not to everything, but to the things that scare us a little. The things that make us think, what if? I think that's where the good stuff lives.",
+      "audio": "line_0535.mp3"
+    },
+    {
+      "id": 536,
+      "text": "The world feels really heavy sometimes and I think it's okay to acknowledge that. You don't have to pretend everything is fine all the time. Sometimes things are hard and the bravest thing you can do is say, yeah, this is hard, and keep going anyway.",
+      "audio": "line_0536.mp3"
+    },
+    {
+      "id": 537,
+      "text": "I believe in signs. Not in a woo woo way, but in a paying attention way. Like, when the same idea keeps showing up in different places, maybe the universe is trying to tell you something. Or maybe it's just your brain noticing patterns. Either way, I listen.",
+      "audio": "line_0537.mp3"
+    },
+    {
+      "id": 538,
+      "text": "One thing I've learned is that you can't pour from an empty cup. You have to take care of yourself first before you can show up for anyone else. And that's not selfish. That's survival. That's sustainability. That's love, actually.",
+      "audio": "line_0538.mp3"
+    },
+    {
+      "id": 539,
+      "text": "I think the bravest thing any of us can do is be exactly who we are. Not the version we think people want to see, but the real, messy, imperfect, beautiful version. The one that laughs too loud and cries at movies and says the wrong thing sometimes. That version. That's the one worth being.",
+      "audio": "line_0539.mp3"
+    },
+    {
+      "id": 540,
+      "text": "Did you just say what I think you said? Hold on, repeat that. I need to hear it again.",
+      "audio": "line_0540.mp3"
+    },
+    {
+      "id": 541,
+      "text": "I keep going back and forth. One minute I'm sure, the next minute I have no idea.",
+      "audio": "line_0541.mp3"
+    },
+    {
+      "id": 542,
+      "text": "That jacket looks amazing on you, by the way. Where did you get it?",
+      "audio": "line_0542.mp3"
+    },
+    {
+      "id": 543,
+      "text": "I completely forgot what I was going to say. It was important too. It'll come back to me.",
+      "audio": "line_0543.mp3"
+    },
+    {
+      "id": 544,
+      "text": "We should start a tradition. Like, every first Friday of the month we do something fun together.",
+      "audio": "line_0544.mp3"
+    },
+    {
+      "id": 545,
+      "text": "I'm the kind of person who arrives fifteen minutes early to everything. I can't help it. It stresses me out to be late.",
+      "audio": "line_0545.mp3"
+    },
+    {
+      "id": 546,
+      "text": "Do you ever think about how many strangers you've appeared in the background of someone's photo?",
+      "audio": "line_0546.mp3"
+    },
+    {
+      "id": 547,
+      "text": "I bought this on impulse and I already know I'm going to regret it. But right now? No regrets.",
+      "audio": "line_0547.mp3"
+    },
+    {
+      "id": 548,
+      "text": "My handwriting is getting worse every year because I type everything now. I wrote a card recently and it looked like a doctor's note.",
+      "audio": "line_0548.mp3"
+    },
+    {
+      "id": 549,
+      "text": "I had the weirdest interaction at the bank today. The teller asked me how my day was and I said you too. Classic.",
+      "audio": "line_0549.mp3"
+    },
+    {
+      "id": 550,
+      "text": "I love a good metaphor. Like, life isn't a highway, it's more like a hiking trail. Sometimes uphill, sometimes flat, occasionally you step in mud.",
+      "audio": "line_0550.mp3"
+    },
+    {
+      "id": 551,
+      "text": "I'm that person who claps when the plane lands and I refuse to be embarrassed about it. We made it!",
+      "audio": "line_0551.mp3"
+    },
+    {
+      "id": 552,
+      "text": "Someone complimented my shoes today and I've been riding that high for hours. Literal hours.",
+      "audio": "line_0552.mp3"
+    },
+    {
+      "id": 553,
+      "text": "I think there's an art to doing nothing. Like, productive nothing. Where you're just existing and it's wonderful.",
+      "audio": "line_0553.mp3"
+    },
+    {
+      "id": 554,
+      "text": "We ordered the same thing. I love when that happens. It means we're on the same wavelength.",
+      "audio": "line_0554.mp3"
+    },
+    {
+      "id": 555,
+      "text": "I have a theory that the best friendships are the ones where you can sit in silence and it's not weird.",
+      "audio": "line_0555.mp3"
+    },
+    {
+      "id": 556,
+      "text": "I just found out we have the same birthday and I feel like that means something. I don't know what, but something.",
+      "audio": "line_0556.mp3"
+    },
+    {
+      "id": 557,
+      "text": "The thing about getting older is that you care less about what people think. And honestly? It's incredibly freeing.",
+      "audio": "line_0557.mp3"
+    },
+    {
+      "id": 558,
+      "text": "I'm going to need you to say that one more time because I want to make sure I heard you correctly.",
+      "audio": "line_0558.mp3"
+    },
+    {
+      "id": 559,
+      "text": "You have this way of making everything sound interesting. Even boring stuff. That's a gift.",
+      "audio": "line_0559.mp3"
+    },
+    {
+      "id": 560,
+      "text": "I wish I could freeze this moment. Just pause time right here and stay in it for a while.",
+      "audio": "line_0560.mp3"
+    },
+    {
+      "id": 561,
+      "text": "Is it just me or does everything taste better when you eat it outside? Like, a regular sandwich becomes gourmet.",
+      "audio": "line_0561.mp3"
+    },
+    {
+      "id": 562,
+      "text": "I've decided that my personal brand is enthusiasm. I'm just going to be really excited about everything from now on.",
+      "audio": "line_0562.mp3"
+    },
+    {
+      "id": 563,
+      "text": "I lost track of what day it is and honestly that might be the most relaxed I've felt in months.",
+      "audio": "line_0563.mp3"
+    },
+    {
+      "id": 564,
+      "text": "That was the perfect response. Like, you just said exactly what I needed to hear without even knowing it.",
+      "audio": "line_0564.mp3"
+    },
+    {
+      "id": 565,
+      "text": "I think we underestimate how powerful a good hug is. Like, a real one. The kind that says I've got you.",
+      "audio": "line_0565.mp3"
+    },
+    {
+      "id": 566,
+      "text": "I caught myself smiling for no reason today and I thought, huh, maybe things are good. Maybe things are actually really good.",
+      "audio": "line_0566.mp3"
+    },
+    {
+      "id": 567,
+      "text": "Tell me something I don't know. Anything. A random fact, a secret, a story. I just want to learn something new.",
+      "audio": "line_0567.mp3"
+    },
+    {
+      "id": 568,
+      "text": "I'm at that point in the day where I could either take a nap or have another coffee. This is the critical decision.",
+      "audio": "line_0568.mp3"
+    },
+    {
+      "id": 569,
+      "text": "You know those people who just radiate warmth? Like, you feel better just being around them? You're one of those people.",
+      "audio": "line_0569.mp3"
+    },
+    {
+      "id": 570,
+      "text": "Oh! Oh wow. Okay, I was not expecting that. Like, at all.",
+      "audio": "line_0570.mp3"
+    },
+    {
+      "id": 571,
+      "text": "Whoa whoa whoa, hold on. Back up. Say that again?",
+      "audio": "line_0571.mp3"
+    },
+    {
+      "id": 572,
+      "text": "Ugh, come on! Really? That's the third time this week.",
+      "audio": "line_0572.mp3"
+    },
+    {
+      "id": 573,
+      "text": "Oh my god, yes! That's exactly what I've been trying to say! Thank you!",
+      "audio": "line_0573.mp3"
+    },
+    {
+      "id": 574,
+      "text": "Hmm. Hmm hmm hmm. See, that's the part that doesn't add up.",
+      "audio": "line_0574.mp3"
+    },
+    {
+      "id": 575,
+      "text": "Ha! Oh man, that's good. That is really good.",
+      "audio": "line_0575.mp3"
+    },
+    {
+      "id": 576,
+      "text": "Aww! Oh my heart. That's so precious I can't handle it.",
+      "audio": "line_0576.mp3"
+    },
+    {
+      "id": 577,
+      "text": "Ooh, interesting. Tell me more. I'm intrigued.",
+      "audio": "line_0577.mp3"
+    },
+    {
+      "id": 578,
+      "text": "Yikes. Yeah, that's... that's not great. I'm sorry.",
+      "audio": "line_0578.mp3"
+    },
+    {
+      "id": 579,
+      "text": "Ohhh, I see. I see what you did there. Very clever.",
+      "audio": "line_0579.mp3"
+    },
+    {
+      "id": 580,
+      "text": "Nah, no way. I don't believe it. Show me proof.",
+      "audio": "line_0580.mp3"
+    },
+    {
+      "id": 581,
+      "text": "Huh. I never thought about it like that before. Huh.",
+      "audio": "line_0581.mp3"
+    },
+    {
+      "id": 582,
+      "text": "Oh gosh, that's embarrassing. But also hilarious. I'm sorry for laughing.",
+      "audio": "line_0582.mp3"
+    },
+    {
+      "id": 583,
+      "text": "Eww, no! Why would you tell me that? Now I can't unknow it!",
+      "audio": "line_0583.mp3"
+    },
+    {
+      "id": 584,
+      "text": "Wow. Just... wow. I have chills right now. Actual chills.",
+      "audio": "line_0584.mp3"
+    },
+    {
+      "id": 585,
+      "text": "Oof. That hit different. I felt that one in my chest.",
+      "audio": "line_0585.mp3"
+    },
+    {
+      "id": 586,
+      "text": "Oh shoot, wait. I think I left the oven on. No, wait. I didn't cook today. We're fine. False alarm.",
+      "audio": "line_0586.mp3"
+    },
+    {
+      "id": 587,
+      "text": "Woah. Okay. Let me just process this for a second. Give me a moment.",
+      "audio": "line_0587.mp3"
+    },
+    {
+      "id": 588,
+      "text": "Phew! That was close. Way too close. My heart is still racing.",
+      "audio": "line_0588.mp3"
+    },
+    {
+      "id": 589,
+      "text": "Oh come on, don't be like that. You know I was kidding.",
+      "audio": "line_0589.mp3"
+    },
+    {
+      "id": 590,
+      "text": "Wait, what?! Since when?! How did I not know about this?",
+      "audio": "line_0590.mp3"
+    },
+    {
+      "id": 591,
+      "text": "Oh! Oh no. Oh no no no. Tell me you didn't.",
+      "audio": "line_0591.mp3"
+    },
+    {
+      "id": 592,
+      "text": "Whaaaat? Get out of here! You're lying. You have to be lying.",
+      "audio": "line_0592.mp3"
+    },
+    {
+      "id": 593,
+      "text": "Oh my gosh, really? That's amazing! I'm literally so happy right now!",
+      "audio": "line_0593.mp3"
+    },
+    {
+      "id": 594,
+      "text": "Hold on, hold on, hold on. You're telling me this has been going on for how long?",
+      "audio": "line_0594.mp3"
+    },
+    {
+      "id": 595,
+      "text": "No! Shut up! Are you serious?! When did this happen?!",
+      "audio": "line_0595.mp3"
+    },
+    {
+      "id": 596,
+      "text": "Oh wow, okay, that changes everything. Like, completely changes everything.",
+      "audio": "line_0596.mp3"
+    },
+    {
+      "id": 597,
+      "text": "Wait wait wait. So you're saying... oh. OH. I get it now.",
+      "audio": "line_0597.mp3"
+    },
+    {
+      "id": 598,
+      "text": "Hmm, that's not what I expected you to say. But okay, I can work with that.",
+      "audio": "line_0598.mp3"
+    },
+    {
+      "id": 599,
+      "text": "Gasp! No way. You did not just say that to me. I'm shook.",
+      "audio": "line_0599.mp3"
+    },
+    {
+      "id": 600,
+      "text": "Oh man, I haven't laughed that hard in so long. Like, my stomach hurts and my eyes are watering and I can barely breathe. That was so funny.",
+      "audio": "line_0600.mp3"
+    },
+    {
+      "id": 601,
+      "text": "Ugh, this day has been so long. Like, it started out okay but then everything just went sideways and now I'm just... done. I'm so done.",
+      "audio": "line_0601.mp3"
+    },
+    {
+      "id": 602,
+      "text": "Aww, you remembered! Oh my gosh, that's so sweet. You didn't have to do that but the fact that you did means everything to me.",
+      "audio": "line_0602.mp3"
+    },
+    {
+      "id": 603,
+      "text": "Whoa, okay, that's a lot to take in. Let me just sit with that for a second because my brain is doing somersaults right now.",
+      "audio": "line_0603.mp3"
+    },
+    {
+      "id": 604,
+      "text": "Oh no, babe, don't cry. Hey, it's okay. It's going to be okay. Come here. Let's figure this out together.",
+      "audio": "line_0604.mp3"
+    },
+    {
+      "id": 605,
+      "text": "Ha! Oh, the irony. The sweet, beautiful irony. You can't make this stuff up. Life is absolutely wild sometimes.",
+      "audio": "line_0605.mp3"
+    },
+    {
+      "id": 606,
+      "text": "Mmm, this is so good. Oh my god. What is in this? No seriously, what did you put in this because it's incredible.",
+      "audio": "line_0606.mp3"
+    },
+    {
+      "id": 607,
+      "text": "Ugh, I'm so frustrated with myself. I know what I should do, I just can't get myself to do it. It's like my brain and my body are having a disagreement.",
+      "audio": "line_0607.mp3"
+    },
+    {
+      "id": 608,
+      "text": "Oh! I just remembered something. So the other day, and this is going to sound crazy, but just bear with me on this one.",
+      "audio": "line_0608.mp3"
+    },
+    {
+      "id": 609,
+      "text": "Wow, that was really brave of you. Like, genuinely. I don't know if I could have done that. I'm really impressed.",
+      "audio": "line_0609.mp3"
+    },
+    {
+      "id": 610,
+      "text": "So... hmm... okay so what if we tried doing it the other way? Like, instead of starting from scratch, what if we just tweaked what we already have?",
+      "audio": "line_0610.mp3"
+    },
+    {
+      "id": 611,
+      "text": "I mean... yeah, I guess that could work. But there's this little voice in my head saying it's too risky. But then again, when has playing it safe ever gotten us anywhere?",
+      "audio": "line_0611.mp3"
+    },
+    {
+      "id": 612,
+      "text": "Let me think, let me think. Okay so we have option A which is safe but boring, and option B which is exciting but terrifying. Classic.",
+      "audio": "line_0612.mp3"
+    },
+    {
+      "id": 613,
+      "text": "You know what, actually... no. Wait. Yes. Actually, no. Okay, final answer: yes. I'm going with yes.",
+      "audio": "line_0613.mp3"
+    },
+    {
+      "id": 614,
+      "text": "Here's what's bugging me about this whole situation. It's not that it happened, it's how it happened. Like, the whole thing just feels off somehow.",
+      "audio": "line_0614.mp3"
+    },
+    {
+      "id": 615,
+      "text": "Oh! Actually, that gives me an idea. What if... no, that's dumb. Or is it? Hold on, let me think this through.",
+      "audio": "line_0615.mp3"
+    },
+    {
+      "id": 616,
+      "text": "I keep circling back to the same thought and I can't figure out if it's because I'm right or because I'm stubborn. Probably both.",
+      "audio": "line_0616.mp3"
+    },
+    {
+      "id": 617,
+      "text": "So here's my concern, and tell me if I'm overthinking this, because I might be overthinking this.",
+      "audio": "line_0617.mp3"
+    },
+    {
+      "id": 618,
+      "text": "Hmm, I want to say yes but something is telling me to wait. I don't know what it is but I've learned to trust that feeling.",
+      "audio": "line_0618.mp3"
+    },
+    {
+      "id": 619,
+      "text": "Okay so hear me out, this is going to sound weird at first but stay with me. I think it'll make sense by the end. Maybe.",
+      "audio": "line_0619.mp3"
+    },
+    {
+      "id": 620,
+      "text": "Um, so, the thing is... okay how do I say this? I've been wanting to talk to you about something.",
+      "audio": "line_0620.mp3"
+    },
+    {
+      "id": 621,
+      "text": "Well, I mean, it's not like... okay, yeah, you're right. It's exactly like that.",
+      "audio": "line_0621.mp3"
+    },
+    {
+      "id": 622,
+      "text": "So basically, long story short, well actually it's not that short, but the main point is...",
+      "audio": "line_0622.mp3"
+    },
+    {
+      "id": 623,
+      "text": "I don't know how to say this without it sounding weird, so I'm just going to say it and hope for the best.",
+      "audio": "line_0623.mp3"
+    },
+    {
+      "id": 624,
+      "text": "Okay so, um, this might come out wrong but I promise my intentions are good.",
+      "audio": "line_0624.mp3"
+    },
+    {
+      "id": 625,
+      "text": "Right, so, where do I even begin? I guess the beginning would be a good place, wouldn't it?",
+      "audio": "line_0625.mp3"
+    },
+    {
+      "id": 626,
+      "text": "How do I put this? It's like... you know when... okay, here's a better way to explain it.",
+      "audio": "line_0626.mp3"
+    },
+    {
+      "id": 627,
+      "text": "I was going to bring this up sooner but the timing never felt right and now it feels kind of random but here goes.",
+      "audio": "line_0627.mp3"
+    },
+    {
+      "id": 628,
+      "text": "So, yeah, that's um, that's basically where I'm at with the whole thing. Make sense?",
+      "audio": "line_0628.mp3"
+    },
+    {
+      "id": 629,
+      "text": "Look, I'm just going to come right out and say it because I've been dancing around this for way too long.",
+      "audio": "line_0629.mp3"
+    },
+    {
+      "id": 630,
+      "text": "Mhm, yeah, I hear you. Keep going, I'm listening.",
+      "audio": "line_0630.mp3"
+    },
+    {
+      "id": 631,
+      "text": "Right, right. That makes total sense. And then what happened?",
+      "audio": "line_0631.mp3"
+    },
+    {
+      "id": 632,
+      "text": "Oh interesting. So what did you do after that?",
+      "audio": "line_0632.mp3"
+    },
+    {
+      "id": 633,
+      "text": "Yeah, I can see why that would bother you. That's completely understandable.",
+      "audio": "line_0633.mp3"
+    },
+    {
+      "id": 634,
+      "text": "Wait, so let me make sure I'm following. You went there and then...?",
+      "audio": "line_0634.mp3"
+    },
+    {
+      "id": 635,
+      "text": "Okay, yeah. I'm with you so far. Go on.",
+      "audio": "line_0635.mp3"
+    },
+    {
+      "id": 636,
+      "text": "That's a lot. Take your time, there's no rush.",
+      "audio": "line_0636.mp3"
+    },
+    {
+      "id": 637,
+      "text": "I see, I see. And how did that make you feel?",
+      "audio": "line_0637.mp3"
+    },
+    {
+      "id": 638,
+      "text": "Got it. So it was more of a situation where you had no choice?",
+      "audio": "line_0638.mp3"
+    },
+    {
+      "id": 639,
+      "text": "Mmm, yeah. I've been in a similar spot before. It's tough.",
+      "audio": "line_0639.mp3"
+    },
+    {
+      "id": 640,
+      "text": "I had this amazing conversation with a stranger on the bus today. We started talking about the weather and somehow ended up discussing the meaning of life. That's the thing about people, you never know what conversation you're going to have until you start talking.",
+      "audio": "line_0640.mp3"
+    },
+    {
+      "id": 641,
+      "text": "My favorite time of day is right around five or six in the evening, when the light gets all golden and everything looks warm. I think photographers call it golden hour. Whatever they call it, it makes even ordinary things look magical.",
+      "audio": "line_0641.mp3"
+    },
+    {
+      "id": 642,
+      "text": "I've started this thing where I leave little notes for future me in random places. Like, in a jacket pocket or inside a book I'll read again. So when I find them months later, it's like getting a message from my past self. It's surprisingly comforting.",
+      "audio": "line_0642.mp3"
+    },
+    {
+      "id": 643,
+      "text": "I was sitting in traffic today and instead of being annoyed, I just turned up the music and sang along. And you know what? It actually turned a frustrating moment into a fun one. I think attitude really is a choice sometimes.",
+      "audio": "line_0643.mp3"
+    },
+    {
+      "id": 644,
+      "text": "There's this coffee shop I go to where the barista knows my order by heart. And every time she says, the usual? I feel like I belong there. It's such a small thing but it makes me feel known. And isn't that what we all want? To feel known?",
+      "audio": "line_0644.mp3"
+    },
+    {
+      "id": 645,
+      "text": "I think the hardest part of growing up is realizing that your parents are just people too. They don't have all the answers. They make mistakes. They're figuring it out as they go, same as the rest of us. That realization is kind of scary but also kind of beautiful.",
+      "audio": "line_0645.mp3"
+    },
+    {
+      "id": 646,
+      "text": "Someone asked me recently what my happiest memory is, and I couldn't pick just one. It's not the big moments that came to mind first. It was the small ones. Laughing in the car with friends. My dad teaching me to ride a bike. Quiet mornings with a good book. The small stuff is the big stuff.",
+      "audio": "line_0646.mp3"
+    },
+    {
+      "id": 647,
+      "text": "I learned something important this year. You can't control what happens to you, but you can control how you respond. And I know that sounds like something you'd see on a motivational poster, but it's true. The response is where your power is.",
+      "audio": "line_0647.mp3"
+    },
+    {
+      "id": 648,
+      "text": "I've been collecting moments instead of things lately. Less shopping, more experiencing. And honestly? I'm happier. I don't need another sweater. I need another sunset. Another long walk. Another good conversation. Like this one.",
+      "audio": "line_0648.mp3"
+    },
+    {
+      "id": 649,
+      "text": "I think everyone should have at least one person in their life who makes them feel like they can be completely themselves. No filter, no performance, just raw, honest, real. If you have that person, hold onto them. If you are that person for someone, you're doing something right.",
+      "audio": "line_0649.mp3"
+    },
+    {
+      "id": 650,
+      "text": "Oh, absolutely! I'd be happy to help you with that. Let me pull that up real quick.",
+      "audio": "line_0650.mp3"
+    },
+    {
+      "id": 651,
+      "text": "So what I'm hearing is you need help with your reservation, right? Let me see what I can do.",
+      "audio": "line_0651.mp3"
+    },
+    {
+      "id": 652,
+      "text": "No worries at all! These things happen. Let's get it sorted out together.",
+      "audio": "line_0652.mp3"
+    },
+    {
+      "id": 653,
+      "text": "Great question! So the way it works is pretty straightforward, actually.",
+      "audio": "line_0653.mp3"
+    },
+    {
+      "id": 654,
+      "text": "I totally understand your frustration. That shouldn't have happened and I'm sorry about that.",
+      "audio": "line_0654.mp3"
+    },
+    {
+      "id": 655,
+      "text": "Let me walk you through it step by step so it makes sense. Ready?",
+      "audio": "line_0655.mp3"
+    },
+    {
+      "id": 656,
+      "text": "Oh, I see what happened there. Easy fix! Give me one second.",
+      "audio": "line_0656.mp3"
+    },
+    {
+      "id": 657,
+      "text": "Is there anything else I can help you with? I want to make sure you're all set before we wrap up.",
+      "audio": "line_0657.mp3"
+    },
+    {
+      "id": 658,
+      "text": "Perfect! So you're all good then? Awesome. Don't hesitate to reach out if you need anything else.",
+      "audio": "line_0658.mp3"
+    },
+    {
+      "id": 659,
+      "text": "I'm going to put you on a brief hold while I check on that, okay? I'll be right back, I promise.",
+      "audio": "line_0659.mp3"
+    },
+    {
+      "id": 660,
+      "text": "Okay so you're going to want to take a left at the light, then go straight for about two blocks. You can't miss it, it's the building with the blue awning.",
+      "audio": "line_0660.mp3"
+    },
+    {
+      "id": 661,
+      "text": "It's really simple, actually. First you open the app, then tap on settings, and it should be right there at the top.",
+      "audio": "line_0661.mp3"
+    },
+    {
+      "id": 662,
+      "text": "The trick is to not overthink it. Just follow the steps in order and it'll work. Trust me, I messed it up the first three times too.",
+      "audio": "line_0662.mp3"
+    },
+    {
+      "id": 663,
+      "text": "So basically, the way I'd explain it is like this. Imagine you have a jar, right? And the jar is your time. The big rocks are the important stuff.",
+      "audio": "line_0663.mp3"
+    },
+    {
+      "id": 664,
+      "text": "Let me break it down for you because when someone explained it to me this way, it finally clicked.",
+      "audio": "line_0664.mp3"
+    },
+    {
+      "id": 665,
+      "text": "You're almost there! Just one more step. See that button on the right? Click that and you're done.",
+      "audio": "line_0665.mp3"
+    },
+    {
+      "id": 666,
+      "text": "It sounds more complicated than it actually is. Once you do it once, you'll be like, oh, that's it?",
+      "audio": "line_0666.mp3"
+    },
+    {
+      "id": 667,
+      "text": "If you get stuck, just text me and I'll walk you through it. Seriously, it's no trouble at all.",
+      "audio": "line_0667.mp3"
+    },
+    {
+      "id": 668,
+      "text": "The easiest way to remember it is like this. Think of it as a recipe. You wouldn't skip steps in a recipe, right?",
+      "audio": "line_0668.mp3"
+    },
+    {
+      "id": 669,
+      "text": "Oh! I know a shortcut for that. Instead of doing all those steps, you can just press and hold the button and it does it automatically.",
+      "audio": "line_0669.mp3"
+    },
+    {
+      "id": 670,
+      "text": "I don't know why I'm so emotional today. Everything just feels heavier than usual and I can't shake it.",
+      "audio": "line_0670.mp3"
+    },
+    {
+      "id": 671,
+      "text": "Sometimes I just miss how things used to be. Not because now is bad, just because then was special too.",
+      "audio": "line_0671.mp3"
+    },
+    {
+      "id": 672,
+      "text": "I had a really hard conversation today and I'm still kind of processing it. I think I need a minute.",
+      "audio": "line_0672.mp3"
+    },
+    {
+      "id": 673,
+      "text": "It's okay, I'm fine. Well, I'm not fine, but I will be. I just need some time.",
+      "audio": "line_0673.mp3"
+    },
+    {
+      "id": 674,
+      "text": "I cried in the parking lot today and I'm not even sure why. Sometimes the tears just need to come out.",
+      "audio": "line_0674.mp3"
+    },
+    {
+      "id": 675,
+      "text": "I miss my grandpa. It's been years but some days it hits me out of nowhere. Today is one of those days.",
+      "audio": "line_0675.mp3"
+    },
+    {
+      "id": 676,
+      "text": "There are some things you never really get over. You just learn to carry them differently.",
+      "audio": "line_0676.mp3"
+    },
+    {
+      "id": 677,
+      "text": "I put on a brave face a lot but honestly? Sometimes I'm really struggling behind the scenes.",
+      "audio": "line_0677.mp3"
+    },
+    {
+      "id": 678,
+      "text": "I feel like I've been running on empty for a while now and I don't know how to refuel.",
+      "audio": "line_0678.mp3"
+    },
+    {
+      "id": 679,
+      "text": "Can we just sit here quietly for a minute? I don't need words right now, I just need your presence.",
+      "audio": "line_0679.mp3"
+    },
+    {
+      "id": 680,
+      "text": "OH MY GOD! It happened! It actually happened! I can't believe it! Come here, I need to hug someone!",
+      "audio": "line_0680.mp3"
+    },
+    {
+      "id": 681,
+      "text": "This is the best day ever. I'm not exaggerating. Literally the best day of my entire life!",
+      "audio": "line_0681.mp3"
+    },
+    {
+      "id": 682,
+      "text": "I am SO pumped right now! Like, I could run a marathon! Okay, not a marathon, but definitely a 5K!",
+      "audio": "line_0682.mp3"
+    },
+    {
+      "id": 683,
+      "text": "Yes yes yes yes yes! I knew it! I knew it was going to work out! I had a feeling!",
+      "audio": "line_0683.mp3"
+    },
+    {
+      "id": 684,
+      "text": "I'm literally dancing in my kitchen right now. By myself. No music. Just pure happiness.",
+      "audio": "line_0684.mp3"
+    },
+    {
+      "id": 685,
+      "text": "Everything is coming together and I'm trying not to jinx it by talking about it but I can't help it!",
+      "audio": "line_0685.mp3"
+    },
+    {
+      "id": 686,
+      "text": "I feel like I could take on the world right now. Whatever the world throws at me, bring it!",
+      "audio": "line_0686.mp3"
+    },
+    {
+      "id": 687,
+      "text": "This might be the happiest I've been in a really long time and I want to stay in this feeling forever.",
+      "audio": "line_0687.mp3"
+    },
+    {
+      "id": 688,
+      "text": "I'm grinning so hard right now that my face hurts. That's how you know it's real joy.",
+      "audio": "line_0688.mp3"
+    },
+    {
+      "id": 689,
+      "text": "I just want to tell everyone I see about this because I'm bursting. Literally bursting with excitement.",
+      "audio": "line_0689.mp3"
+    },
+    {
+      "id": 690,
+      "text": "I'm trying really hard to be patient right now but it is taking everything in me.",
+      "audio": "line_0690.mp3"
+    },
+    {
+      "id": 691,
+      "text": "You know what drives me absolutely crazy? When people don't listen. Like, I literally just said that.",
+      "audio": "line_0691.mp3"
+    },
+    {
+      "id": 692,
+      "text": "I've asked three times now and I'm going to lose my mind if I have to ask again.",
+      "audio": "line_0692.mp3"
+    },
+    {
+      "id": 693,
+      "text": "Why is this so unnecessarily complicated? It should not be this hard. It should not.",
+      "audio": "line_0693.mp3"
+    },
+    {
+      "id": 694,
+      "text": "I'm not angry, I'm just... disappointed. Which, as we all know, is actually worse.",
+      "audio": "line_0694.mp3"
+    },
+    {
+      "id": 695,
+      "text": "The amount of hoops I had to jump through for something this simple is honestly insulting.",
+      "audio": "line_0695.mp3"
+    },
+    {
+      "id": 696,
+      "text": "I just want it to work. That's all I'm asking. Just work. Please. For the love of everything.",
+      "audio": "line_0696.mp3"
+    },
+    {
+      "id": 697,
+      "text": "If one more thing goes wrong today, I'm going back to bed and starting over tomorrow.",
+      "audio": "line_0697.mp3"
+    },
+    {
+      "id": 698,
+      "text": "I don't want to complain but I'm going to complain because this is genuinely ridiculous.",
+      "audio": "line_0698.mp3"
+    },
+    {
+      "id": 699,
+      "text": "Deep breaths. I'm taking deep breaths. It's not working but I'm trying.",
+      "audio": "line_0699.mp3"
+    },
+    {
+      "id": 700,
+      "text": "Okay, are you sitting down? Because I have the best news and I need you to be seated for this.",
+      "audio": "line_0700.mp3"
+    },
+    {
+      "id": 701,
+      "text": "Guess what? Guess! No, you'll never guess. Okay, I'll just tell you. I got the job!",
+      "audio": "line_0701.mp3"
+    },
+    {
+      "id": 702,
+      "text": "So remember that thing I was stressed about? It worked out. It actually worked out perfectly.",
+      "audio": "line_0702.mp3"
+    },
+    {
+      "id": 703,
+      "text": "I've been dying to tell you this all day. I couldn't say anything until now but oh my god.",
+      "audio": "line_0703.mp3"
+    },
+    {
+      "id": 704,
+      "text": "You're going to be so happy when I tell you this. Ready? Okay here goes.",
+      "audio": "line_0704.mp3"
+    },
+    {
+      "id": 705,
+      "text": "I just found out the best news and you're the first person I wanted to tell.",
+      "audio": "line_0705.mp3"
+    },
+    {
+      "id": 706,
+      "text": "Plot twist! Everything I was worried about? Completely unnecessary. It all went great!",
+      "audio": "line_0706.mp3"
+    },
+    {
+      "id": 707,
+      "text": "I have an announcement and I want to see your face when I say it. Okay, here it is.",
+      "audio": "line_0707.mp3"
+    },
+    {
+      "id": 708,
+      "text": "Today I got the email I've been waiting for and I screamed. Like, actually screamed. My neighbors probably think I'm unhinged.",
+      "audio": "line_0708.mp3"
+    },
+    {
+      "id": 709,
+      "text": "I'm still in shock. Like, is this real? Someone pinch me because I'm pretty sure I'm dreaming.",
+      "audio": "line_0709.mp3"
+    },
+    {
+      "id": 710,
+      "text": "I wonder if fish know they're wet. Like, if you've never known anything else, does it even register?",
+      "audio": "line_0710.mp3"
+    },
+    {
+      "id": 711,
+      "text": "Time is so weird when you think about it. A minute can feel like an hour and an hour can feel like a minute.",
+      "audio": "line_0711.mp3"
+    },
+    {
+      "id": 712,
+      "text": "I think kindness is underrated as a form of intelligence. It takes real awareness to be kind in a difficult moment.",
+      "audio": "line_0712.mp3"
+    },
+    {
+      "id": 713,
+      "text": "What if the universe is just one big inside joke and we're all in on it but we forgot?",
+      "audio": "line_0713.mp3"
+    },
+    {
+      "id": 714,
+      "text": "I read that trees communicate through their roots underground. Like, they share nutrients and warn each other about danger. That blew my mind.",
+      "audio": "line_0714.mp3"
+    },
+    {
+      "id": 715,
+      "text": "The fact that we're on a rock floating through space and we still get upset about stuff like parking tickets is kind of hilarious.",
+      "audio": "line_0715.mp3"
+    },
+    {
+      "id": 716,
+      "text": "I think every person you meet knows something you don't. Everyone is a teacher if you're willing to learn.",
+      "audio": "line_0716.mp3"
+    },
+    {
+      "id": 717,
+      "text": "Music is basically organized vibrations that make us feel emotions. When you describe it that way it sounds like magic. And honestly, it kind of is.",
+      "audio": "line_0717.mp3"
+    },
+    {
+      "id": 718,
+      "text": "I wonder how many times we've been in the same place as someone who will become really important to us but we just haven't met yet.",
+      "audio": "line_0718.mp3"
+    },
+    {
+      "id": 719,
+      "text": "The universe is, what, fourteen billion years old? And we get like eighty years on this planet. We better make them count.",
+      "audio": "line_0719.mp3"
+    },
+    {
+      "id": 720,
+      "text": "Excuse me, sorry, do you know if this bus goes downtown? I always get confused with the routes.",
+      "audio": "line_0720.mp3"
+    },
+    {
+      "id": 721,
+      "text": "Oh, after you. No really, go ahead. I'm not in a rush.",
+      "audio": "line_0721.mp3"
+    },
+    {
+      "id": 722,
+      "text": "Is this seat taken? Cool, thanks. I'll just be here reading my book and minding my business.",
+      "audio": "line_0722.mp3"
+    },
+    {
+      "id": 723,
+      "text": "Hey, quick question. Do you know what time this place closes? I want to make sure I don't get locked in.",
+      "audio": "line_0723.mp3"
+    },
+    {
+      "id": 724,
+      "text": "Thank you so much! You didn't have to do that but I really appreciate it.",
+      "audio": "line_0724.mp3"
+    },
+    {
+      "id": 725,
+      "text": "Sorry, I didn't catch your name. Could you say it one more time? I want to make sure I get it right.",
+      "audio": "line_0725.mp3"
+    },
+    {
+      "id": 726,
+      "text": "Oh, bless you! Sounds like allergies? Yeah, this time of year is brutal for that.",
+      "audio": "line_0726.mp3"
+    },
+    {
+      "id": 727,
+      "text": "That's a beautiful dog! What breed is it? Oh, a mix? The mixes are always the cutest ones.",
+      "audio": "line_0727.mp3"
+    },
+    {
+      "id": 728,
+      "text": "Do you mind if I sit here? Every other table is taken and I just need a spot to eat my lunch.",
+      "audio": "line_0728.mp3"
+    },
+    {
+      "id": 729,
+      "text": "Your garden is gorgeous, by the way. I walk past it every day and it always makes me smile.",
+      "audio": "line_0729.mp3"
+    },
+    {
+      "id": 730,
+      "text": "Excuse me, I think you dropped this! Yeah, it was right there on the ground. Good thing I saw it.",
+      "audio": "line_0730.mp3"
+    },
+    {
+      "id": 731,
+      "text": "Oh, we have the same phone case! Great minds think alike, right?",
+      "audio": "line_0731.mp3"
+    },
+    {
+      "id": 732,
+      "text": "Hi, sorry to bother you, but do you have the time? My phone is dead and I'm supposed to be somewhere.",
+      "audio": "line_0732.mp3"
+    },
+    {
+      "id": 733,
+      "text": "Want the last slice? No? You sure? Okay, twist my arm. I'll take it then.",
+      "audio": "line_0733.mp3"
+    },
+    {
+      "id": 734,
+      "text": "I love your earrings! Where did you find those? I've been looking for something exactly like that.",
+      "audio": "line_0734.mp3"
+    },
+    {
+      "id": 735,
+      "text": "Hey, I know things are tough right now but I just want you to know I'm in your corner. Always.",
+      "audio": "line_0735.mp3"
+    },
+    {
+      "id": 736,
+      "text": "You don't have to have it all figured out right now. Nobody expects that from you. Especially not me.",
+      "audio": "line_0736.mp3"
+    },
+    {
+      "id": 737,
+      "text": "I'm going to say something and I need you to really hear it, okay? You are enough. Right now, as you are.",
+      "audio": "line_0737.mp3"
+    },
+    {
+      "id": 738,
+      "text": "Whatever happens, we'll deal with it together. That's what we do. We figure it out.",
+      "audio": "line_0738.mp3"
+    },
+    {
+      "id": 739,
+      "text": "I know you're scared. And that's okay. Being scared means you care. We'll get through this.",
+      "audio": "line_0739.mp3"
+    },
+    {
+      "id": 740,
+      "text": "Look at me. You are not a burden. You are never a burden. Don't ever think that.",
+      "audio": "line_0740.mp3"
+    },
+    {
+      "id": 741,
+      "text": "I'm not going anywhere. You hear me? I'm right here and I'm not going anywhere.",
+      "audio": "line_0741.mp3"
+    },
+    {
+      "id": 742,
+      "text": "You've been so strong for so long. It's okay to let someone else be strong for you for a bit.",
+      "audio": "line_0742.mp3"
+    },
+    {
+      "id": 743,
+      "text": "I made you some soup. You don't have to eat it right now but it's there when you're ready.",
+      "audio": "line_0743.mp3"
+    },
+    {
+      "id": 744,
+      "text": "I cleared my whole afternoon. I'm yours. Whatever you need, wherever you want to go, I'm in.",
+      "audio": "line_0744.mp3"
+    },
+    {
+      "id": 745,
+      "text": "Oh this is cute! Wait, how much is it? Hmm. It's cute but is it that cute? You know what, yeah, I'm getting it.",
+      "audio": "line_0745.mp3"
+    },
+    {
+      "id": 746,
+      "text": "I've been standing in this aisle for fifteen minutes trying to decide between two things that are basically identical.",
+      "audio": "line_0746.mp3"
+    },
+    {
+      "id": 747,
+      "text": "Do we need milk? I feel like we need milk. I'm getting milk just in case. Better safe than sorry.",
+      "audio": "line_0747.mp3"
+    },
+    {
+      "id": 748,
+      "text": "I went in for one thing and came out with a full cart. Every single time. I have no self control in there.",
+      "audio": "line_0748.mp3"
+    },
+    {
+      "id": 749,
+      "text": "The line is so long but I refuse to use self checkout because it always yells at me about unexpected items.",
+      "audio": "line_0749.mp3"
+    },
+    {
+      "id": 750,
+      "text": "I love a good deal. Like, finding something on sale gives me a rush. Is that weird? Probably. Do I care? No.",
+      "audio": "line_0750.mp3"
+    },
+    {
+      "id": 751,
+      "text": "I brought my reusable bags but left them in the car. Which is basically the same as not bringing them.",
+      "audio": "line_0751.mp3"
+    },
+    {
+      "id": 752,
+      "text": "There's something so satisfying about crossing everything off a to do list. I even add things I've already done just to cross them off.",
+      "audio": "line_0752.mp3"
+    },
+    {
+      "id": 753,
+      "text": "I need to return this but I've been putting it off because returning things feels like a confrontation and I avoid confrontation.",
+      "audio": "line_0753.mp3"
+    },
+    {
+      "id": 754,
+      "text": "Oh we should check out that new store that opened! I heard it's really good. Well, I saw someone post about it online.",
+      "audio": "line_0754.mp3"
+    },
+    {
+      "id": 755,
+      "text": "The sky right now is this insane shade of pink and orange and purple all mixed together. It looks like a painting. An actual painting.",
+      "audio": "line_0755.mp3"
+    },
+    {
+      "id": 756,
+      "text": "It smelled like fresh rain and cut grass and something sweet, like flowers maybe. It was one of those smells that makes you stop and breathe deep.",
+      "audio": "line_0756.mp3"
+    },
+    {
+      "id": 757,
+      "text": "The room was tiny, like barely bigger than a closet, but it was so cozy. String lights everywhere, books piled up, a soft rug on the floor.",
+      "audio": "line_0757.mp3"
+    },
+    {
+      "id": 758,
+      "text": "The sound of the waves was so constant and rhythmic that it almost felt like a heartbeat. The ocean's heartbeat.",
+      "audio": "line_0758.mp3"
+    },
+    {
+      "id": 759,
+      "text": "He had the warmest smile. The kind that reaches the eyes. You know those smiles? Where you can tell it's real? That was his smile.",
+      "audio": "line_0759.mp3"
+    },
+    {
+      "id": 760,
+      "text": "The chocolate cake was so rich it was almost overwhelming. Like, every bite was an event. Dense, fudgy, melt in your mouth perfection.",
+      "audio": "line_0760.mp3"
+    },
+    {
+      "id": 761,
+      "text": "The fog was so thick this morning that I could barely see ten feet in front of me. It felt like walking through a cloud.",
+      "audio": "line_0761.mp3"
+    },
+    {
+      "id": 762,
+      "text": "She walked in and the whole room just sort of shifted. Not in a dramatic way, but in a way where you could feel the energy change.",
+      "audio": "line_0762.mp3"
+    },
+    {
+      "id": 763,
+      "text": "The music was so loud you could feel it in your chest. Like, your ribcage was vibrating. It was intense but in the best way.",
+      "audio": "line_0763.mp3"
+    },
+    {
+      "id": 764,
+      "text": "The water was crystal clear, like you could see all the way to the bottom. Little fish swimming around, sunlight dancing on the surface.",
+      "audio": "line_0764.mp3"
+    },
+    {
+      "id": 765,
+      "text": "See, I hear what you're saying, and I respect it, but I just don't see it that way.",
+      "audio": "line_0765.mp3"
+    },
+    {
+      "id": 766,
+      "text": "Okay, but consider this. What if the opposite is true? Just entertain it for a second.",
+      "audio": "line_0766.mp3"
+    },
+    {
+      "id": 767,
+      "text": "I'm going to push back on that a little bit, not to be difficult, but because I think there's another angle.",
+      "audio": "line_0767.mp3"
+    },
+    {
+      "id": 768,
+      "text": "We're going to have to agree to disagree on this one. And that's totally fine. That's what makes us interesting.",
+      "audio": "line_0768.mp3"
+    },
+    {
+      "id": 769,
+      "text": "I think you make a fair point, but here's where I get stuck with that logic.",
+      "audio": "line_0769.mp3"
+    },
+    {
+      "id": 770,
+      "text": "Wait, but doesn't that contradict what you said earlier? Help me connect the dots here.",
+      "audio": "line_0770.mp3"
+    },
+    {
+      "id": 771,
+      "text": "I love that we can disagree and still be cool about it. Not everyone can do that.",
+      "audio": "line_0771.mp3"
+    },
+    {
+      "id": 772,
+      "text": "Fair enough. You've given me something to think about. I might come around to your side eventually.",
+      "audio": "line_0772.mp3"
+    },
+    {
+      "id": 773,
+      "text": "Okay, you win this round. But I reserve the right to bring it up again later when I have better arguments.",
+      "audio": "line_0773.mp3"
+    },
+    {
+      "id": 774,
+      "text": "That's a bold take and honestly I kind of admire the confidence even though I think you're wrong.",
+      "audio": "line_0774.mp3"
+    },
+    {
+      "id": 775,
+      "text": "Well, I should probably head out. But this was so nice. Really, really nice.",
+      "audio": "line_0775.mp3"
+    },
+    {
+      "id": 776,
+      "text": "I don't want to go but I have to. Can we do this again soon? Like, really soon?",
+      "audio": "line_0776.mp3"
+    },
+    {
+      "id": 777,
+      "text": "Okay, one more story and then I really have to leave. I keep saying that but I mean it this time.",
+      "audio": "line_0777.mp3"
+    },
+    {
+      "id": 778,
+      "text": "Walk me out? I always feel like the conversation is better on the way to the door anyway.",
+      "audio": "line_0778.mp3"
+    },
+    {
+      "id": 779,
+      "text": "Drive safe, okay? Text me when you get home so I know you made it.",
+      "audio": "line_0779.mp3"
+    },
+    {
+      "id": 780,
+      "text": "This was exactly what I needed. A good conversation and a good friend. You checked both boxes.",
+      "audio": "line_0780.mp3"
+    },
+    {
+      "id": 781,
+      "text": "Oh gosh, look at the time! I completely lost track. See, that's how I know we had a good talk.",
+      "audio": "line_0781.mp3"
+    },
+    {
+      "id": 782,
+      "text": "Alright, I'm gonna go before I start another topic. Because I will. You know I will.",
+      "audio": "line_0782.mp3"
+    },
+    {
+      "id": 783,
+      "text": "Hug? Come here. That was a good one. Okay, for real this time. I'm going. Bye! Love you! Bye!",
+      "audio": "line_0783.mp3"
+    },
+    {
+      "id": 784,
+      "text": "Until next time, my friend. Take care of yourself and don't be a stranger, okay?",
+      "audio": "line_0784.mp3"
+    },
+    {
+      "id": 785,
+      "text": "Hey, hey, slow down. Take a breath. Okay, now tell me what happened. Start from the beginning.",
+      "audio": "line_0785.mp3"
+    },
+    {
+      "id": 786,
+      "text": "I'm right here, okay? I'm not hanging up. Take all the time you need.",
+      "audio": "line_0786.mp3"
+    },
+    {
+      "id": 787,
+      "text": "That sounds really scary but you're safe now, right? Okay good. That's what matters.",
+      "audio": "line_0787.mp3"
+    },
+    {
+      "id": 788,
+      "text": "Listen to me. You did the right thing. You absolutely did the right thing. Don't second guess yourself.",
+      "audio": "line_0788.mp3"
+    },
+    {
+      "id": 789,
+      "text": "I know it feels like the end of the world right now but I promise you it's not. This will pass.",
+      "audio": "line_0789.mp3"
+    },
+    {
+      "id": 790,
+      "text": "I'm going to stay on the phone with you until you feel better. I don't care how long it takes.",
+      "audio": "line_0790.mp3"
+    },
+    {
+      "id": 791,
+      "text": "Can you do something for me? Just look around and tell me five things you can see. It helps, trust me.",
+      "audio": "line_0791.mp3"
+    },
+    {
+      "id": 792,
+      "text": "You're stronger than you think you are. I mean that. You've been through worse and you're still here.",
+      "audio": "line_0792.mp3"
+    },
+    {
+      "id": 793,
+      "text": "It's going to be okay. And I'm not just saying that to say it. I genuinely believe it's going to be okay.",
+      "audio": "line_0793.mp3"
+    },
+    {
+      "id": 794,
+      "text": "I love you, you know that? Whatever this is, we'll figure it out. Together. Like we always do.",
+      "audio": "line_0794.mp3"
+    },
+    {
+      "id": 795,
+      "text": "If I were a superhero, my power would definitely be being able to fall asleep anywhere. Instantly. On command.",
+      "audio": "line_0795.mp3"
+    },
+    {
+      "id": 796,
+      "text": "I just had a staring contest with myself in the mirror and I lost. How does that even work?",
+      "audio": "line_0796.mp3"
+    },
+    {
+      "id": 797,
+      "text": "My life motto is basically just winging it and hoping for the best, and so far it's been surprisingly effective.",
+      "audio": "line_0797.mp3"
+    },
+    {
+      "id": 798,
+      "text": "I wonder what my dog thinks about all day. Like, is he having deep thoughts or is it just squirrel, nap, food, repeat?",
+      "audio": "line_0798.mp3"
+    },
+    {
+      "id": 799,
+      "text": "If I could have any job in the world, I think I'd be a professional sunset watcher. Is that a thing? It should be a thing.",
+      "audio": "line_0799.mp3"
+    },
+    {
+      "id": 800,
+      "text": "I accidentally made eye contact with someone through a window and now we're basically in a relationship.",
+      "audio": "line_0800.mp3"
+    },
+    {
+      "id": 801,
+      "text": "My spirit animal is a sloth. Not because I'm lazy, but because I believe in moving with intention. Slowly. Very slowly.",
+      "audio": "line_0801.mp3"
+    },
+    {
+      "id": 802,
+      "text": "I tried to wink at someone and instead I just blinked aggressively with one eye. Nailed it.",
+      "audio": "line_0802.mp3"
+    },
+    {
+      "id": 803,
+      "text": "If aliens came to Earth and asked me to explain humanity, I'd just show them a video of people at IKEA on a Saturday.",
+      "audio": "line_0803.mp3"
+    },
+    {
+      "id": 804,
+      "text": "I put my shirt on inside out today and didn't notice until someone pointed it out. I said it was a fashion statement.",
+      "audio": "line_0804.mp3"
+    },
+    {
+      "id": 805,
+      "text": "Oh! Before I forget, I wanted to ask you something. It's been on my mind all week.",
+      "audio": "line_0805.mp3"
+    },
+    {
+      "id": 806,
+      "text": "You have no idea how much I needed to hear that today. Your timing is impeccable as always.",
+      "audio": "line_0806.mp3"
+    },
+    {
+      "id": 807,
+      "text": "I've been replaying this conversation in my head and I keep thinking of better things I should have said.",
+      "audio": "line_0807.mp3"
+    },
+    {
+      "id": 808,
+      "text": "Can we talk about something light? My brain needs a break from all the heavy stuff.",
+      "audio": "line_0808.mp3"
+    },
+    {
+      "id": 809,
+      "text": "You always have the best energy. Like, I leave our conversations feeling recharged. That's rare.",
+      "audio": "line_0809.mp3"
+    },
+    {
+      "id": 810,
+      "text": "I tried to explain this to someone else and they didn't get it at all. But I knew you would understand.",
+      "audio": "line_0810.mp3"
+    },
+    {
+      "id": 811,
+      "text": "That might be the most relatable thing anyone has ever said to me. I feel seen right now.",
+      "audio": "line_0811.mp3"
+    },
+    {
+      "id": 812,
+      "text": "Okay, rapid fire. Favorite color, favorite season, favorite ice cream flavor. Go!",
+      "audio": "line_0812.mp3"
+    },
+    {
+      "id": 813,
+      "text": "You know what, I changed my mind. I'm going for it. Life's too short to play it safe all the time.",
+      "audio": "line_0813.mp3"
+    },
+    {
+      "id": 814,
+      "text": "I think this is the beginning of something really good. I can feel it. Can you feel it too?",
+      "audio": "line_0814.mp3"
+    },
+    {
+      "id": 815,
+      "text": "That was such a perfect way to put it. I'm going to remember that. I might even write it down.",
+      "audio": "line_0815.mp3"
+    },
+    {
+      "id": 816,
+      "text": "Hold that thought because I need to get a snack. I can't have deep conversations on an empty stomach.",
+      "audio": "line_0816.mp3"
+    },
+    {
+      "id": 817,
+      "text": "We've been talking for two hours and it felt like twenty minutes. That's the sign of a truly great conversation.",
+      "audio": "line_0817.mp3"
+    },
+    {
+      "id": 818,
+      "text": "Okay, last thing, and then I promise I'll stop talking. Well, probably. Okay, no promises. But listen.",
+      "audio": "line_0818.mp3"
+    },
+    {
+      "id": 819,
+      "text": "I'm smiling so hard right now. Like, if you could see my face. This is pure, genuine, ear to ear happiness.",
+      "audio": "line_0819.mp3"
+    },
+    {
+      "id": 820,
+      "text": "Oh wait, one more thing. I keep saying one more thing but this is actually the last one. I think.",
+      "audio": "line_0820.mp3"
+    },
+    {
+      "id": 821,
+      "text": "You ever get that feeling where something just clicks? Like puzzle pieces snapping together? That's what just happened.",
+      "audio": "line_0821.mp3"
+    },
+    {
+      "id": 822,
+      "text": "I wrote you a little note. Don't open it now, open it later when you need a pick me up.",
+      "audio": "line_0822.mp3"
+    },
+    {
+      "id": 823,
+      "text": "This tastes like summer. I know that sounds weird but there are foods that taste like seasons and this is one of them.",
+      "audio": "line_0823.mp3"
+    },
+    {
+      "id": 824,
+      "text": "My favorite sound in the world is rain on a tin roof. Or maybe laughter. Actually, definitely laughter.",
+      "audio": "line_0824.mp3"
+    },
+    {
+      "id": 825,
+      "text": "I just realized we've known each other for years and I still learn new things about you. That's pretty special.",
+      "audio": "line_0825.mp3"
+    },
+    {
+      "id": 826,
+      "text": "Oh, you startled me! I was completely zoned out. I do that sometimes. Just go to another planet in my head.",
+      "audio": "line_0826.mp3"
+    },
+    {
+      "id": 827,
+      "text": "I think I left my phone in the car. Actually, no, it's in my pocket. Crisis averted.",
+      "audio": "line_0827.mp3"
+    },
+    {
+      "id": 828,
+      "text": "That was a mic drop moment and you didn't even realize it. You just casually dropped wisdom like it was nothing.",
+      "audio": "line_0828.mp3"
+    },
+    {
+      "id": 829,
+      "text": "I love those lazy Sunday afternoons where you have absolutely nothing to do and nowhere to be. Pure bliss.",
+      "audio": "line_0829.mp3"
+    },
+    {
+      "id": 830,
+      "text": "I'm one of those people who gets emotional at graduations even when I don't know anyone graduating. The potential, the pride, it just gets to me.",
+      "audio": "line_0830.mp3"
+    },
+    {
+      "id": 831,
+      "text": "You want to know what my comfort movie is? Don't judge me. Okay, you're going to judge me. But I don't care.",
+      "audio": "line_0831.mp3"
+    },
+    {
+      "id": 832,
+      "text": "I think about conversations days after they happen. Like, I'll be in the shower and suddenly think of the perfect response three days too late.",
+      "audio": "line_0832.mp3"
+    },
+    {
+      "id": 833,
+      "text": "The best surprises are the ones you don't see coming at all. The ones that catch you completely off guard in the best way.",
+      "audio": "line_0833.mp3"
+    },
+    {
+      "id": 834,
+      "text": "I love how passionate you get about this stuff. Your whole face lights up and your voice changes and it's the most authentic version of you.",
+      "audio": "line_0834.mp3"
+    },
+    {
+      "id": 835,
+      "text": "There's a crack in everything, that's how the light gets in. I read that somewhere and it stuck with me. It's about imperfection being beautiful.",
+      "audio": "line_0835.mp3"
+    },
+    {
+      "id": 836,
+      "text": "I've been meaning to learn how to dance. Not professionally, just enough to not embarrass myself at weddings.",
+      "audio": "line_0836.mp3"
+    },
+    {
+      "id": 837,
+      "text": "You know those mornings where the sun comes through the curtains just right and everything glows gold? I had one of those today and it set the tone for the whole day.",
+      "audio": "line_0837.mp3"
+    },
+    {
+      "id": 838,
+      "text": "I'm a firm believer that dessert should come first sometimes. Life is uncertain. Eat the cake.",
+      "audio": "line_0838.mp3"
+    },
+    {
+      "id": 839,
+      "text": "There's something about handwritten letters that hits different than texts or emails. The effort, the permanence, the fact that someone sat down and wrote it just for you.",
+      "audio": "line_0839.mp3"
+    },
+    {
+      "id": 840,
+      "text": "I sneezed while drinking coffee and now it's everywhere. The ceiling. My shirt. The wall. I didn't know that was physically possible.",
+      "audio": "line_0840.mp3"
+    },
+    {
+      "id": 841,
+      "text": "My phone autocorrected something to the most inappropriate word possible and I sent it to my boss. I'm currently updating my resume.",
+      "audio": "line_0841.mp3"
+    },
+    {
+      "id": 842,
+      "text": "Okay here's a controversial take. Pineapple absolutely belongs on pizza. I will debate anyone on this. Any time. Any place.",
+      "audio": "line_0842.mp3"
+    },
+    {
+      "id": 843,
+      "text": "I think the world would be a better place if people spent more time asking questions and less time assuming they know the answers.",
+      "audio": "line_0843.mp3"
+    },
+    {
+      "id": 844,
+      "text": "There are seven billion people on this planet and somehow I ended up knowing you. The odds of that are insane. And I'm really glad the universe worked it out.",
+      "audio": "line_0844.mp3"
+    },
+    {
+      "id": 845,
+      "text": "I keep a gratitude journal and today's entry is just this conversation. That's it. That's the whole entry.",
+      "audio": "line_0845.mp3"
+    },
+    {
+      "id": 846,
+      "text": "If I could bottle this feeling right now, I'd keep it on my shelf and open it on rainy days when I need a reminder that life is good.",
+      "audio": "line_0846.mp3"
+    },
+    {
+      "id": 847,
+      "text": "Do you believe in parallel universes? Because somewhere out there, there's a version of us having this exact same conversation. And they're probably having just as good a time.",
+      "audio": "line_0847.mp3"
+    },
+    {
+      "id": 848,
+      "text": "I want to age like my grandmother. Gracefully, joyfully, with a sharp wit and an even sharper sense of humor. That woman is my hero.",
+      "audio": "line_0848.mp3"
+    },
+    {
+      "id": 849,
+      "text": "Alright, this is it. For real this time. The actual, final, absolute last thing I'm going to say. Thank you for being you. Okay, now I'm done. Maybe.",
+      "audio": "line_0849.mp3"
+    }
+  ]
+}
