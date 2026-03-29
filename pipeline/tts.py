@@ -41,9 +41,6 @@ class StreamingTTS:
         print(f"Loading Orpheus TTS (voice: {self.voice})...")
         self.model = OrpheusModel(
             model_name="canopylabs/orpheus-tts-0.1-finetune-prod",
-            max_model_len=2048,
-            gpu_memory_utilization=0.3,
-            dtype="bfloat16",
         )
         print("Orpheus TTS ready.")
 
