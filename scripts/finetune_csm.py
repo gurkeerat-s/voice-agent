@@ -357,10 +357,8 @@ def train(args):
         gradient_checkpointing_kwargs={"use_reentrant": False},
 
         # -- Eval + saving --
-        eval_strategy="steps",
-        eval_steps=max(1, steps_per_epoch // 2),  # eval twice per epoch
-        save_strategy="steps",
-        save_steps=max(1, steps_per_epoch),  # save every epoch
+        eval_strategy="epoch",
+        save_strategy="epoch",
         save_total_limit=3,
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
