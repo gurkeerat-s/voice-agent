@@ -305,12 +305,9 @@ def train(args):
     processor = AutoProcessor.from_pretrained(args.model_id)
     model = CsmForConditionalGeneration.from_pretrained(
         args.model_id,
-        torch_dtype=torch.bfloat16,
-        attn_implementation="sdpa",  # use Flash Attention if available
+        # float32 — official CSM fine-tuning example uses float32
+        # bfloat16 causes dtype mismatch in _merge_input_ids_with_input_values
     )
-
-    # Cast entire model to bfloat16 (including codec) to avoid dtype mismatches
-    model = model.to(torch.bfloat16)
 
     # ---- Freeze codec ----
     freeze_codec(model)
@@ -352,8 +349,7 @@ def train(args):
         max_grad_norm=1.0,
 
         # -- Precision --
-        bf16=True,
-        bf16_full_eval=True,
+        # float32 training (matches official CSM example)
 
         # -- Memory --
         gradient_checkpointing=True,
