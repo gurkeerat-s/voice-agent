@@ -58,17 +58,26 @@ class StreamingTTS:
         if self.model is None:
             raise RuntimeError("Call load_model() first")
 
-        chunks = []
-        for audio_bytes in self.model.generate_speech(
-            prompt=text,
-            voice=self.voice,
-            temperature=0.6,
-            top_p=0.8,
-            repetition_penalty=1.3,
-            max_tokens=1200,
-        ):
-            chunk_np = np.frombuffer(audio_bytes, dtype=np.int16)
-            chunks.append(chunk_np)
+        import concurrent.futures
+
+        def _generate():
+            chunks = []
+            for audio_bytes in self.model.generate_speech(
+                prompt=text,
+                voice=self.voice,
+                temperature=0.6,
+                top_p=0.8,
+                repetition_penalty=1.3,
+                max_tokens=1200,
+            ):
+                chunk_np = np.frombuffer(audio_bytes, dtype=np.int16)
+                chunks.append(chunk_np)
+            return chunks
+
+        # Run in a separate thread to avoid async event loop conflicts
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            future = executor.submit(_generate)
+            chunks = future.result(timeout=30)
 
         if not chunks:
             return np.array([], dtype=np.float32)
