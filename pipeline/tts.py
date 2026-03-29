@@ -52,9 +52,13 @@ class StreamingTTS:
         model = PeftModel.from_pretrained(base_model, self.adapter_path)
         self.model = model.merge_and_unload()
 
+        # Convert to bfloat16 for faster inference
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.model = self.model.to(self.device)
+        self.model = self.model.to(device=self.device, dtype=torch.bfloat16)
         self.model.eval()
+
+        # Compile for faster generation
+        # self.model = torch.compile(self.model, mode="reduce-overhead")
         print(f"CSM-1B ready on {self.device}")
 
     def load_voice(self, reference_audio_path: str):
