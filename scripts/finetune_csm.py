@@ -352,8 +352,8 @@ def train(args):
         # float32 training (matches official CSM example)
 
         # -- Memory --
-        gradient_checkpointing=True,
-        gradient_checkpointing_kwargs={"use_reentrant": False},
+        # gradient checkpointing disabled — conflicts with CSM depth decoder
+        # in-place ops. A100 80GB has enough VRAM for float32 training.
 
         # -- Eval + saving --
         eval_strategy="epoch",
