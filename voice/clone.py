@@ -1,8 +1,8 @@
 """
-Voice setup for Kokoro TTS.
+Voice setup for CSM-1B with LoRA adapter.
 
-Kokoro uses preset voices (no cloning needed).
-This module just initializes the TTS pipeline.
+Loads the base model + fine-tuned adapter and returns
+a ready-to-use TTS instance.
 
 Usage:
     tts = setup_voice()
@@ -14,13 +14,13 @@ from config import config
 
 def setup_voice(reference_audio_path: str | None = None) -> StreamingTTS:
     """
-    Initialize TTS. Reference audio path is ignored (Kokoro uses preset voices).
+    Initialize TTS with the fine-tuned CSM-1B model.
 
     Returns:
         A StreamingTTS instance ready to synthesize speech.
     """
     tts = StreamingTTS()
-    print(f"Loading Kokoro TTS (voice: {config.tts.voice})...")
+    print(f"Loading CSM-1B + LoRA adapter ({config.tts.adapter_path})...")
     tts.load_model()
-    print("Kokoro TTS ready.")
+    print("CSM-1B TTS ready.")
     return tts

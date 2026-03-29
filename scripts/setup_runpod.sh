@@ -1,6 +1,6 @@
 #!/bin/bash
 # ──────────────────────────────────────────────────────────
-# RunPod Setup Script — One-shot setup
+# RunPod Setup Script — Voice Agent with CSM-1B
 #
 # Usage:
 #   cd /workspace && git clone https://github.com/gurkeerat-s/voice-agent.git && cd voice-agent && chmod +x scripts/setup_runpod.sh && ./scripts/setup_runpod.sh
@@ -13,30 +13,25 @@ echo "  Voice Agent — RunPod Setup"
 echo "=============================================="
 
 # ── 1. System deps ─────────────────────────────────────────
-echo "[1/5] System dependencies..."
-apt-get update -qq && apt-get install -y -qq ffmpeg zstd espeak-ng > /dev/null 2>&1
+echo "[1/4] System dependencies..."
+apt-get update -qq && apt-get install -y -qq ffmpeg zstd > /dev/null 2>&1
 echo "  Done."
 
 # ── 2. Python packages ────────────────────────────────────
-echo "[2/5] Installing Python packages..."
-pip install -q "kokoro>=0.9" soundfile faster-whisper openai fastapi "uvicorn[standard]" websockets scipy pydantic pydantic-settings
+echo "[2/4] Installing Python packages..."
+pip install -q "transformers>=4.52.1" "peft>=0.15.0" faster-whisper openai fastapi "uvicorn[standard]" websockets scipy soundfile pydantic pydantic-settings accelerate
 echo "  Done."
 
 # ── 3. Install Ollama ─────────────────────────────────────
-echo "[3/5] Installing Ollama..."
+echo "[3/4] Installing Ollama..."
 curl -fsSL https://ollama.com/install.sh | sh
 echo "  Done."
 
 # ── 4. Start Ollama and pull model ────────────────────────
-echo "[4/5] Starting Ollama and pulling Llama 3.1 8B..."
+echo "[4/4] Starting Ollama and pulling Llama 3.1 8B..."
 ollama serve &
 sleep 5
 ollama pull llama3.1:8b
-echo "  Done."
-
-# ── 5. Download Kokoro model ──────────────────────────────
-echo "[5/5] Downloading Kokoro model..."
-python -c "from kokoro import KPipeline; p = KPipeline(lang_code='a'); print('Kokoro ready.')"
 echo "  Done."
 
 echo ""

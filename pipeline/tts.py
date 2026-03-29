@@ -1,8 +1,9 @@
 """
-TTS using Kokoro-82M.
+TTS using fine-tuned CSM-1B with LoRA adapter.
 
-High-quality, fast text-to-speech with preset voices.
-Outputs 24kHz float32 mono audio. Supports sentence-level streaming.
+Loads sesame/csm-1b base model + LoRA adapter (trained on Zara voice),
+merges weights, and generates speech.
+Outputs 24kHz float32 mono audio.
 
 Usage:
     tts = StreamingTTS()
@@ -13,34 +14,51 @@ Usage:
 """
 
 import numpy as np
-from kokoro import KPipeline
+import torch
 
 from config import config
 
 
 class StreamingTTS:
     """
-    Kokoro-82M TTS wrapper.
+    CSM-1B TTS with LoRA adapter for voice cloning.
     """
 
     def __init__(self):
         cfg = config.tts
         self.sample_rate = cfg.sample_rate  # 24000
         self.crossfade_ms = cfg.crossfade_ms
-        self.voice = cfg.voice
-        self.speed = cfg.speed
+        self.base_model_id = cfg.base_model
+        self.adapter_path = cfg.adapter_path
+        self.speaker_id = cfg.speaker_id
 
-        self.pipeline: KPipeline | None = None
+        self.model = None
+        self.processor = None
+        self.device = None
 
     def load_model(self):
-        """Load the Kokoro pipeline. Call once at startup."""
-        # Language code: first letter of voice ID (e.g. 'af_heart' -> 'a')
-        lang_code = self.voice[0] if self.voice else 'a'
-        self.pipeline = KPipeline(lang_code=lang_code)
-        print(f"Kokoro loaded — voice: {self.voice}, lang: {lang_code}")
+        """Load CSM-1B base model + LoRA adapter. Call once at startup."""
+        from transformers import CsmForConditionalGeneration, AutoProcessor
+        from peft import PeftModel
+
+        print(f"Loading CSM-1B base model: {self.base_model_id}")
+        self.processor = AutoProcessor.from_pretrained(self.base_model_id)
+        base_model = CsmForConditionalGeneration.from_pretrained(
+            self.base_model_id,
+            torch_dtype=torch.float32,
+        )
+
+        print(f"Loading LoRA adapter: {self.adapter_path}")
+        model = PeftModel.from_pretrained(base_model, self.adapter_path)
+        self.model = model.merge_and_unload()
+
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.model = self.model.to(self.device)
+        self.model.eval()
+        print(f"CSM-1B ready on {self.device}")
 
     def load_voice(self, reference_audio_path: str):
-        """No-op for Kokoro (uses preset voices, no cloning needed)."""
+        """No-op — voice is baked into the LoRA adapter."""
         pass
 
     def synthesize_full(self, text: str) -> np.ndarray:
@@ -50,17 +68,29 @@ class StreamingTTS:
         Returns:
             float32 numpy array of audio at self.sample_rate
         """
-        if self.pipeline is None:
+        if self.model is None:
             raise RuntimeError("Call load_model() first")
 
-        chunks = []
-        for _gs, _ps, audio in self.pipeline(text, voice=self.voice, speed=self.speed):
-            chunks.append(audio)
+        # Format text with speaker ID prefix
+        prompt = f"[{self.speaker_id}]{text}"
+        inputs = self.processor(prompt, add_special_tokens=True).to(self.device)
 
-        if not chunks:
-            return np.array([], dtype=np.float32)
+        with torch.no_grad():
+            audio = self.model.generate(**inputs, output_audio=True)
 
-        return np.concatenate(chunks).astype(np.float32)
+        # Save to temp buffer and read back as numpy
+        # processor.save_audio returns None, writes to file
+        # Instead, extract audio directly from the generate output
+        if hasattr(audio, 'cpu'):
+            audio_np = audio.cpu().numpy().astype(np.float32)
+        else:
+            audio_np = np.asarray(audio, dtype=np.float32)
+
+        # Flatten if needed
+        if audio_np.ndim > 1:
+            audio_np = audio_np.squeeze()
+
+        return audio_np
 
     def crossfade(
         self,

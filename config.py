@@ -49,20 +49,19 @@ class LLMConfig(BaseSettings):
 
 
 class TTSConfig(BaseSettings):
-    """Text-to-speech settings (Kokoro-82M)."""
-    # Kokoro voice ID — see available voices:
-    # American English female: af_heart, af_bella, af_nicole, af_nova, af_sarah, af_sky
-    # American English male: am_adam, am_echo, am_eric, am_liam, am_michael
-    # British English female: bf_emma, bf_isabella, bf_lily
-    # British English male: bm_daniel, bm_george, bm_lewis
-    voice: str = "af_heart"
-    speed: float = 1.0
-    # Sample rate of generated audio (Kokoro outputs 24kHz)
+    """Text-to-speech settings (CSM-1B with LoRA adapter)."""
+    # Base model ID on HuggingFace
+    base_model: str = "sesame/csm-1b"
+    # Path to LoRA adapter directory
+    adapter_path: str = "checkpoints/csm-lora/final"
+    # Speaker ID for generation
+    speaker_id: int = 0
+    # Sample rate (CSM outputs 24kHz via Mimi codec)
     sample_rate: int = 24000
     # Crossfade duration when transitioning filler -> real response (ms)
     crossfade_ms: int = 100
-    # Path to reference audio (not used by Kokoro, kept for compatibility)
-    reference_audio_path: str = "voice/reference.wav"
+    # Max audio length per generation (ms)
+    max_audio_length_ms: int = 30000
 
 
 class AudioConfig(BaseSettings):
@@ -71,7 +70,7 @@ class AudioConfig(BaseSettings):
     input_sample_rate: int = 48000
     # Internal processing sample rate (Whisper wants 16kHz)
     stt_sample_rate: int = 16000
-    # Output sample rate (XTTS outputs 24kHz)
+    # Output sample rate (CSM outputs 24kHz)
     output_sample_rate: int = 24000
     # Chunk size sent over WebSocket (ms)
     ws_chunk_ms: int = 200
