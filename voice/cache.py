@@ -107,11 +107,13 @@ class AudioCache:
         pool: dict[str, np.ndarray],
         recent: list[str],
         max_recent: int,
-    ) -> tuple[str, np.ndarray]:
+    ) -> tuple[str, np.ndarray] | None:
         """Pick a random clip, avoiding recently used ones."""
+        if not pool:
+            return None
+
         available = [k for k in pool if k not in recent]
         if not available:
-            # All used recently — reset and pick any
             recent.clear()
             available = list(pool.keys())
 
