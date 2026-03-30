@@ -1,26 +1,26 @@
 """
-TTS using Orpheus-TTS (3B, Llama-based).
+TTS client that calls the Orpheus TTS server via HTTP.
 
-Fast, expressive speech synthesis with emotion tags.
-Outputs 24kHz int16 PCM via SNAC codec, converted to float32 for pipeline.
-Native streaming support (~85ms per chunk).
+The Orpheus model runs in a separate process (scripts/orpheus_server.py)
+to avoid vLLM/asyncio event loop conflicts with our FastAPI server.
 
 Usage:
     tts = StreamingTTS()
-    tts.load_model()
+    tts.load_model()  # just verifies the server is running
 
     audio = tts.synthesize_full("Hello, how can I help?")
-    blended = tts.crossfade(filler_audio, first_real_chunk)
 """
 
+import time
 import numpy as np
+import requests
 
 from config import config
 
 
 class StreamingTTS:
     """
-    Orpheus TTS wrapper with streaming output.
+    HTTP client for the Orpheus TTS server.
     """
 
     def __init__(self):
@@ -28,21 +28,29 @@ class StreamingTTS:
         self.sample_rate = cfg.sample_rate  # 24000
         self.crossfade_ms = cfg.crossfade_ms
         self.voice = cfg.voice
-
-        self.model = None
+        self.server_url = cfg.server_url
 
     def load_model(self):
-        """Load Orpheus TTS model. Call once at startup."""
-        import os
-        os.environ["SNAC_DEVICE"] = "cuda"
+        """Verify the Orpheus TTS server is running."""
+        print(f"Connecting to Orpheus TTS server at {self.server_url}...")
 
-        from orpheus_tts import OrpheusModel
+        # Wait for server to be ready (it may still be loading the model)
+        for i in range(120):  # wait up to 2 minutes
+            try:
+                resp = requests.get(f"{self.server_url}/health", timeout=2)
+                if resp.status_code == 200:
+                    print(f"Orpheus TTS server connected (voice: {self.voice}).")
+                    return
+            except requests.ConnectionError:
+                pass
+            if i % 10 == 0 and i > 0:
+                print(f"  Waiting for Orpheus server... ({i}s)")
+            time.sleep(1)
 
-        print(f"Loading Orpheus TTS (voice: {self.voice})...")
-        self.model = OrpheusModel(
-            model_name="canopylabs/orpheus-tts-0.1-finetune-prod",
+        raise RuntimeError(
+            f"Orpheus TTS server not responding at {self.server_url}. "
+            "Start it with: python scripts/orpheus_server.py"
         )
-        print("Orpheus TTS ready.")
 
     def load_voice(self, reference_audio_path: str):
         """No-op — Orpheus uses preset voices."""
@@ -50,39 +58,27 @@ class StreamingTTS:
 
     def synthesize_full(self, text: str) -> np.ndarray:
         """
-        Generate speech for the full text at once.
+        Generate speech by calling the Orpheus TTS server.
 
         Returns:
             float32 numpy array of audio at self.sample_rate
         """
-        if self.model is None:
-            raise RuntimeError("Call load_model() first")
+        resp = requests.post(
+            f"{self.server_url}/synthesize",
+            json={"text": text, "voice": self.voice},
+            timeout=30,
+        )
 
-        import concurrent.futures
-
-        def _generate():
-            chunks = []
-            for audio_bytes in self.model.generate_speech(
-                prompt=text,
-                voice=self.voice,
-                temperature=0.6,
-                top_p=0.8,
-                repetition_penalty=1.3,
-                max_tokens=1200,
-            ):
-                chunk_np = np.frombuffer(audio_bytes, dtype=np.int16)
-                chunks.append(chunk_np)
-            return chunks
-
-        # Run in a separate thread to avoid async event loop conflicts
-        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-            future = executor.submit(_generate)
-            chunks = future.result(timeout=30)
-
-        if not chunks:
+        if resp.status_code != 200:
+            print(f"TTS server error: {resp.status_code}")
             return np.array([], dtype=np.float32)
 
-        audio_int16 = np.concatenate(chunks)
+        raw_audio = resp.content
+        if not raw_audio:
+            return np.array([], dtype=np.float32)
+
+        # Convert int16 PCM bytes to float32
+        audio_int16 = np.frombuffer(raw_audio, dtype=np.int16)
         return audio_int16.astype(np.float32) / 32767.0
 
     def crossfade(
