@@ -80,7 +80,10 @@ class FillerManager:
             return None
 
         # Time's up — LLM is slow, play a filler
-        self._filler_phrase, self._filler_audio = self.cache.get_filler()
+        result = self.cache.get_filler()
+        if result is None:
+            return None
+        self._filler_phrase, self._filler_audio = result
         self._filler_played = True
         return self._filler_phrase, self._filler_audio
 
