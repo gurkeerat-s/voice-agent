@@ -407,10 +407,10 @@ def cmd_test(args):
     codes_1 = [max(0, min(4095, c)) for c in codes_1]
     codes_2 = [max(0, min(4095, c)) for c in codes_2]
 
-    # Convert to tensors for SNAC
-    c0 = torch.tensor(codes_0, dtype=torch.long).unsqueeze(0).unsqueeze(0).to("cuda")
-    c1 = torch.tensor(codes_1, dtype=torch.long).unsqueeze(0).unsqueeze(0).to("cuda")
-    c2 = torch.tensor(codes_2, dtype=torch.long).unsqueeze(0).unsqueeze(0).to("cuda")
+    # Convert to tensors for SNAC — shape [1, T] (batch, time)
+    c0 = torch.tensor(codes_0, dtype=torch.long).unsqueeze(0).to("cuda")
+    c1 = torch.tensor(codes_1, dtype=torch.long).unsqueeze(0).to("cuda")
+    c2 = torch.tensor(codes_2, dtype=torch.long).unsqueeze(0).to("cuda")
 
     with torch.no_grad():
         audio = snac_model.decode([c0, c1, c2])
