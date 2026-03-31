@@ -65,9 +65,10 @@ def encode_audio_to_tokens(audio_path, snac_model, token_config, device="cuda"):
         codes = snac_model.encode(audio)
 
     # SNAC 24kHz returns 3 code groups at ratios 1:2:4
-    c0 = codes[0][0, 0].cpu()  # coarsest, [T0]
-    c1 = codes[1][0, 0].cpu()  # middle, [2*T0]
-    c2 = codes[2][0, 0].cpu()  # finest, [4*T0]
+    # Shape: [1, T] for each group
+    c0 = codes[0][0].cpu()  # coarsest, [T0]
+    c1 = codes[1][0].cpu()  # middle, [2*T0]
+    c2 = codes[2][0].cpu()  # finest, [4*T0]
 
     T0 = c0.shape[0]
     base = token_config["audio_base"]
