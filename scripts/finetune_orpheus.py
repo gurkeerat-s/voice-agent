@@ -36,16 +36,17 @@ def get_token_config(tokenizer):
     """Get audio token offsets from the Orpheus tokenizer."""
     start_token = tokenizer.encode("<custom_token_10>", add_special_tokens=False)[0]
     end_token_1 = tokenizer.encode("<custom_token_11>", add_special_tokens=False)[0]
-    end_token_2 = tokenizer.encode("<custom_token_12>", add_special_tokens=False)[0]
 
-    # Audio tokens start after the custom tokens
-    # In Orpheus, audio codes for each of 7 "virtual codebooks" are offset by 4096
-    audio_base = start_token + 1  # first audio token ID
+    # Audio tokens start at position: total_vocab - 7*4096
+    # custom_10 = start audio marker
+    # custom_11 = end audio marker
+    # custom_12 onwards = first audio token
+    total_vocab = len(tokenizer)
+    audio_base = total_vocab - 7 * 4096  # = 128268
 
     return {
         "start_token": start_token,
         "end_token_1": end_token_1,
-        "end_token_2": end_token_2,
         "audio_base": audio_base,
         "codebook_size": 4096,
     }
@@ -129,7 +130,7 @@ def cmd_encode(args):
                 text_tokens
                 + [token_config["start_token"]]
                 + audio_tokens
-                + [token_config["end_token_1"], token_config["end_token_2"]]
+                + [token_config["end_token_1"]]
             )
 
             encoded_samples.append({
@@ -372,7 +373,7 @@ def cmd_test(args):
         if tok == token_config["start_token"]:
             in_audio = True
             continue
-        if tok in (token_config["end_token_1"], token_config["end_token_2"]):
+        if tok == token_config["end_token_1"]:
             break
         if in_audio:
             audio_tokens.append(tok)
