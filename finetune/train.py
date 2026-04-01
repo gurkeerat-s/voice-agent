@@ -57,6 +57,7 @@ training_args = TrainingArguments(
     output_dir=f"./{save_folder}",
     report_to=report_to,
     save_steps=save_steps,
+    save_total_limit=1,
     remove_unused_columns=True,
     learning_rate=learning_rate,
 )
