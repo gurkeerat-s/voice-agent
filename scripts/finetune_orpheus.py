@@ -32,22 +32,33 @@ VOICE_NAME = "zara"
 SAMPLE_RATE = 24000
 
 
-def get_token_config(tokenizer):
-    """Get audio token offsets from the Orpheus tokenizer."""
-    start_token = tokenizer.encode("<custom_token_10>", add_special_tokens=False)[0]
-    end_token_1 = tokenizer.encode("<custom_token_11>", add_special_tokens=False)[0]
+def get_token_config():
+    """Orpheus special token IDs (hardcoded per official spec).
 
-    # Audio tokens start at position: total_vocab - 7*4096
-    # custom_10 = start audio marker
-    # custom_11 = end audio marker
-    # custom_12 onwards = first audio token
-    total_vocab = len(tokenizer)
-    audio_base = total_vocab - 7 * 4096  # = 128268
-
+    Layout: base Llama tokenizer has 128256 tokens (IDs 0–128255).
+    Orpheus adds structured control tokens and 7×4096 audio tokens:
+      128256 = tokenizer_length
+      128257 = start_of_speech
+      128258 = end_of_speech
+      128259 = start_of_human
+      128260 = end_of_human
+      128261 = start_of_ai
+      128262 = end_of_ai
+      128263 = pad_token
+      128264 = (reserved)
+      128265 = (reserved)
+      128266 = audio_tokens_start (= tokenizer_length + 10)
+      128266 + 7*4096 - 1 = last audio token
+    """
     return {
-        "start_token": start_token,
-        "end_token_1": end_token_1,
-        "audio_base": audio_base,
+        "start_of_speech": 128257,
+        "end_of_speech": 128258,
+        "start_of_human": 128259,
+        "end_of_human": 128260,
+        "start_of_ai": 128261,
+        "end_of_ai": 128262,
+        "pad_token": 128263,
+        "audio_base": 128266,  # first audio token ID
         "codebook_size": 4096,
     }
 
@@ -106,9 +117,10 @@ def cmd_encode(args):
 
     print(f"Loading tokenizer: {ORPHEUS_MODEL}")
     tokenizer = AutoTokenizer.from_pretrained(ORPHEUS_MODEL)
-    token_config = get_token_config(tokenizer)
-    print(f"  Audio base token: {token_config['audio_base']}")
-    print(f"  Start token: {token_config['start_token']}")
+    tc = get_token_config()
+    print(f"  Audio base: {tc['audio_base']}")
+    print(f"  start_of_speech: {tc['start_of_speech']}")
+    print(f"  end_of_speech: {tc['end_of_speech']}")
 
     encoded_samples = []
     lines = manifest["lines"]
@@ -119,31 +131,36 @@ def cmd_encode(args):
             continue
 
         try:
-            audio_tokens = encode_audio_to_tokens(audio_path, snac_model, token_config)
+            audio_tokens = encode_audio_to_tokens(audio_path, snac_model, tc)
 
-            # Build the full token sequence:
-            # text_tokens + start_audio + audio_tokens + end_audio
+            # Orpheus training sequence format:
+            # [start_of_human] + text_tokens + [end_of_human, start_of_ai, start_of_speech]
+            #   + audio_tokens + [end_of_speech, end_of_ai]
             text = f"{VOICE_NAME}: {item['text']}"
-            text_tokens = tokenizer.encode(text, add_special_tokens=True)
+            text_tokens = tokenizer.encode(text, add_special_tokens=False)
 
+            prompt_tokens = (
+                [tc["start_of_human"]]
+                + text_tokens
+                + [tc["end_of_human"], tc["start_of_ai"], tc["start_of_speech"]]
+            )
             full_sequence = (
-                text_tokens
-                + [token_config["start_token"]]
+                prompt_tokens
                 + audio_tokens
-                + [token_config["end_token_1"]]
+                + [tc["end_of_speech"], tc["end_of_ai"]]
             )
 
             encoded_samples.append({
                 "id": item["id"],
                 "text": item["text"],
-                "num_text_tokens": len(text_tokens),
+                "num_prompt_tokens": len(prompt_tokens),
                 "num_audio_tokens": len(audio_tokens),
                 "token_ids": full_sequence,
             })
 
             if (i + 1) % 50 == 0 or i == 0:
                 print(f"  [{i + 1}/{len(lines)}] {item['text'][:50]}... "
-                      f"({len(text_tokens)} text + {len(audio_tokens)} audio tokens)")
+                      f"({len(prompt_tokens)} prompt + {len(audio_tokens)} audio tokens)")
 
         except Exception as e:
             print(f"  [{i + 1}/{len(lines)}] ERROR: {e}")
@@ -155,7 +172,7 @@ def cmd_encode(args):
         json.dump({
             "model": ORPHEUS_MODEL,
             "voice": VOICE_NAME,
-            "token_config": token_config,
+            "token_config": tc,
             "num_samples": len(encoded_samples),
             "samples": encoded_samples,
         }, f)
@@ -189,8 +206,8 @@ def cmd_train(args):
     # ── Load model ─────────────────────────────────────────
     print(f"Loading model: {ORPHEUS_MODEL}")
     tokenizer = AutoTokenizer.from_pretrained(ORPHEUS_MODEL)
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
+    tc = get_token_config()
+    tokenizer.pad_token_id = tc["pad_token"]  # 128263
 
     model = AutoModelForCausalLM.from_pretrained(
         ORPHEUS_MODEL,
@@ -213,25 +230,46 @@ def cmd_train(args):
 
     # ── Dataset ────────────────────────────────────────────
     class OrpheusDataset(Dataset):
-        def __init__(self, samples, max_len=2048):
+        def __init__(self, samples, max_len=4096):
             self.samples = []
+            self.prompt_lengths = []  # how many tokens to mask in labels
+            skipped = 0
             for s in samples:
                 ids = s["token_ids"]
+                prompt_len = s["num_prompt_tokens"]
+
                 if len(ids) <= max_len:
                     self.samples.append(ids)
+                    self.prompt_lengths.append(prompt_len)
                 else:
-                    # Truncate (keep text + start + truncated audio + end)
-                    self.samples.append(ids[:max_len - 2] + ids[-2:])
+                    # Truncate audio to fit, keeping 7-token SNAC alignment
+                    # Sequence ends with [end_of_speech, end_of_ai] = 2 tokens
+                    audio_start = prompt_len
+                    end_tokens = ids[-2:]  # [end_of_speech, end_of_ai]
+                    max_audio = ((max_len - prompt_len - 2) // 7) * 7
+                    if max_audio <= 0:
+                        skipped += 1
+                        continue
+                    truncated = ids[:audio_start] + ids[audio_start:audio_start + max_audio] + end_tokens
+                    self.samples.append(truncated)
+                    self.prompt_lengths.append(prompt_len)
+
+            if skipped:
+                print(f"  Skipped {skipped} samples (too long even after truncation)")
 
         def __len__(self):
             return len(self.samples)
 
         def __getitem__(self, idx):
             ids = self.samples[idx]
-            return {
-                "input_ids": torch.tensor(ids, dtype=torch.long),
-                "labels": torch.tensor(ids, dtype=torch.long),
-            }
+            prompt_len = self.prompt_lengths[idx]
+
+            input_ids = torch.tensor(ids, dtype=torch.long)
+            labels = torch.tensor(ids, dtype=torch.long)
+            # Mask the text prompt + start_audio token — only train on audio output
+            labels[:prompt_len] = -100
+
+            return {"input_ids": input_ids, "labels": labels}
 
     dataset = OrpheusDataset(samples, max_len=args.max_len)
     print(f"Dataset: {len(dataset)} samples")
@@ -266,8 +304,9 @@ def cmd_train(args):
         per_device_train_batch_size=args.batch_size,
         gradient_accumulation_steps=args.grad_accum,
         learning_rate=args.lr,
+        weight_decay=0.01,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.1,
+        warmup_ratio=0.05,
         bf16=True,
         logging_steps=10,
         save_strategy="epoch",
@@ -343,14 +382,21 @@ def cmd_test(args):
     )
     model.eval()
 
-    token_config = get_token_config(tokenizer)
+    tc = get_token_config()
 
     print(f"Loading SNAC decoder: {SNAC_MODEL}")
     snac_model = snac_lib.SNAC.from_pretrained(SNAC_MODEL).to("cuda").eval()
 
-    # Generate
+    # Build prompt in Orpheus format:
+    # [start_of_human] + text_tokens + [end_of_text, end_of_human, start_of_ai, start_of_speech]
     text = f"{VOICE_NAME}: {args.text}"
-    input_ids = tokenizer.encode(text, return_tensors="pt").to(model.device)
+    text_tokens = tokenizer.encode(text, add_special_tokens=False)
+    prompt = (
+        [tc["start_of_human"]]
+        + text_tokens
+        + [128009, tc["end_of_human"], tc["start_of_ai"], tc["start_of_speech"]]
+    )
+    input_ids = torch.tensor([prompt], dtype=torch.long).to(model.device)
 
     print(f"Generating: \"{args.text}\"")
     with torch.no_grad():
@@ -363,19 +409,15 @@ def cmd_test(args):
             do_sample=True,
         )
 
-    # Extract generated audio tokens (skip input tokens)
+    # Extract generated tokens (after the prompt)
     generated = output[0][input_ids.shape[1]:].cpu().tolist()
 
-    # Filter to audio tokens only (between start and end)
+    # Collect audio tokens until end_of_speech
     audio_tokens = []
-    in_audio = False
     for tok in generated:
-        if tok == token_config["start_token"]:
-            in_audio = True
-            continue
-        if tok == token_config["end_token_1"]:
+        if tok == tc["end_of_speech"]:
             break
-        if in_audio:
+        if tok >= tc["audio_base"]:
             audio_tokens.append(tok)
 
     if not audio_tokens:
@@ -385,8 +427,8 @@ def cmd_test(args):
     print(f"Generated {len(audio_tokens)} audio tokens")
 
     # Decode: token IDs → SNAC codes → audio
-    base = token_config["audio_base"]
-    cs = token_config["codebook_size"]
+    base = tc["audio_base"]
+    cs = tc["codebook_size"]
 
     # Reshape into groups of 7
     num_frames = len(audio_tokens) // 7
@@ -436,13 +478,13 @@ def main():
     trn = subparsers.add_parser("train", help="LoRA fine-tune Orpheus")
     trn.add_argument("--data-dir", default="data/training")
     trn.add_argument("--output-dir", default="checkpoints/orpheus-zara")
-    trn.add_argument("--epochs", type=int, default=5)
+    trn.add_argument("--epochs", type=int, default=8)
     trn.add_argument("--batch-size", type=int, default=1)
     trn.add_argument("--grad-accum", type=int, default=8)
-    trn.add_argument("--lr", type=float, default=2e-5)
-    trn.add_argument("--lora-rank", type=int, default=16)
-    trn.add_argument("--lora-alpha", type=int, default=32)
-    trn.add_argument("--max-len", type=int, default=2048)
+    trn.add_argument("--lr", type=float, default=1e-5)
+    trn.add_argument("--lora-rank", type=int, default=64)
+    trn.add_argument("--lora-alpha", type=int, default=128)
+    trn.add_argument("--max-len", type=int, default=4096)
 
     # Merge
     mrg = subparsers.add_parser("merge", help="Merge adapter into base model")

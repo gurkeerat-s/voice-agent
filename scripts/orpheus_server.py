@@ -5,8 +5,8 @@ Runs as a separate process from the main voice agent to avoid
 vLLM/asyncio event loop conflicts. Exposes a simple HTTP API.
 
 Usage:
-    python scripts/orpheus_server.py              # starts on port 8766
-    python scripts/orpheus_server.py --port 8766
+    python scripts/orpheus_server.py              # base Orpheus model
+    python scripts/orpheus_server.py --model-dir models/orpheus-zara  # fine-tuned
 
 API:
     POST /synthesize  {"text": "Hello", "voice": "tara"}  → raw PCM audio bytes
@@ -25,14 +25,14 @@ import numpy as np
 os.environ["SNAC_DEVICE"] = "cuda"
 
 
-def create_app():
+def create_app(model_name="canopylabs/orpheus-tts-0.1-finetune-prod"):
     from flask import Flask, request, Response, jsonify
     from orpheus_tts import OrpheusModel
 
     app = Flask(__name__)
 
-    print("Loading Orpheus TTS model...")
-    model = OrpheusModel(model_name="canopylabs/orpheus-tts-0.1-finetune-prod")
+    print(f"Loading Orpheus TTS model: {model_name}")
+    model = OrpheusModel(model_name=model_name)
     print("Orpheus TTS ready.")
 
     @app.route("/health", methods=["GET"])
@@ -74,9 +74,12 @@ def main():
     parser = argparse.ArgumentParser(description="Orpheus TTS Server")
     parser.add_argument("--port", type=int, default=8766)
     parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--model-dir", default=None,
+                        help="Path to fine-tuned merged model (default: base Orpheus)")
     args = parser.parse_args()
 
-    app = create_app()
+    model_name = args.model_dir or "canopylabs/orpheus-tts-0.1-finetune-prod"
+    app = create_app(model_name=model_name)
     print(f"Orpheus server listening on http://{args.host}:{args.port}")
     app.run(host=args.host, port=args.port, threaded=True)
 

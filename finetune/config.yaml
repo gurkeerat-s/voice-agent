@@ -1,0 +1,14 @@
+# Orpheus fine-tuning config for Zara voice
+# Matches the official Orpheus finetune config format
+
+TTS_dataset: "data/orpheus-dataset"       # local path or HF Hub dataset name
+model_name: "canopylabs/orpheus-tts-0.1-finetune-prod"
+epochs: 3
+batch_size: 1
+number_processes: 1
+pad_token: 128263
+save_steps: 200
+learning_rate: 5.0e-5
+save_folder: "checkpoints/orpheus-zara"
+project_name: "zara-voice"
+run_name: "zara-lora-v1"
