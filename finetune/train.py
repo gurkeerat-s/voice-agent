@@ -50,7 +50,6 @@ except ImportError:
     report_to = "none"
 
 training_args = TrainingArguments(
-    overwrite_output_dir=True,
     num_train_epochs=epochs,
     per_device_train_batch_size=batch_size,
     logging_steps=1,
