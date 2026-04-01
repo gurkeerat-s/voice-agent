@@ -387,26 +387,31 @@ def cmd_test(args):
     print(f"Loading SNAC decoder: {SNAC_MODEL}")
     snac_model = snac_lib.SNAC.from_pretrained(SNAC_MODEL).to("cuda").eval()
 
-    # Build prompt in Orpheus format:
-    # [start_of_human] + text_tokens + [end_of_text, end_of_human, start_of_ai, start_of_speech]
+    # Build prompt matching the exact training format from prepare_dataset.py:
+    # [start_of_human] + [BOS] + text_tokens + [end_of_text, end_of_human]
+    #   + [start_of_ai, start_of_speech]
     text = f"{VOICE_NAME}: {args.text}"
-    text_tokens = tokenizer.encode(text, add_special_tokens=False)
+    # add_special_tokens=True prepends BOS (128000), matching training data
+    text_tokens = tokenizer.encode(text, add_special_tokens=True)
     prompt = (
         [tc["start_of_human"]]
         + text_tokens
         + [128009, tc["end_of_human"], tc["start_of_ai"], tc["start_of_speech"]]
     )
     input_ids = torch.tensor([prompt], dtype=torch.long).to(model.device)
+    attention_mask = torch.ones_like(input_ids)
 
-    print(f"Generating: \"{args.text}\"")
+    print(f"Generating: \"{args.text}\" ({len(prompt)} prompt tokens)")
     with torch.no_grad():
         output = model.generate(
             input_ids,
+            attention_mask=attention_mask,
             max_new_tokens=args.max_tokens,
             temperature=0.6,
             top_p=0.8,
-            repetition_penalty=1.3,
+            repetition_penalty=1.1,
             do_sample=True,
+            pad_token_id=tc["pad_token"],
         )
 
     # Extract generated tokens (after the prompt)
