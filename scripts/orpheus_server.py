@@ -1,8 +1,8 @@
 """
-Standalone Orpheus TTS server (transformers-based, no vLLM).
+Standalone Orpheus TTS server using vLLM Python API directly.
 
-Uses raw transformers + SNAC to avoid vLLM/torch version conflicts.
-Slower than vLLM but much simpler dependency-wise.
+Skips the orpheus-speech wrapper (which has version conflicts) and uses
+vLLM directly for fast inference, plus SNAC for audio decoding.
 
 Usage:
     python scripts/orpheus_server.py --model-dir ./models/orpheus-zara
@@ -77,23 +77,33 @@ def decode_audio_tokens(audio_tokens, snac_model):
 
 def create_app(model_name):
     from flask import Flask, request, Response, jsonify
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers import AutoTokenizer
+    from vllm import LLM, SamplingParams
     import snac as snac_lib
 
     app = Flask(__name__)
 
-    print(f"Loading Orpheus TTS model: {model_name}")
+    print(f"Loading tokenizer: {model_name}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        dtype=torch.bfloat16,
-        device_map="cuda",
-        attn_implementation="flash_attention_2",
+
+    print(f"Loading Orpheus TTS model via vLLM: {model_name}")
+    llm = LLM(
+        model=model_name,
+        dtype="bfloat16",
+        gpu_memory_utilization=0.5,  # leave room for LLM + STT + SNAC
+        max_model_len=2048,
     )
-    model.eval()
 
     print("Loading SNAC decoder...")
     snac_model = snac_lib.SNAC.from_pretrained("hubertsiuzdak/snac_24khz").to("cuda").eval()
+
+    sampling_params = SamplingParams(
+        temperature=0.6,
+        top_p=0.8,
+        repetition_penalty=1.1,
+        max_tokens=1200,
+        stop_token_ids=[END_OF_SPEECH],
+    )
 
     print("Orpheus TTS ready.")
 
@@ -110,36 +120,22 @@ def create_app(model_name):
         if not text.strip():
             return Response(b"", content_type="application/octet-stream")
 
-        prompt = build_prompt(text, voice, tokenizer)
-        input_ids = torch.tensor([prompt], dtype=torch.long).to(model.device)
-        attention_mask = torch.ones_like(input_ids)
+        prompt_token_ids = build_prompt(text, voice, tokenizer)
 
-        with torch.no_grad():
-            output = model.generate(
-                input_ids,
-                attention_mask=attention_mask,
-                max_new_tokens=1200,
-                temperature=0.6,
-                top_p=0.8,
-                repetition_penalty=1.1,
-                do_sample=True,
-                pad_token_id=PAD_TOKEN,
-            )
+        outputs = llm.generate(
+            prompt_token_ids=[prompt_token_ids],
+            sampling_params=sampling_params,
+            use_tqdm=False,
+        )
 
-        generated = output[0][input_ids.shape[1]:].cpu().tolist()
+        generated = list(outputs[0].outputs[0].token_ids)
 
-        audio_tokens = []
-        for tok in generated:
-            if tok == END_OF_SPEECH:
-                break
-            if tok >= AUDIO_BASE:
-                audio_tokens.append(tok)
+        audio_tokens = [tok for tok in generated if tok >= AUDIO_BASE]
 
         if not audio_tokens:
             return Response(b"", content_type="application/octet-stream")
 
         audio_np = decode_audio_tokens(audio_tokens, snac_model)
-        # Convert float32 [-1, 1] to int16 PCM
         audio_int16 = (np.clip(audio_np, -1.0, 1.0) * 32767).astype(np.int16)
         return Response(audio_int16.tobytes(), content_type="application/octet-stream")
 
@@ -147,7 +143,7 @@ def create_app(model_name):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Orpheus TTS Server")
+    parser = argparse.ArgumentParser(description="Orpheus TTS Server (vLLM)")
     parser.add_argument("--port", type=int, default=8766)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--model-dir", required=True,
