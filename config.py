@@ -39,8 +39,8 @@ class LLMConfig(BaseSettings):
 
 class TTSConfig(BaseSettings):
     """Text-to-speech settings (Orpheus TTS via HTTP server)."""
-    # Available voices: tara, leah, jess, leo, dan, mia, zac, zoe
-    voice: str = "tara"
+    # Fine-tuned Zara voice (trained on 850 ElevenLabs clips)
+    voice: str = "zara"
     # URL of the Orpheus TTS server (runs as separate process)
     server_url: str = "http://127.0.0.1:8766"
     # Sample rate (Orpheus/SNAC outputs 24kHz)
