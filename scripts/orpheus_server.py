@@ -1,38 +1,99 @@
 """
-Standalone Orpheus TTS server.
+Standalone Orpheus TTS server (transformers-based, no vLLM).
 
-Runs as a separate process from the main voice agent to avoid
-vLLM/asyncio event loop conflicts. Exposes a simple HTTP API.
+Uses raw transformers + SNAC to avoid vLLM/torch version conflicts.
+Slower than vLLM but much simpler dependency-wise.
 
 Usage:
-    python scripts/orpheus_server.py              # base Orpheus model
-    python scripts/orpheus_server.py --model-dir models/orpheus-zara  # fine-tuned
+    python scripts/orpheus_server.py --model-dir ./models/orpheus-zara
 
 API:
-    POST /synthesize  {"text": "Hello", "voice": "tara"}  → raw PCM audio bytes
+    POST /synthesize  {"text": "Hello", "voice": "zara"}  → raw PCM audio bytes
     GET  /health      → {"status": "ok"}
 """
 
 import argparse
-import io
-import sys
 import os
-import json
 
 import numpy as np
-
-# Set SNAC device before importing orpheus
-os.environ["SNAC_DEVICE"] = "cuda"
+import torch
 
 
-def create_app(model_name="canopylabs/orpheus-tts-0.1-finetune-prod"):
+# Orpheus special token IDs (must match training format)
+START_OF_SPEECH = 128257
+END_OF_SPEECH = 128258
+START_OF_HUMAN = 128259
+END_OF_HUMAN = 128260
+START_OF_AI = 128261
+END_OF_AI = 128262
+PAD_TOKEN = 128263
+END_OF_TEXT = 128009
+AUDIO_BASE = 128266
+CODEBOOK_SIZE = 4096
+SAMPLE_RATE = 24000
+
+
+def build_prompt(text, voice, tokenizer):
+    """Build Orpheus prompt in the exact training format."""
+    full_text = f"{voice}: {text}"
+    text_tokens = tokenizer.encode(full_text, add_special_tokens=True)
+    prompt = (
+        [START_OF_HUMAN]
+        + text_tokens
+        + [END_OF_TEXT, END_OF_HUMAN, START_OF_AI, START_OF_SPEECH]
+    )
+    return prompt
+
+
+def decode_audio_tokens(audio_tokens, snac_model):
+    """Decode interleaved audio tokens back to waveform."""
+    num_frames = len(audio_tokens) // 7
+    audio_tokens = audio_tokens[: num_frames * 7]
+
+    codes_0, codes_1, codes_2 = [], [], []
+    for i in range(0, len(audio_tokens), 7):
+        t = audio_tokens[i : i + 7]
+        codes_0.append(t[0] - AUDIO_BASE)
+        codes_1.append(t[1] - (AUDIO_BASE + CODEBOOK_SIZE))
+        codes_2.append(t[2] - (AUDIO_BASE + 2 * CODEBOOK_SIZE))
+        codes_2.append(t[3] - (AUDIO_BASE + 3 * CODEBOOK_SIZE))
+        codes_1.append(t[4] - (AUDIO_BASE + 4 * CODEBOOK_SIZE))
+        codes_2.append(t[5] - (AUDIO_BASE + 5 * CODEBOOK_SIZE))
+        codes_2.append(t[6] - (AUDIO_BASE + 6 * CODEBOOK_SIZE))
+
+    codes_0 = [max(0, min(4095, c)) for c in codes_0]
+    codes_1 = [max(0, min(4095, c)) for c in codes_1]
+    codes_2 = [max(0, min(4095, c)) for c in codes_2]
+
+    c0 = torch.tensor(codes_0, dtype=torch.long).unsqueeze(0).to("cuda")
+    c1 = torch.tensor(codes_1, dtype=torch.long).unsqueeze(0).to("cuda")
+    c2 = torch.tensor(codes_2, dtype=torch.long).unsqueeze(0).to("cuda")
+
+    with torch.no_grad():
+        audio = snac_model.decode([c0, c1, c2])
+
+    return audio.squeeze().cpu().numpy()
+
+
+def create_app(model_name):
     from flask import Flask, request, Response, jsonify
-    from orpheus_tts import OrpheusModel
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    import snac as snac_lib
 
     app = Flask(__name__)
 
     print(f"Loading Orpheus TTS model: {model_name}")
-    model = OrpheusModel(model_name=model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        torch_dtype=torch.bfloat16,
+        device_map="cuda",
+    )
+    model.eval()
+
+    print("Loading SNAC decoder...")
+    snac_model = snac_lib.SNAC.from_pretrained("hubertsiuzdak/snac_24khz").to("cuda").eval()
+
     print("Orpheus TTS ready.")
 
     @app.route("/health", methods=["GET"])
@@ -43,29 +104,43 @@ def create_app(model_name="canopylabs/orpheus-tts-0.1-finetune-prod"):
     def synthesize():
         data = request.get_json()
         text = data.get("text", "")
-        voice = data.get("voice", "tara")
+        voice = data.get("voice", "zara")
 
         if not text.strip():
             return Response(b"", content_type="application/octet-stream")
 
-        # Generate audio
-        chunks = []
-        for audio_bytes in model.generate_speech(
-            prompt=text,
-            voice=voice,
-            temperature=0.6,
-            top_p=0.8,
-            repetition_penalty=1.3,
-            max_tokens=1200,
-        ):
-            chunks.append(audio_bytes)
+        prompt = build_prompt(text, voice, tokenizer)
+        input_ids = torch.tensor([prompt], dtype=torch.long).to(model.device)
+        attention_mask = torch.ones_like(input_ids)
 
-        if not chunks:
+        with torch.no_grad():
+            output = model.generate(
+                input_ids,
+                attention_mask=attention_mask,
+                max_new_tokens=1200,
+                temperature=0.6,
+                top_p=0.8,
+                repetition_penalty=1.1,
+                do_sample=True,
+                pad_token_id=PAD_TOKEN,
+            )
+
+        generated = output[0][input_ids.shape[1]:].cpu().tolist()
+
+        audio_tokens = []
+        for tok in generated:
+            if tok == END_OF_SPEECH:
+                break
+            if tok >= AUDIO_BASE:
+                audio_tokens.append(tok)
+
+        if not audio_tokens:
             return Response(b"", content_type="application/octet-stream")
 
-        # Return raw PCM bytes (int16, 24kHz, mono)
-        raw_audio = b"".join(chunks)
-        return Response(raw_audio, content_type="application/octet-stream")
+        audio_np = decode_audio_tokens(audio_tokens, snac_model)
+        # Convert float32 [-1, 1] to int16 PCM
+        audio_int16 = (np.clip(audio_np, -1.0, 1.0) * 32767).astype(np.int16)
+        return Response(audio_int16.tobytes(), content_type="application/octet-stream")
 
     return app
 
@@ -74,12 +149,11 @@ def main():
     parser = argparse.ArgumentParser(description="Orpheus TTS Server")
     parser.add_argument("--port", type=int, default=8766)
     parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--model-dir", default=None,
-                        help="Path to fine-tuned merged model (default: base Orpheus)")
+    parser.add_argument("--model-dir", required=True,
+                        help="Path to fine-tuned model (local dir or HF repo)")
     args = parser.parse_args()
 
-    model_name = args.model_dir or "canopylabs/orpheus-tts-0.1-finetune-prod"
-    app = create_app(model_name=model_name)
+    app = create_app(model_name=args.model_dir)
     print(f"Orpheus server listening on http://{args.host}:{args.port}")
     app.run(host=args.host, port=args.port, threaded=True)
 
